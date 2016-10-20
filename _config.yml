@@ -1,34 +1,41 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+url: https://samyounger.github.io
+baseurl: ""
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://samyounger.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Sam Younger
+email: sam.younger@gmail.com
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+
+# Team names, titles and social links
+people:
+- name: Sam younger
+  pic: 1
+  position: Web Developer
+  social:
+    - title: twitter
+      url: https://twitter.com/aYoungerSage
+    - title: linkedin
+      url: https://uk.linkedin.com/in/sam-younger
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/ayoungersage
+  - title: facebook
+    url: https://www.facebook.com/sam.younger1
+  - title: stack-overflow
+    url: http://stackoverflow.com/story/samyounger
+  - title: linkedin
+    url: https://uk.linkedin.com/in/sam-younger
+  - title: github
+    url: http://github.com/samyounger
+
+# Postal address (add as many lines as necessary)
+address:
+  - line:Flat 4 Shams Court, 25 Fulton Road
+  - line: London, HA9 0GA
 
 # Build settings
 markdown: kramdown
-theme: minima
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+permalink: pretty
