@@ -1,20 +1,329 @@
----
-layout: default
----
+<!DOCTYPE HTML>
+<!--
+Twenty by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>Twenty by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+<body class="index">
+	<div id="page-wrapper">
 
-<div class="home">
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1 id="logo"><a href="index.html">Sam Younger <span>| web developer</span></a></h1>
+			<nav id="nav">
+				<ul>
+					<li class="current"><a href="index.html">Welcome</a></li>
+					<li class="submenu">
+						<a href="#">Layouts</a>
+						<ul>
+							<li><a href="left-sidebar.html">Left Sidebar</a></li>
+							<li><a href="right-sidebar.html">Right Sidebar</a></li>
+							<li><a href="no-sidebar.html">No Sidebar</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li class="submenu">
+								<a href="#">Submenu</a>
+								<ul>
+									<li><a href="#">Dolore Sed</a></li>
+									<li><a href="#">Consequat</a></li>
+									<li><a href="#">Lorem Magna</a></li>
+									<li><a href="#">Sed Magna</a></li>
+									<li><a href="#">Ipsum Nisl</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#" class="button special">Sign Up</a></li>
+				</ul>
+			</nav>
+		</header>
 
-  <h1>Posts</h1>
+		<!-- Banner -->
+		<section id="banner">
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+			<!--
+			".inner" is set up as an inline-block so it automatically expands
+			in both directions to fit whatever's inside it. This means it won't
+			automatically wrap lines, so be sure to use line breaks where
+			appropriate (<br />).
+		-->
+		<div class="inner">
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+			<header>
+				<img src="images/logo.png" alt="samyounger logo" style="width: 150px" />
+				<h2>SAM YOUNGER</h2>
+			</header>
+			<p>
+				Web Developer<br>
+				Former investment manager<br/>
+				Coding enthusiast
+			</p>
+			<footer>
+				<ul class="buttons vertical">
+					<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+	</section>
+
+	<!-- Main -->
+	<article id="main">
+
+		<header class="special container">
+			<span class="icon fa-code"></span>
+			<h2>
+				I was drawn to web development with a belief that with the right drive anything could be done
+			</h2>
+			<p>I began learning to code in early 2015. From what began as years of learning and using Microsoft Excel, I realised I had a passion for coding which fast developed into an enthusiasm for web development.</p>
+		</header>
+
+		<!-- One -->
+		<section class="wrapper style2 container special-alt">
+			<div class="row 50%">
+				<div class="8u 12u(narrower)">
+
+					<header>
+						<h2>I have learnt a good deal of coding languages, and this list continues to expand in order to keep up with language developments</h2>
+					</header>
+					<p>During the intensive 3 month General Assembly web development immersive boot camp I learnt most of these languages at high speed. The MEAN stack is my favourite to build in, however I have also produced a site with a Rails API and Angular on the front which was a lot of fun to work with.</p>
+					<p>
+						My next coding challenge is to learn ReactJS which is fast gaining popularity in the coding community. Potentially Angular2 will be on the learning list, but ReactJS has the priority.
+					</p>
+					<footer>
+						<ul class="buttons">
+							<li><a href="#" class="button">Find Out More</a></li>
+						</ul>
+					</footer>
+
+				</div>
+				<div class="4u 12u(narrower) important(narrower)">
+
+					<ul class="featured-icons">
+						<li>
+							<i class="devicon-angularjs-plain" style="font-size: 3em"></i><br>
+							Angular
+						</li>
+						<li>
+							<i class="devicon-bower-plain" style="font-size: 3em"></i><br>
+							Bower
+						</li>
+						<li>
+							<i class="devicon-bootstrap-plain" style="font-size: 3em"></i><br>
+							Bootstrap
+						</li>
+						<li>
+							<i class="devicon-css3-plain" style="font-size: 3em"></i><br>
+							CSS3
+						</li>
+						<li>
+							<i class="devicon-gulp-plain" style="font-size: 3em"></i><br>
+							Gulp
+						</li>
+						<li>
+							<i class="devicon-html5-plain" style="font-size: 3em"></i><br>
+							HTML5
+						</li>
+						<li>
+							<i class="devicon-javascript-plain" style="font-size: 3em"></i><br>
+							JavaScript
+						</li>
+						<li>
+							<i class="devicon-jquery-plain" style="font-size: 3em"></i><br>
+							jQuery
+						</li>
+						<li>
+							<i class="devicon-mongodb-plain" style="font-size: 3em"></i><br>
+							MongoDB
+						</li>
+						<li>
+							<i class="devicon-nodejs-plain" style="font-size: 3em"></i><br>
+							nodeJS
+						</li>
+						<li>
+							<i class="devicon-rails-plain" style="font-size: 3em"></i><br>
+							Rails
+						</li>
+						<li>
+							<i class="devicon-postgresql-plain" style="font-size: 3em"></i><br>
+							Postgresql
+						</li>
+						<li>
+							<i class="devicon-ruby-plain" style="font-size: 3em"></i><br>
+							Ruby
+						</li>
+						<li>
+							<i class="devicon-sass-original" style="font-size: 3em"></i><br>
+							SASS
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Two -->
+		<section class="wrapper style1 container special">
+			<div class="row">
+				<div class="4u 12u(narrower)">
+
+					<section>
+						<span class="icon featured fa-check"></span>
+						<header>
+							<h3>This is Something</h3>
+						</header>
+						<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+					</section>
+
+				</div>
+				<div class="4u 12u(narrower)">
+
+					<section>
+						<span class="icon featured fa-check"></span>
+						<header>
+							<h3>Also Something</h3>
+						</header>
+						<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+					</section>
+
+				</div>
+				<div class="4u 12u(narrower)">
+
+					<section>
+						<span class="icon featured fa-check"></span>
+						<header>
+							<h3>Probably Something</h3>
+						</header>
+						<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+					</section>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Three -->
+		<section class="wrapper style3 container special">
+
+			<header class="major">
+				<h2>Some examples of my work</h2>
+			</header>
+
+			<div class="row">
+				<div class="6u 12u(narrower)">
+
+					<section>
+						<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+						<header>
+							<h3>Politicat</h3>
+						</header>
+						<p>A game where politicians fly across the screen. Inspired by Duck Hunt and Pokémon Go. The logic in jQuery moves the politician from point A to B on a randomizer function on the X/Y axis, and a loop detects for collisions between the fired object and the target.
+						</p>
+					</section>
+
+				</div>
+				<div class="6u 12u(narrower)">
+
+					<section>
+						<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+						<header>
+							<h3>BarPleeze</h3>
+						</header>
+						<p>A site where users can view bars located nearby using the Google Maps and Google Places APIs. The bars are displayed on the map with markers, and on clicking an info-window appears with photos, contact details, rating, and reviews.
+						</p>
+					</section>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="6u 12u(narrower)">
+
+					<section>
+						<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+						<header>
+							<h3>NoveList</h3>
+						</header>
+						<p>A site where which uses photos from the Unsplash API to display photos. Users take inspiration from the photos to start collaborative novels. Each novel has a total entry limit of 5, and each entry has a limit of 200 words. Once a novelist has created a story and written the first paragraph, another user must enter hte next paragraph.</p>
+					</section>
+
+				</div>
+				<div class="6u 12u(narrower)">
+
+					<section>
+						<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+						<header>
+							<h3>BodhiNomad</h3>
+						</header>
+						<p>An investment management application which retrieves live market data from Google Finance, historic chart price data from Quandl, and exchange & epic codes from Markit. Users can place virtual trades with comments, view their historic trades, and portfolio summary.</p>
+					</section>
+
+				</div>
+			</div>
+
+			<footer class="major">
+				<ul class="buttons">
+					<li><a href="#" class="button">See More</a></li>
+				</ul>
+			</footer>
+
+		</section>
+
+	</article>
+
+	<!-- CTA -->
+	<section id="cta">
+
+		<header>
+			<h2>Ready to do <strong>something</strong>?</h2>
+			<p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
+		</header>
+		<footer>
+			<ul class="buttons">
+				<li><a href="#" class="button special">Take My Money</a></li>
+				<li><a href="#" class="button">LOL Wut</a></li>
+			</ul>
+		</footer>
+
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+
+		<ul class="icons">
+			<li><a href="https://twitter.com/aYoungerSage" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="https://www.facebook.com/sam.younger1" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
+			<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+			<li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+		</ul>
+
+		<ul class="copyright">
+			<li>&copy; Sam Younger</li>
+		</ul>
+
+	</footer>
 
 </div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollgress.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
