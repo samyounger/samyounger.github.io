@@ -1,0 +1,11 @@
+# Site settings
+title: Sam Younger
+email: sam.younger@gmail.com
+description: > # This is the home page for web developer Sam Younger. It displays previous project works, links to his social media pages, and a contact form.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://locahost:4000" # the base hostname & protocol for your site
+twitter_username: ayoungersage
+github_username:  samyounger
+
+# Build settings
+markdown: kramdown
