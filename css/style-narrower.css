@@ -11,7 +11,7 @@
 	}
 
 	header.special {
-		margin-bottom: 4em;
+		/*margin-bottom: 4em;*/
 		padding-top: 5em;
 	}
 
@@ -91,7 +91,7 @@
 /* Main */
 
 	#main {
-		padding: 5em 0;
+		padding: 5em 0 1em;
 	}
 
 		#main .sidebar {
@@ -117,5 +117,5 @@
 /* Footer */
 
 	#footer {
-		padding: 4em 1.5em;
+		padding: 1em 1.5em 1em;
 	}
