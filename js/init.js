@@ -14,7 +14,7 @@
 			normal:		{ range: '-1280', href: '/css/style-normal.css', containers: 960, viewport: { scalable: false } },
 			narrow:		{ range: '-980', href: '/css/style-narrow.css', containers: '95%', grid: { gutters: 30 } },
 			narrower:	{ range: '-840', href: '/css/style-narrower.css', grid: { collapse: 1 } },
-			mobile:		{ range: '-736', href: '/css/style-mobile.css', containers: '100%', grid: { gutters: 15, collapse: 2 } }
+			mobile:		{ range: '-710', href: '/css/style-mobile.css', containers: '100%', grid: { gutters: 15, collapse: 2 } }
 		},
 		plugins: {
 			layers: {
