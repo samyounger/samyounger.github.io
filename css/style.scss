@@ -1,19 +1,14 @@
 ---
 ---
 
-@import url("font-awesome.min.css");
+@import "colors";
+@import "font-awesome.min";
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
-
-/*
-	Twenty by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 /* Basic */
 
 	body, #skel-layers-wrapper {
-		background: #f3f6fa;
+		background: #FFFDFD;
 	}
 
 	body.is-loading * {
@@ -30,7 +25,7 @@
 	}
 
 	body, input, select, textarea {
-		color: #7c8081;
+		color: $secondary-color;
 		font-family: 'Lato', sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
@@ -44,7 +39,7 @@
 		-o-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-		color: #3fb1a3;
+		color: lighten($primary-color, 15%);
 		text-decoration: none;
 		border-bottom: dotted 1px;
 	}
@@ -70,9 +65,12 @@
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			color: inherit;
+			color: white;
 			text-decoration: none;
 			border: 0;
+		}
+		.contact #header h1 a {
+			color: $secondary-color;
 		}
 
 	h2 {
@@ -98,13 +96,13 @@
 	}
 
 	hr {
-		border-top: solid 1px rgba(124, 128, 129, 0.2);
+		border-top: solid 1px rgba($primary-color, 0.2);
 		border: 0;
 		margin-bottom: 1.5em;
 	}
 
 	blockquote {
-		border-left: solid 0.5em rgba(124, 128, 129, 0.2);
+		border-left: solid 0.5em rgba($primary-color, 0.2);
 		font-style: italic;
 		padding: 1em 0 1em 2em;
 	}
@@ -120,7 +118,7 @@
 	}
 
 	header.special {
-		margin-bottom: 5em;
+		/*margin-bottom: 5em;*/
 		padding-top: 7em;
 		position: relative;
 		text-align: center;
@@ -194,7 +192,7 @@
 		-ms-appearance: none;
 		appearance: none;
 		background: none;
-		border: solid 1px rgba(124, 128, 129, 0.2);
+		border: solid 1px rgba($primary-color, 0.2);
 		color: inherit;
 		display: block;
 		padding: 0.75em;
@@ -207,7 +205,7 @@
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		textarea:focus {
-			border-color: #83d3c9;
+			border-color: $primary-color;
 		}
 
 	input[type="text"],
@@ -239,7 +237,7 @@
 	}
 
 	.formerize-placeholder {
-		color: rgba(124, 128, 129, 0.5) !important;
+		color: rgba($primary-color, 0.5) !important;
 	}
 
 /* Image */
@@ -334,12 +332,12 @@
 					background: #829bc9;
 				}
 
-			.icon.circle.fa-google-plus {
+			.icon.circle.fa-linkedin {
 				background: #db6b67;
 				color: white;
 			}
 
-				.icon.circle.fa-google-plus:hover {
+				.icon.circle.fa-linkedin:hover {
 					background: #df7b77;
 				}
 
@@ -472,7 +470,7 @@
 		}
 
 			table.default tbody tr {
-				border-bottom: solid 1px rgba(124, 128, 129, 0.2);
+				border-bottom: solid 1px rgba($primary-color, 0.2);
 			}
 
 			table.default td {
@@ -486,7 +484,7 @@
 			}
 
 			table.default thead {
-				background: #7c8081;
+				background: $secondary-color;
 				color: #fff;
 			}
 
@@ -526,7 +524,7 @@
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		.button:hover {
-			background: rgba(188, 202, 206, 0.15);
+			background: rgba($primary-color, 0.15);
 			border-color: inherit;
 		}
 
@@ -534,8 +532,8 @@
 		input[type="submit"].special,
 		input[type="reset"].special,
 		.button.special {
-			background: #83d3c9;
-			border-color: #83d3c9;
+			background: $primary-color;
+			border-color: $primary-color;
 			color: white !important;
 		}
 
@@ -543,8 +541,8 @@
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
 			.button.special:hover {
-				background: #96dad1 !important;
-				border-color: #96dad1 !important;
+				background: lighten($primary-color, 15%) !important;
+				border-color: lighten($primary-color, 15%) !important;
 			}
 
 		input[type="button"].fit,
@@ -575,7 +573,7 @@
 		}
 
 		.wrapper.style2 {
-			background-color: #83d3c9;
+			background-color: $primary-color;
 			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
 			background-position: bottom left, bottom right;
 			background-repeat: no-repeat, no-repeat;
@@ -584,13 +582,13 @@
 		}
 
 			.wrapper.style2 .button:hover {
-				background: rgba(255, 255, 255, 0.15) !important;
+				background: rgba($secondary-color, 0.15) !important;
 			}
 
 			.wrapper.style2 .button.special {
 				background: white;
 				border-color: white;
-				color: #83d3c9 !important;
+				color: $primary-color !important;
 			}
 
 				.wrapper.style2 .button.special:hover {
@@ -617,9 +615,10 @@
 	@keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
 
 	#header {
-		background: white;
-		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
-		color: inherit;
+		/*background: $primary-color;*/
+		background: rgba($primary-color, 0.5);
+		box-shadow: 0 1px 2px 0 rgba($secondary-color, 0.075);
+		color: #FFFDFD;
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
@@ -658,11 +657,15 @@
 
 				#header nav ul li a {
 					border: solid 1px transparent;
-					color: inherit;
+					color: white;
 					display: inline-block;
 					line-height: 1em;
 					padding: 0.6em 0.75em;
 					text-decoration: none;
+				}
+
+				.contact #header nav ul li a {
+					color: $secondary-color;
 				}
 
 				#header nav ul li input[type="button"],
@@ -694,7 +697,7 @@
 					-o-transition: all 0.2s ease-in-out;
 					-ms-transition: all 0.2s ease-in-out;
 					transition: all 0.2s ease-in-out;
-					background: rgba(188, 202, 206, 0.15);
+					background: rgba($primary-color, 0.15);
 				}
 
 				#header nav .cc-active {
@@ -748,7 +751,7 @@
 
 	.dropotron {
 		background: #fff;
-		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
+		box-shadow: 0 1px 2px 0 rgba($secondary-color, 0.075);
 		line-height: 2.25em;
 		min-width: 13em;
 		padding: 1em 0;
@@ -773,7 +776,7 @@
 			}
 
 		.dropotron > li {
-			border-top: solid 1px rgba(124, 128, 129, 0.2);
+			border-top: solid 1px rgba($primary-color, 0.2);
 		}
 
 			.dropotron > li > a {
@@ -789,7 +792,7 @@
 			}
 
 			.dropotron > li:hover > a {
-				background: #83d3c9;
+				background: $primary-color;
 				color: white;
 			}
 
@@ -806,7 +809,7 @@
 
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #645862;
+		background-color: lighten($primary-color, 15%);
 		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../images/banner.jpg");
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
@@ -828,7 +831,7 @@
 			-o-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
-			background: rgba(52, 27, 43, 0.5);
+			/*background: rgba($primary-color, 0.5);*/
 			color: white;
 			display: inline-block;
 			opacity: 0;
@@ -879,7 +882,7 @@
 		background-position: top left, top right, bottom left, bottom right;
 		background-repeat: no-repeat;
 		background-size: 25em;
-		padding: 7em 0;
+		padding: 4em 0 1em;
 	}
 
 		#main > :last-child {
@@ -887,7 +890,7 @@
 		}
 
 		#main .sidebar section {
-			border-top: solid 1px rgba(124, 128, 129, 0.2);
+			border-top: solid 1px rgba($primary-color, 0.2);
 			margin: 3em 0 0 0;
 			padding: 3em 0 0 0;
 		}
@@ -906,7 +909,7 @@
 
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #645862;
+		background-color: lighten($primary-color, 15%);
 		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../images/banner.jpg");
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
@@ -923,9 +926,9 @@
 /* Footer */
 
 	#footer {
-		background: #e8eef4;
-		color: #7c8081;
-		padding: 5em 5em 10em 5em;
+		background: #FFFDFD;
+		color: $secondary-color;
+		padding: 1em 5em 1em 5em;
 		text-align: center;
 	}
 
@@ -986,7 +989,7 @@
 		}
 
 		#topButton .toggle:after {
-			background: rgba(163, 169, 170, 0.75);
+			background: rgba($secondary-color, 0.75);
 			border-radius: 0 0 4px 4px;
 			content: '';
 			height: 30px;
@@ -1030,7 +1033,7 @@
 		}
 
 		#sideButton .toggle:after {
-			background: rgba(163, 169, 170, 0.75);
+			background: rgba($secondary-color, 0.75);
 			border-radius: 2px;
 			content: '';
 			height: 40px;
@@ -1057,7 +1060,7 @@
 		#topPanel .link,
 		#sidePanel .link {
 			border: 0;
-			border-top: solid 1px rgba(255, 255, 255, 0.05);
+			border-top: solid 1px rgba($primary-color, 0.05);
 			color: inherit;
 			display: block;
 			height: 3em;
