@@ -1,11 +1,30 @@
 # Site settings
 title: Sam Younger
 email: sam.younger@gmail.com
-description: > # This is the home page for web developer Sam Younger. It displays previous project works, links to his social media pages, and a contact form.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://locahost:4000" # the base hostname & protocol for your site
-twitter_username: ayoungersage
-github_username:  samyounger
+url: http://samyounger.com
+description: "Sam Younger's personal web page displaying his most recent work and contact details."
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#219ab3'
+
+# Footer settings
+footer: Sam Younger
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/ayoungersage
+  - title: facebook
+    url:
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket
+    url: http://bitbucket.org/jekyll
+  - title: github
+    url: https://github.com/samyounger
 
 # Build settings
 markdown: kramdown
+permalink: pretty
