@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 30px 0 35px;
+  margin: 50px 0 35px;
   text-transform: uppercase;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -344,37 +344,71 @@ img::-moz-selection {
   background: white;
   width: 100%;
   color: black;
-}
+  .projectContainer {
+    display: block;
+    width: 840px;
+    height: auto;
+    // background: yellow;
+    margin: 0 auto;
+    .project {
+      height: 300px;
+      width: 400px;
+      // margin: 10px;
+      background: black;
+      float: left;
+      overflow: hidden;
+      position: relative;
+      // &:nth-child(3), &:nth-child(7) {
+      //   float: right;
+      // }
+    }
+  &:nth-child(3) .project, &:nth-child(5) .project {
+    float: right;
+  }
 
-.project {
-  height: 300px;
-  width: 400px;
-  margin: 10px;
-  background: black;
-  float: left;
-  overflow: hidden;
-  position: relative;
-}
+    .projectDescription {
+      // float: left;
+      display: inline-block;
+      width: 400px;
+      height: 300px;
+      margin: 10px;
+      overflow: hidden;
+      h3 {
+        margin: 10px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
 
-.projectDescription {
-  float: left;
-  width: 400px;
-  height: 300px;
-  margin: 10px;
-  overflow: hidden;
-  p {
-    font-size: 15px;
+    .projectPhoto {
+      height: 300px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      margin-left: -100px;
+      transition: all .2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
-.projectPhoto {
-  height: 300px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-  margin-left: -100px;
-  transition: all .2s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
+@media (max-width: 870px) {
+  #projects {
+    .projectContainer {
+      width: auto;
+      height: auto;
+      .project, .projectDescription {
+        width: 100%;
+        height: auto;
+      }
+      .projectPhoto, .projectDescription {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
   }
 }
