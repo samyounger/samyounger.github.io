@@ -128,7 +128,7 @@ a {
 
   .top-nav-collapse {
     padding: 0;
-    background-color: {{ site.color.primary-dark }};
+    background-color: rgba({{ site.color.primary-dark }}, 0.5);
   }
 
   .navbar-custom.top-nav-collapse {
@@ -264,7 +264,7 @@ a {
     // padding-top: 200px;
   }
   section#contact.content-section {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 130px);
   }
   section#about.content-section {
     height: calc(100vh);
