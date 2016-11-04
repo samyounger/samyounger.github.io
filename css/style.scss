@@ -30,6 +30,17 @@ h6 {
   letter-spacing: 1px;
 }
 
+.intro {
+  .logo {
+    width: 200px;
+    margin: 80px 0 0;
+  }
+  h1 {
+    margin: 0;
+  }
+}
+
+
 p {
   margin: 0 0 25px;
   font-size: 18px;
@@ -294,8 +305,6 @@ ul.banner-social-buttons {
   }
 }
 
-
-
 @media(max-width:1199px) {
   ul.banner-social-buttons {
     margin-top: 15px;
@@ -348,26 +357,20 @@ img::-moz-selection {
     display: block;
     width: 840px;
     height: auto;
-    // background: yellow;
     margin: 0 auto;
     .project {
       height: 300px;
       width: 400px;
-      // margin: 10px;
       background: black;
       float: left;
       overflow: hidden;
       position: relative;
-      // &:nth-child(3), &:nth-child(7) {
-      //   float: right;
-      // }
     }
   &:nth-child(3) .project, &:nth-child(5) .project {
     float: right;
   }
 
     .projectDescription {
-      // float: left;
       display: inline-block;
       width: 400px;
       height: 300px;
