@@ -368,9 +368,9 @@ img::-moz-selection {
       overflow: hidden;
       position: relative;
     }
-  &:nth-child(3) .project, &:nth-child(5) .project {
-    float: right;
-  }
+    &:nth-child(3) .project, &:nth-child(5) .project {
+      float: right;
+    }
 
     .projectDescription {
       display: inline-block;
@@ -414,6 +414,26 @@ img::-moz-selection {
         height: auto;
         margin: 0 auto;
       }
+    }
+  }
+}
+
+@media (max-width: 736px) {
+  .download-section, .intro {
+    background-image: none;
+    background: white;
+    h1, p {
+      color: black;
+    }
+  }
+
+  .btn-circle {
+    border: 2px solid black;
+    color: black;
+    &:hover,
+    &:focus {
+      color: black;
+      background: rgba(255,255,255,.1);
     }
   }
 }
