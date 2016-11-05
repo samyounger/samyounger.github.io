@@ -384,6 +384,11 @@ img::-moz-selection {
       p {
         font-size: 15px;
       }
+      .fa-cloud, .fa-code {
+        font-size: 5em;
+        color: black;
+        margin: 0 50px;
+      }
     }
 
     .projectPhoto {
@@ -435,5 +440,13 @@ img::-moz-selection {
       color: black;
       background: rgba(255,255,255,.1);
     }
+  }
+  .intro {
+    .logo {
+      margin: 0;
+    }
+  }
+  #projects .projectContainer .projectPhoto {
+    display: none;
   }
 }
