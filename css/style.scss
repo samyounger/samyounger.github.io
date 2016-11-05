@@ -351,6 +351,12 @@ img::-moz-selection {
   background: 0 0;
 }
 
+#about {
+  h3 {
+    margin: 0;
+  }
+}
+
 #projects {
   background: white;
   width: 100%;
@@ -442,11 +448,17 @@ img::-moz-selection {
     }
   }
   .intro {
+    padding: 50px 0 0;
     .logo {
       margin: 0;
     }
   }
-  #projects .projectContainer .projectPhoto {
+  #projects .projectContainer .projectPhoto,
+  #download {
     display: none;
+  }
+  .container {
+    padding: 0;
+    margin: 0;
   }
 }
