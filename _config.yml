@@ -7,7 +7,7 @@ description: "Sam Younger's personal web page displaying his most recent work an
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary-dark: '#000000'
-  links: '#62985D'
+  links: '#FFD85F'
 
 # Footer settings
 footer: Sam Younger
