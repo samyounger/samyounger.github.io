@@ -38,6 +38,8 @@ h6 {
   }
   h1 {
     margin: 0;
+    text-align: center;
+    // padding: 0;
     letter-spacing: 15px;
   }
 }
@@ -462,5 +464,12 @@ img::-moz-selection {
   .container {
     padding: 0;
     margin: 0;
+  }
+
+  .intro {
+    h1 {
+      margin: 0;
+      letter-spacing: 10px;
+    }
   }
 }
