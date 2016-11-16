@@ -159,6 +159,31 @@ a {
   }
 }
 
+.storyIntro {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  // background: url(/img/intro-bg.jpg) no-repeat center center fixed;
+  // background-color: {{ site.color.primary-dark }};
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+    .brand-heading {
+      font-size: 40px;
+    }
+    .intro-text {
+      font-size: 18px;
+    }
+  }
+}
+
 @media(min-width:767px) {
   .intro {
     padding: 0;
@@ -314,6 +339,18 @@ ul.banner-social-buttons {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+
+.samPhoto {
+  height: 250px;
+  width: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 120px / 150px;
+  img {
+    width: 200px;
   }
 }
 
