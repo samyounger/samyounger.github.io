@@ -1,4 +1,5 @@
 ---
+layout: post
 title: First Blog
 date: 2016-12-20T22:55:46.000Z
 ---
