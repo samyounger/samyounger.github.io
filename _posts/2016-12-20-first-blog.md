@@ -1,5 +1,5 @@
 ---
-title: My First Blog Post
+title: First Blog
 ---
 
 
