@@ -1,0 +1,10 @@
+<section id="blog" class="container content-section text-left">
+  <h2>Here is a list of blogs I have written</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
