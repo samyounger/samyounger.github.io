@@ -1,8 +1,8 @@
 ---
 layout: post
 title: GitHub Setup
-date: 2016-12-20 22:55:46
-published: false
+date: 2016-12-20 22:55:00
+published: true
 ---
 
 
