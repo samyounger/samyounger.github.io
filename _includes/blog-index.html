@@ -1,9 +1,13 @@
-<section id="blog" class="container content-section text-left">
-  <h2>Here is a list of blogs I have written</h2>
+<section id="blogIndex" class="container content-section text-left">
+  <h2>My blog</h2>
+  <p>These articles contain a series of my thoughts, learning of findings mostly on my path to becoming a better programmer. However from time to time I may include other thoughts about investment, or hobbies.</p>
+
+  <h3>Articles</h3>
+
   <ul>
-    {% for post in site.posts %}
+    {% for post in site.posts reversed %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.url }}">{{ post.date | date: "%d/%m/%Y" }} | {{ post.title }}</a>
       </li>
     {% endfor %}
   </ul>

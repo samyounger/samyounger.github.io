@@ -1,4 +1,7 @@
-<section id="blog" class="container content-section text-left">
-  <h2>{{ page.title }}</h2>
+<section id="blogPost" class="container content-section text-left">
+  <div class="postTitle">
+    <h2>{{ page.title }}</h2>
+    <h3>{{ page.date | date_to_long_string }}</h3>
+  </div>
   {{ content }}
 </section>
