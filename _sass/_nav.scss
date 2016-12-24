@@ -1,0 +1,30 @@
+.navbar {
+  padding: 10px 0;
+  letter-spacing: 1px;
+  -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  transition: background .5s ease-in-out,padding .5s ease-in-out;
+  .container {
+    .navbar-header {
+      a i {
+        padding: 10px;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+    .collapse {
+      ul li a {
+        &:hover {
+          color: white;
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+.top-nav-collapse {
+  padding: 0;
+  background-color: rgba($primary-color, 0.5);
+}
