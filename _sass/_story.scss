@@ -64,3 +64,15 @@
     }
   }
 }
+
+@media(min-width:767px) {
+  section#story.content-section {
+    max-width: 850px;
+  }
+}
+
+@media (max-width: 767px) {
+  #codeLanguages {
+    display: none;
+  }
+}

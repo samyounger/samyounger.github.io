@@ -17,7 +17,7 @@
 #blogPost {
   margin-top: 80px;
   min-height: calc(100vh - 80px);
-  background: white;
+  background: lighten($primary-color, 100%);
   color: black;
   h2, h3 {
     margin: 10px 0;
@@ -33,5 +33,16 @@
     font-size: 15px;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media (max-width: 736px) {
+  #blogIndex {
+    background-image: none;
+    background: lighten($primary-color, 100%);
+    color: black;
+  }
+  #blogIndex ul li a {
+    color: black;
   }
 }

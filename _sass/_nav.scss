@@ -4,21 +4,19 @@
   -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
   -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
   transition: background .5s ease-in-out,padding .5s ease-in-out;
-  .container {
-    .navbar-header {
-      a i {
-        padding: 10px;
-      }
-      &:hover {
-        color: white;
-      }
+  .navbar-header {
+    a i {
+      padding: 10px;
     }
-    .collapse {
-      ul li a {
-        &:hover {
-          color: white;
-          background: none;
-        }
+    &:hover {
+      color: lighten($primary-color, 100%);
+    }
+  }
+  .collapse {
+    ul li a {
+      &:hover {
+        color: lighten($primary-color, 100%);
+        background: none;
       }
     }
   }
@@ -27,4 +25,30 @@
 .top-nav-collapse {
   padding: 0;
   background-color: rgba($primary-color, 0.5);
+}
+
+@media (max-width: 870px) {
+  .navbar-nav {
+    padding-left: 20px;
+    li:hover {
+      background: lightgrey;
+    }
+  }
+}
+
+@media (max-width: 736px) {
+  .navbar-toggle {
+    color: $secondary-color;
+  }
+  .nav li a, .navbar-header a i {
+    color: black;
+  }
+  .navbar {
+    background-image: none;
+    background: lighten($primary-color, 100%);
+    color: black;
+  }
+  .navbar-brand .light, .fa-bars {
+    color: black;
+  }
 }

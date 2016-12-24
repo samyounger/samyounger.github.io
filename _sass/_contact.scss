@@ -17,11 +17,23 @@
   }
 }
 
-@media(min-width:767px) {
+@media(min-width: 767px) {
   section#contact.content-section {
     height: calc(100vh - 147px);
   }
+}
+
+@media(max-width:767px) {
   .getInTouch-section {
     padding: 100px 0;
+    background-image: none;
+    background: lighten($primary-color, 100%);
+    color: black;
+  }
+  #contact {
+    height: calc(100vh - 160px);
+  }
+  #getInTouch {
+    display: none;
   }
 }

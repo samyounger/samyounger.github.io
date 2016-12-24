@@ -1,4 +1,5 @@
 .intro {
+  padding: 0;
   .logo {
     width: 200px;
     margin: 0 0 0;
@@ -24,26 +25,16 @@
     display: table-cell;
     vertical-align: middle;
     .brand-heading {
-      font-size: 40px;
+      font-size: 100px;
     }
     .intro-text {
-      font-size: 18px;
+      font-size: 25px;
     }
   }
 }
 
-@media(min-width:767px) {
-  .intro {
-    padding: 0;
-    .intro-body {
-      .brand-heading {
-        font-size: 100px;
-      }
-      .intro-text {
-        font-size: 25px;
-      }
-    }
-  }
+section#about.content-section {
+  max-width: 850px;
 }
 
 .btn-circle {
@@ -124,7 +115,7 @@
 }
 
 #projects {
-  background: white;
+  background: lighten($primary-color, 100%);
   width: 100%;
   color: black;
   .projectContainer {
@@ -188,5 +179,47 @@
         transform: scale(1.1);
       }
     }
+  }
+}
+
+@media (max-width: 870px) {
+  #projects .projectContainer {
+    width: auto;
+    height: auto;
+    .project, .projectDescription {
+      width: 100%;
+      height: auto;
+    }
+    .projectPhoto, .projectDescription {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .intro {
+    background-image: none;
+    background: lighten($primary-color, 100%);
+    color: black;
+    padding: 50px 0 0;
+    height: 100vh;
+    h1 {
+      margin: 0;
+      letter-spacing: 10px;
+    }
+    .logo {
+      margin: 0;
+    }
+  }
+  .projectDescription {
+    display: block;
+  }
+  #projects .projectContainer .projectPhoto {
+    display: none;
+  }
+  .btn-circle {
+    display: none;
   }
 }
