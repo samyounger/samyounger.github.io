@@ -20,10 +20,11 @@
 @import "story";
 @import "blog";
 
-body {
+html, body {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: $primary-font-stack;
   color: lighten($primary-color, 100%);
   background-color: $primary-color;
