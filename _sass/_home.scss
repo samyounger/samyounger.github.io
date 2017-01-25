@@ -22,9 +22,11 @@
   background-size: cover;
   -o-background-size: cover;
   .intro-body {
-    display: table-cell;
-    vertical-align: middle;
+    padding-top: 20px;
     .brand-heading {
+      width: 100vw;
+      text-align: center;
+      margin: 0 auto;
       font-size: 100px;
     }
     .intro-text {
@@ -205,12 +207,15 @@ section#about.content-section {
     color: black;
     padding: 50px 0 0;
     height: 100vh;
-    h1 {
-      margin: 0;
-      letter-spacing: 10px;
-    }
-    .logo {
-      margin: 0;
+    .intro-body {
+      h1 {
+        margin: 40px 0 !important;
+        letter-spacing: 10px;
+        font-size: 50px !important;
+      }
+      .logo {
+        margin: 0;
+      }
     }
   }
   .projectDescription {
