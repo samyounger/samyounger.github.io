@@ -20,6 +20,9 @@
 @media(min-width: 767px) {
   section#contact.content-section {
     height: calc(100vh - 98px);
+    h2 {
+      padding-top: 20px;
+    }
   }
 }
 
