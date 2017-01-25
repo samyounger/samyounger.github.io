@@ -24,7 +24,7 @@
 
 @media(min-width: 767px) {
   section#contact.content-section {
-    height: calc(100vh - 98px);
+    height: calc(100vh - 48px);
     h2 {
       padding-top: 20px;
     }
@@ -39,7 +39,7 @@
     color: black;
   }
   #contact {
-    height: calc(100vh - 155px);
+    height: calc(100vh - 100px);
   }
   .banner-social-buttons {
     margin: 5px;

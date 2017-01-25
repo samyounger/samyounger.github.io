@@ -35,11 +35,16 @@
   }
 }
 
-section#about.content-section {
+.content-section {
   max-width: 850px;
   margin: 0 auto;
   padding: 5px;
   text-align: center;
+}
+
+#projects.content-section, #getInTouch {
+  max-width: 100%;
+  padding: 0;
 }
 
 .btn-circle {
@@ -112,12 +117,6 @@ section#about.content-section {
     transform: scale(1);
   }
 }
-
-// #about {
-//   h3 {
-//     margin: 0;
-//   }
-// }
 
 #projects {
   background: lighten($primary-color, 100%);
@@ -206,6 +205,9 @@ section#about.content-section {
 }
 
 @media(max-width: 767px) {
+  h1, h2, h3, h4, h5, h6 {
+    padding: 0px !important;
+  }
   .intro {
     background-image: none;
     background: lighten($primary-color, 100%);
@@ -214,7 +216,6 @@ section#about.content-section {
     height: 100vh;
     .intro-body {
       h1 {
-        margin: 40px 0 !important;
         letter-spacing: 10px;
         font-size: 50px !important;
       }
