@@ -19,7 +19,7 @@
 
 @media(min-width: 767px) {
   section#contact.content-section {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 98px);
   }
 }
 
@@ -31,7 +31,10 @@
     color: black;
   }
   #contact {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 155px);
+  }
+  .banner-social-buttons {
+    margin: 5px;
   }
   #getInTouch {
     display: none;
