@@ -38,7 +38,8 @@
 section#about.content-section {
   max-width: 850px;
   margin: 0 auto;
-  padding: 5px;
+  padding: 5px 15px 5px 5px;
+  text-align: center;
 }
 
 .btn-circle {
@@ -123,6 +124,7 @@ section#about.content-section {
   width: 100%;
   color: black;
   padding: 5px;
+  text-align: center;
   .projectContainer {
     display: block;
     width: 840px;
