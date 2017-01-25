@@ -38,7 +38,7 @@
 section#about.content-section {
   max-width: 850px;
   margin: 0 auto;
-  padding: 5px 15px 5px 5px;
+  padding: 5px -15px 5px 5px; //the -15px is to counter bootstrap +15px padding
   text-align: center;
 }
 
