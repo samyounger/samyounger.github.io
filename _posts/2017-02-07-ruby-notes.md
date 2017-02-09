@@ -111,3 +111,6 @@ class Person < ApplicationRecord
             confirmation: true
 end
 ```
+
+###Controllers
+Controllers are the brains of the website. The controller accesses the model to input/output data. In addition it retrieves the data that is to be shown in the HTML.
