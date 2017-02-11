@@ -4,17 +4,25 @@ title: RSpec notes
 date: 2017-02-07
 published: true
 ---
-#RSpec notes
 
-RSpec is a testing GEM for Ruby, supposedly easier to read for non-developers.
+    DESCRIPTION: RSpec is a testing GEM for Ruby, supposedly easier to read for non-developers.
+
+Its documentation is located here:
+
+<http://rspec.info/>
 
 To install:
-`gem install rspec`
-This gives you access to `$rspec` from the terminal.
+`$ gem install rspec`
+
+This gives you access to `$ rspec` from the terminal.
+
 To initialize in the project:
-`rspec --init`
+`$ rspec --init`
+
 To install rspec into the current rails project:
-`rails g rspec:install`
+`$ rails g rspec:install`
+
 To add color and formatting to the rspec testing code:
-`rspec --color --format documentation` and then the file path.
-or in the `.rspec` file put the formatting for color and format.
+`$ rspec --color --format documentation` and then the file path.
+
+- or in the `.rspec` file put the formatting for color and format.
