@@ -42,6 +42,31 @@
   text-align: center;
 }
 
+#about {
+  h1, h2, h3, h4 {
+    padding: 0 0 10px 0;
+    margin: 10px 0;
+    border-bottom: 3px solid $secondary-color;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  h1 {
+    font-size: 35px;
+    padding: 10px 0;
+  }
+  h2 {
+    display: inline-block;
+    font-size: 30px;
+
+  }
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}
+
 #projects.content-section, #getInTouch {
   max-width: 100%;
   padding: 0;
