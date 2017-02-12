@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RSpec notes
-date: 2017-02-07
+date: 2017-02-07 10:00
 published: true
 ---
 
