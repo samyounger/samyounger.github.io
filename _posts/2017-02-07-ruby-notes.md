@@ -19,11 +19,15 @@ Ruby is probably best known for the Ruby on Rails framework. The documentation f
 
 ## Classes
 
+[Ruby Class documentation](https://ruby-doc.org/core-2.2.0/Class.html)
+
 **Naming**: all class names should begin with a capital letter.
 
 **Creating an object**: you call your object outside of the object with `Object_Name.new`. This creates a new instance of the object.
 
 ## attr_accesssor
+
+[Ruby attr_accessor documentation](http://ruby-doc.org/core-2.0.0/Module.html#method-i-attr_accessor)
 
 When you want to read/write to the database, in the Class you would need to write two read/write methods:
 
@@ -63,9 +67,13 @@ end
 
 ## Models
 
+[Rails Model documentation](http://guides.rubyonrails.org/active_model_basics.html)
+
 Models are where we determine database table relationships and filters/validations to any data being saved to the database.
 
 ## Database Relationships
+
+[Rails Active Record documentation](http://guides.rubyonrails.org/association_basics.html)
 
 SQL databases are relational and we must determine the relationship between the data sets.
 
@@ -103,6 +111,8 @@ You will see above I used a `belongs_to` relationship. This is called a **join**
 
 ## Validation
 
+[Rails Active Record Validations documentation](http://guides.rubyonrails.org/active_record_validations.html)
+
 In the models directory, you can add in validations for data that is going to be added to your directory to ensure your database is clean data added that you approve of.
 
 ```ruby
@@ -119,6 +129,8 @@ end
 ```
 
 ## Controllers
+
+[Rails Action Controller documentation](http://guides.rubyonrails.org/action_controller_overview.html)
 
 Controllers are the brains of the website. The controller accesses the model to input/output data. In addition it retrieves the data that is to be shown in the HTML.
 
@@ -141,3 +153,32 @@ def version_params
   params.require(:photos).permit(:photo_id, :photo_date, :photo_commentary)
 end
 ```
+
+## Routes
+
+[Rails Routes documentation](http://guides.rubyonrails.org/routing.html)
+
+This is the section of the Rails app which controls how the URL is routed to the correct controller action. For our photo rails App a standard route page would look something like this:
+
+```ruby
+MyRailsPhotoApp::Applcation.routes.draw do
+
+  # The root url to the webpage will direct to the photos controller Index action
+  root 'photos#index'
+
+  # Gives the application access to the photos controller
+  resources :photos
+
+  # Direct the url /photos to the photos controller index action
+  get '/photos' => 'photos#index'
+
+  # Redirect a custom url '/newphoto' to the photos controller new action
+  get '/newphoto' => redirect('photos#new')
+
+  # Create a filtered index. e.g. if you direct to the URL /photos/sam this would filter the index page to an index of just my photos.
+  get '/photos/:name', to: 'photos#index', as: 'myphotos'
+
+end
+```
+
+There is a lot more filtering that can be done within the controller to tailor what gets fed through to the view.
