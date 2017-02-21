@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Github Pages with AWS Route 53
-date: 2017-02-15 12:00:00
+date: 2017-02-15 23:00:00
 published: true
 ---
 
@@ -65,3 +65,5 @@ You have now connected the GitHub username repository to AWS Route 53, and your 
 Learn about Jekyll which GitHub Pages runs off.
 
 [Jekyll Guidance Notes](https://jekyllrb.com/docs/github-pages/)
+
+Finally in the project folder, create a `CNAME` file. In the file simply type the name of your domain, for example `username.com`. No HTTP:// reference.
