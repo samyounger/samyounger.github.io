@@ -5,12 +5,12 @@
 
   <form action="/search" method="get">
     <label for="search-box">Search</label>
-    <input type="text" id="search-box" name="query">
-    <input type="submit" value="search">
+    <input type="text" id="search-box" name="query" style="color: black">
+    <input type="submit" onclick="return myPrograms.search()" value="search">
   </form>
 
   <ul id="search-results"></ul>
 
-  {% include js.html %}
+  {% include javascripts.html %}
 </body>
 </html>
