@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>
+      Github Pages with AWS Route 53
+    
+  </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Github Pages with AWS Route 53">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="samyounger.com/2017/02/15/github-pages-with-aws/">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="Sam Younger">
+  <meta property="og:image" content="samyounger.com/assets/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="samyounger.com/2017/02/15/github-pages-with-aws/">
+  <meta name="twitter:title" content="Github Pages with AWS Route 53">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="samyounger.com/assets/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <link type="text/css" rel="stylesheet" href="/assets/application.css">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <a href="/blog" class="navbar-brand">
+      <span class="light">BLog list</span>
+    </a>
+    <a href="/2017/02/15/rails-router/">
+      <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+    </a>
+    <a href="/2017/02/20/ruby-object-oriented-programming/">
+      <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+    </a>
+  </div>
+</nav>
+
+  <section id="blogPost" class="content-section">
+  <div class="postTitle">
+    <h1 class="blog_title">Github Pages with AWS Route 53</h1>
+    <h2 class="blog_date">15 February 2017</h2>
+  </div>
+  <div class="highlighter-rouge"><pre class="highlight"><code>DESCRIPTION: This post will describe how to set up your own personal jekyll website with github pages and route it to an amazon AWS Route53 DNS provider for a cost-effective solution to launching your website live.
+</code></pre>
+</div>
+
+<p><a href="https://github.com/">GitHub</a>
+<a href="https://aws.amazon.com/console/">AWS</a>
+<a href="https://jekyllrb.com/docs/github-pages/">Jekyll</a></p>
+
+<p>Launching a website can potentially be a costly exercise if going through one of the Content Management Service providers, or even through SquareSpace or WordPress. One of the most cost-effective solutions I found was to host the code on GitHub (which you should be doing anyway for version control), and to host the domain with Amazon Web Services. The cost of the domain varies depending on what you go for, but mine costs c. $10 per annum. On top of that Amazon charges for traffic to the site. With me using my own site this ranges from $3 - $6 per month.</p>
+
+<h2 id="step-1-set-up-your-github-repo">Step 1: Set up your GitHub repo</h2>
+
+<p>GitHub has a special service it calls <a href="https://pages.github.com/">Pages</a>. This is when they allow you to have one free personal website. I find it fantastically easy to use where any code pushes to the repository are instantly live, and while using usual workflow of <code class="highlighter-rouge">git add</code>, <code class="highlighter-rouge">git commit</code>, <code class="highlighter-rouge">git push</code>.</p>
+
+<p>The first step to having access to your GitHub pages account is to set up a new repository like so: <code class="highlighter-rouge">username.github.io</code>. Of course change <code class="highlighter-rouge">username</code> with your github username.</p>
+
+<p>Open the repository, and click the settings tab. Scroll down the pages and ensure the GitHub Pages Source is on masterbranch. Also below this change custom domain to your domainname, for example mine is <code class="highlighter-rouge">samyounger.com</code> - note do not put in the http:// reference, or www (which is a subdomain reference).</p>
+
+<p>You are now done with github and can move onto AWS.</p>
+
+<h2 id="step-2-purchase-your-domain-name">Step 2: Purchase your domain name</h2>
+
+<p>Setting up an AWS account is fairly self explanatory, just make sure you set it up on the <code class="highlighter-rouge">basic</code> user account which is free, and not as <code class="highlighter-rouge">developer</code> which is a minimum of $25 per month. It effectively means you do not get any direct support if anything goes wrong.</p>
+
+<p>In the AWS console, select <code class="highlighter-rouge">Route 53</code>. You will see in the middle of the page <code class="highlighter-rouge">Register Domain</code>. Here type in the domain name you want, choose a suitable ending <code class="highlighter-rouge">.com</code> <code class="highlighter-rouge">.co.uk</code> <code class="highlighter-rouge">.org</code> etc. and buy it.</p>
+
+<h2 id="step-3-set-up-the-hosted-zone">Step 3: Set up the Hosted Zone</h2>
+
+<p>In the menu bar in the left select <code class="highlighter-rouge">Hosted zones</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>NOTE: If AWS did not automatically create a hosted zone upon buying the domain name, create one. So for example if you bought the domain name username.com, you create the hosted zone name username.com. Once created open it up.
+
+Once you have created the hosted zone, open it up, click the Type NS, and copy the values on the right (4x url's to awsdns addresses). Then go to the registered domains from the left menu, and in the Name Servers section on the right, click `Add or edit name servers`, delete any contents in there, and add the 4x lines you just copied one by one. This gives your domain name the address to the hosted zone.
+</code></pre>
+</div>
+
+<p>If AWS did create a hosted zone for the domain name, then click the link to open the hosted zone. Here select <code class="highlighter-rouge">Create Record Set</code>. Leave the name box empty, Type is <code class="highlighter-rouge">A</code>, and in the value box put:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>192.30.252.153
+192.30.252.154
+</code></pre>
+</div>
+
+<p>Then <code class="highlighter-rouge">Save Record Set</code>.</p>
+
+<p>Next select <code class="highlighter-rouge">Create Record Set</code> again, in the name box type in <code class="highlighter-rouge">www</code>, type <code class="highlighter-rouge">A</code>, alias should be <code class="highlighter-rouge">Yes</code>, and in the Alias Target type in the main domain name e.g. <code class="highlighter-rouge">username.com</code>. Then <code class="highlighter-rouge">Save Record Set</code>.</p>
+
+<h3 id="second-domain-name">Second domain name</h3>
+
+<p>If you bought a second domain name, for example <code class="highlighter-rouge">username.co.uk</code> as well as <code class="highlighter-rouge">username.com</code>, then you will likely want to route the second address to the first address.</p>
+
+<p>To do this in AWS, you will need to create an <code class="highlighter-rouge">S3 bucket</code>. In the AWS Services menu dropdown, select S3, then select <code class="highlighter-rouge">Create Bucket</code> and name the bucket identially to your second domain name, in my case <code class="highlighter-rouge">username.co.uk</code>. Once this is done, select <code class="highlighter-rouge">Properties &gt; Static website hosting</code>, and click <code class="highlighter-rouge">Redirect all requests</code>, and in the box for target bucket or domain put your root address <code class="highlighter-rouge">username.com</code>. If you want to create a root for a <code class="highlighter-rouge">www</code> subdomain, then set up a second bucket for <code class="highlighter-rouge">www.username.com</code> and put the same redirect in.</p>
+
+<p>Once this is done, you will need to go back to the AWS <code class="highlighter-rouge">Route 53</code> service, set up a second <code class="highlighter-rouge">Hosted Zone</code> for <code class="highlighter-rouge">username.co.uk</code>. Ensure the domain has the same <code class="highlighter-rouge">Name Servers</code> as the hosted zone. Here set up the two <code class="highlighter-rouge">A</code> Record Sets, for <code class="highlighter-rouge">username.co.uk</code> and <code class="highlighter-rouge">www.username.com</code>, the alias target should be the <code class="highlighter-rouge">S3 bucket</code>.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>You have now connected the GitHub username repository to AWS Route 53, and your website will be live assuming you have added content to your github repository.</p>
+
+<h2 id="follow-up">Follow up</h2>
+
+<p>Learn about Jekyll which GitHub Pages runs off.</p>
+
+<p><a href="https://jekyllrb.com/docs/github-pages/">Jekyll Guidance Notes</a></p>
+
+<p>Finally in the project folder, create a <code class="highlighter-rouge">CNAME</code> file. In the file simply type the name of your domain, for example <code class="highlighter-rouge">username.com</code>. No HTTP:// reference.</p>
+
+</section>
+
+  <script type="text/javascript" src="/assets/vendor.js"></script>
+<script type="text/javascript" src="/assets/application.js"></script>
+<script type="text/javascript" src="/assets/main.js"></script>
+<script type="text/javascript" src="/assets/search.js"></script>
+
+
+
+</body>
+</html>

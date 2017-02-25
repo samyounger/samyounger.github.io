@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>
+      Ruby notes
+    
+  </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Ruby notes">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="samyounger.com/2017/02/07/ruby-notes/">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="Sam Younger">
+  <meta property="og:image" content="samyounger.com/assets/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="samyounger.com/2017/02/07/ruby-notes/">
+  <meta name="twitter:title" content="Ruby notes">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="samyounger.com/assets/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <link type="text/css" rel="stylesheet" href="/assets/application.css">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <a href="/blog" class="navbar-brand">
+      <span class="light">BLog list</span>
+    </a>
+    <a href="/2017/02/07/rspec-notes/">
+      <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+    </a>
+    <a href="/2017/02/13/rails-models/">
+      <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+    </a>
+  </div>
+</nav>
+
+  <section id="blogPost" class="content-section">
+  <div class="postTitle">
+    <h1 class="blog_title">Ruby notes</h1>
+    <h2 class="blog_date">07 February 2017</h2>
+  </div>
+  <div class="highlighter-rouge"><pre class="highlight"><code>DESCRIPTION: This is a collection of notes while learning Ruby
+</code></pre>
+</div>
+
+<p><strong>TAKE NOTE: Everything in Ruby is an object</strong></p>
+
+<p>Its documentation is found here:</p>
+
+<p><a href="https://www.ruby-lang.org/en/">https://www.ruby-lang.org/en/</a></p>
+
+<p>Ruby is probably best known for the Ruby on Rails framework. The documentation for this can be found here:</p>
+
+<p><a href="http://rubyonrails.org/">http://rubyonrails.org/</a></p>
+
+<h2 id="classes">Classes</h2>
+
+<p><a href="https://ruby-doc.org/core-2.2.0/Class.html">Ruby Class documentation</a></p>
+
+<p><strong>Naming</strong>: all class names should begin with a capital letter.</p>
+
+<p><strong>Creating an object</strong>: you call your object outside of the object with <code class="highlighter-rouge">Object_Name.new</code>. This creates a new instance of the object.</p>
+
+<h2 id="attr_accesssor">attr_accesssor</h2>
+
+<p><a href="http://ruby-doc.org/core-2.0.0/Module.html#method-i-attr_accessor">Ruby attr_accessor documentation</a></p>
+
+<p>When you want to read/write to the database, in the Class you would need to write two read/write methods:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span>
+  <span class="c1">#read accessor</span>
+  <span class="k">def</span> <span class="nf">name</span>
+    <span class="vi">@name</span>
+  <span class="k">end</span>
+  <span class="c1">#write accessor</span>
+  <span class="k">def</span> <span class="nf">name</span><span class="o">=</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="n">str</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">person</span> <span class="o">=</span> <span class="no">Person</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">person</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="s1">'Sam'</span>
+<span class="n">person</span><span class="p">.</span><span class="nf">name</span> <span class="c1"># =&gt; "Sam"</span>
+</code></pre>
+</div>
+
+<p>a shortcut to this using accessor is:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span>
+  <span class="kp">attr_reader</span> <span class="ss">:name</span>
+  <span class="kp">attr_writer</span> <span class="ss">:name</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>This can then be shortened down further to:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span>
+  <span class="kp">attr_accessor</span> <span class="ss">:name</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h2 id="models">Models</h2>
+
+<p><a href="http://guides.rubyonrails.org/active_model_basics.html">Rails Model documentation</a></p>
+
+<p>Models are where we determine database table relationships and filters/validations to any data being saved to the database.</p>
+
+<h2 id="database-relationships">Database Relationships</h2>
+
+<p><a href="http://guides.rubyonrails.org/association_basics.html">Rails Active Record documentation</a></p>
+
+<p>SQL databases are relational and we must determine the relationship between the data sets.</p>
+
+<p>The types of relationships are as follows:</p>
+
+<ul>
+  <li>one_to_many</li>
+  <li>one_to_one (note there are not many of these, highly uncommon)</li>
+  <li>many_to_many and many_to_one</li>
+</ul>
+
+<p>By simply writing one of the three lines above in the model for a dataset, we determine the relationship.</p>
+
+<p>For example. If we have two databases, one for a persons belongings, and one for persons. We might have two models as follows:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">one_to_many</span> <span class="ss">:belonging</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Belonging</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">belongs_to</span> <span class="ss">:person</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>You will see above I used a <code class="highlighter-rouge">belongs_to</code> relationship. This is called a <strong>join</strong> query. There are a number of join queries:</p>
+
+<ul>
+  <li>cross joins</li>
+  <li>natural joins</li>
+  <li>inner joins</li>
+  <li>left (outer) joins</li>
+  <li>right (outer) joins</li>
+</ul>
+
+<p><strong>MORE WORK IS REQUIRED HERE</strong></p>
+
+<h2 id="validation">Validation</h2>
+
+<p><a href="http://guides.rubyonrails.org/active_record_validations.html">Rails Active Record Validations documentation</a></p>
+
+<p>In the models directory, you can add in validations for data that is going to be added to your directory to ensure your database is clean data added that you approve of.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">validates</span> <span class="ss">:status</span><span class="p">,</span>
+            <span class="ss">presence: </span><span class="kp">true</span><span class="p">,</span>
+            <span class="ss">length: </span><span class="p">{</span> <span class="ss">minimum: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">maximum: </span><span class="mi">1000</span> <span class="p">},</span>
+            <span class="ss">uniqueness: </span><span class="kp">true</span><span class="p">,</span>
+            <span class="ss">numericality: </span><span class="kp">true</span><span class="p">,</span>
+            <span class="ss">format: </span><span class="p">{</span> <span class="ss">with: </span><span class="sr">/.*/</span> <span class="p">},</span>
+            <span class="ss">acceptance: </span><span class="kp">true</span><span class="p">,</span>
+            <span class="ss">confirmation: </span><span class="kp">true</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h2 id="controllers">Controllers</h2>
+
+<p><a href="http://guides.rubyonrails.org/action_controller_overview.html">Rails Action Controller documentation</a></p>
+
+<p>Controllers are the brains of the website. The controller accesses the model to input/output data. In addition it retrieves the data that is to be shown in the HTML.</p>
+
+<p>The different routes in the application are as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>HTTP Verb</th>
+      <th>Path</th>
+      <th>Controller#Action</th>
+      <th>Used for</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET</td>
+      <td>/photos</td>
+      <td>photos#index</td>
+      <td>display a list of all photos</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/photos/new</td>
+      <td>photos#new</td>
+      <td>return an HTML form for creating a new photo</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>/photos</td>
+      <td>photos#creates</td>
+      <td>create a new photo</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/photos/:id</td>
+      <td>photos#show</td>
+      <td>display a specific photo</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/photos/:id/edit</td>
+      <td>photos#edit</td>
+      <td>return an HTML form for editing a photo</td>
+    </tr>
+    <tr>
+      <td>PATCH/PUT</td>
+      <td>/photos/:id</td>
+      <td>photos#update</td>
+      <td>update a specific photo</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>/photos/:id</td>
+      <td>photos#destroy</td>
+      <td>delete a specific photo</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>At the bottom of the controller there should be a method called <code class="highlighter-rouge">version_params</code>. This determines which methods are allowed to be run in the controller. If for example you do not want a rogue piece of data being saved to the database, this can stop that.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">version_params</span>
+  <span class="n">params</span><span class="p">.</span><span class="nf">require</span><span class="p">(</span><span class="ss">:photos</span><span class="p">).</span><span class="nf">permit</span><span class="p">(</span><span class="ss">:photo_id</span><span class="p">,</span> <span class="ss">:photo_date</span><span class="p">,</span> <span class="ss">:photo_commentary</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h2 id="routes">Routes</h2>
+
+<p><a href="http://guides.rubyonrails.org/routing.html">Rails Routes documentation</a></p>
+
+<p>This is the section of the Rails app which controls how the URL is routed to the correct controller action. For our photo rails App a standard route page would look something like this:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="no">MyRailsPhotoApp</span><span class="o">::</span><span class="no">Applcation</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
+
+  <span class="c1"># The root url to the webpage will direct to the photos controller Index action</span>
+  <span class="n">root</span> <span class="s1">'photos#index'</span>
+
+  <span class="c1"># Gives the application access to the photos controller</span>
+  <span class="n">resources</span> <span class="ss">:photos</span>
+
+  <span class="c1"># Direct the url /photos to the photos controller index action</span>
+  <span class="n">get</span> <span class="s1">'/photos'</span> <span class="o">=&gt;</span> <span class="s1">'photos#index'</span>
+
+  <span class="c1"># Redirect a custom url '/newphoto' to the photos controller new action</span>
+  <span class="n">get</span> <span class="s1">'/newphoto'</span> <span class="o">=&gt;</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'photos#new'</span><span class="p">)</span>
+
+  <span class="c1"># Create a filtered index. e.g. if you direct to the URL /photos/sam this would filter the index page to an index of just my photos.</span>
+  <span class="n">get</span> <span class="s1">'/photos/:name'</span><span class="p">,</span> <span class="ss">to: </span><span class="s1">'photos#index'</span><span class="p">,</span> <span class="ss">as: </span><span class="s1">'myphotos'</span>
+
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>There is a lot more filtering that can be done within the controller to tailor what gets fed through to the view.</p>
+
+</section>
+
+  <script type="text/javascript" src="/assets/vendor.js"></script>
+<script type="text/javascript" src="/assets/application.js"></script>
+<script type="text/javascript" src="/assets/main.js"></script>
+<script type="text/javascript" src="/assets/search.js"></script>
+
+
+
+</body>
+</html>
