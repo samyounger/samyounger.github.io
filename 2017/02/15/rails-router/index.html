@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>
+      Rails Router
+    
+  </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Rails Router">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="samyounger.com/2017/02/15/rails-router/">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="Sam Younger">
+  <meta property="og:image" content="samyounger.com/assets/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="samyounger.com/2017/02/15/rails-router/">
+  <meta name="twitter:title" content="Rails Router">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="samyounger.com/assets/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+  <link type="text/css" rel="stylesheet" href="/assets/application.css">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <section class="navigation blog-nav">
+  <div class="brand">
+    <nav>
+      <ul class="nav-list">
+        <li>
+          <a href="/blog" class="navbar-brand">
+            BLog list
+          </a>
+        </li>
+        <li>
+          <a href="/2017/02/13/rails-models/">
+            <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/2017/02/15/github-pages-with-aws/">
+            <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+
+<!-- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <a href="/blog" class="navbar-brand">
+      <span class="light">BLog list</span>
+    </a>
+    <a href="/2017/02/13/rails-models/">
+      <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+    </a>
+    <a href="/2017/02/15/github-pages-with-aws/">
+      <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+    </a>
+  </div>
+</nav>
+ -->
+  <section id="blogPost" class="content-section">
+  <div class="postTitle">
+    <h1 class="blog_title">Rails Router</h1>
+    <h2 class="blog_date">15 February 2017</h2>
+  </div>
+  <div class="highlighter-rouge"><pre class="highlight"><code>DESCRIPTION: The rails router recognises the URL's passed to the app and channels to a controller's action. It can also generate paths and URL's, so the path does not need to be hard coded into the app's view.
+</code></pre>
+</div>
+
+<p>Documentation can be found here:</p>
+
+<p><a href="http://guides.rubyonrails.org/routing.html">Rails Routes</a></p>
+
+<h2 id="basics">Basics</h2>
+
+<p>When the app receives an incoming URL <code class="highlighter-rouge">GET /blogs/5</code>, the router needs to match the incoming URL with a controller. This is a <code class="highlighter-rouge">:show</code> get HTTP method, and so it would be channelled as follows</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">get</span> <span class="s1">'/bogs/:id'</span><span class="p">,</span> <span class="ss">to: </span><span class="s1">'blogs#show'</span>
+</code></pre>
+</div>
+
+<p>In the blogs controller show action, you can then access the <code class="highlighter-rouge">:id</code> being passed in the URL like so:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BlogsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">show</span>
+    <span class="vi">@blog</span> <span class="o">=</span> <span class="no">Blog</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>This then saves the blog object with an id of 5 to the variable <code class="highlighter-rouge">@blog</code>.</p>
+
+<p>If you then edit the route to look like this:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">get</span> <span class="s1">'/blogs/:id'</span><span class="p">,</span> <span class="ss">to: </span><span class="s1">'blogs#show'</span><span class="p">,</span> <span class="ss">as: </span><span class="s1">'blog'</span>
+</code></pre>
+</div>
+
+<p>This enables us to use the route helper in the view when using <code class="highlighter-rouge">link_to</code>:</p>
+
+<div class="language-erb highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s1">'Blog Five'</span><span class="p">,</span> <span class="n">blog_path</span><span class="p">(</span><span class="vi">@blog</span><span class="p">)</span> <span class="cp">%&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>NOTE:</strong> the <code class="highlighter-rouge">as:</code> is what you refer to the link_to helper path as. It can be called anything. So in our example if I wanted to change the path_helper name from <code class="highlighter-rouge">blog</code> to <code class="highlighter-rouge">article</code>, I could do and the link_to helper would be <code class="highlighter-rouge">article_path(@blog)</code>.</p>
+
+<h3 id="resource-routing">Resource routing</h3>
+
+<p>There are <strong><em>SEVEN</em></strong> RESTful routes <code class="highlighter-rouge">INDEX, SHOW, NEW, EDIT, CREATE, UPDATE, DESTROY</code>. Rails has <strong>FIVE</strong> HTTP methods to channel to these RESTful routes <code class="highlighter-rouge">GET, POST, PATCH, PUT, DELETE</code>. So in practice, if the router receives an incoming request like so:</p>
+
+<div class="language-rb highlighter-rouge"><pre class="highlight"><code><span class="no">DELETE</span> <span class="sr">/blogs/</span><span class="mi">5</span>
+</code></pre>
+</div>
+
+<p>If the first matching resource is <code class="highlighter-rouge">resources :blogs</code>, then router accesses the <code class="highlighter-rouge">BlogsController</code>, the <code class="highlighter-rouge">show</code> action, and runs whatever code is in there. The code in the destroy controller would usually be something like this:</p>
+
+<div class="language-rb highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">destroy</span>
+  <span class="no">Blog</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">]).</span><span class="nf">destroy</span>
+  <span class="n">flash</span><span class="p">[</span><span class="ss">:success</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Blog deleted"</span>
+  <span class="n">redirect_to_blogs_url</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h3 id="crud-create-read-update-delete">CRUD (Create, Read, Update, Delete)</h3>
+<p><strong>IMPORTANT:</strong> The <code class="highlighter-rouge">resources :blogs</code> creates seven different routes in the application, all mapping to the BlogsController</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>HTTP Verb</th>
+      <th>Path</th>
+      <th>Controller#Action</th>
+      <th>Used for</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET</td>
+      <td>/blogs</td>
+      <td>blogs#index</td>
+      <td>display a list of all blogs</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/blogs/new</td>
+      <td>blogs#new</td>
+      <td>return an HTML form for creating a new blog</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>/blogs</td>
+      <td>blogs#creates</td>
+      <td>create a new blog</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/blogs/:id</td>
+      <td>blogs#show</td>
+      <td>display a specific blog</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/blogs/:id/edit</td>
+      <td>blogs#edit</td>
+      <td>return an HTML form for editing a blog</td>
+    </tr>
+    <tr>
+      <td>PATCH/PUT</td>
+      <td>/blogs/:id</td>
+      <td>blogs#update</td>
+      <td>update a specific blog</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>/blogs/:id</td>
+      <td>blogs#destroy</td>
+      <td>delete a specific blog</td>
+    </tr>
+  </tbody>
+</table>
+
+</section>
+
+  <script type="text/javascript" src="/assets/vendor.js"></script>
+<script type="text/javascript" src="/assets/application.js"></script>
+<script type="text/javascript" src="/assets/main.js"></script>
+<script type="text/javascript" src="/assets/search.js"></script>
+<script type="text/javascript" src="/assets/nav.js"></script>
+
+
+
+</body>
+</html>

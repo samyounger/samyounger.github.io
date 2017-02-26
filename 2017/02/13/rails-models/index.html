@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>
+      Rails Models
+    
+  </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Rails Models">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="samyounger.com/2017/02/13/rails-models/">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="Sam Younger">
+  <meta property="og:image" content="samyounger.com/assets/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="samyounger.com/2017/02/13/rails-models/">
+  <meta name="twitter:title" content="Rails Models">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="samyounger.com/assets/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+  <link type="text/css" rel="stylesheet" href="/assets/application.css">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <section class="navigation blog-nav">
+  <div class="brand">
+    <nav>
+      <ul class="nav-list">
+        <li>
+          <a href="/blog" class="navbar-brand">
+            BLog list
+          </a>
+        </li>
+        <li>
+          <a href="/2017/02/07/ruby-notes/">
+            <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/2017/02/15/rails-router/">
+            <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+
+<!-- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <a href="/blog" class="navbar-brand">
+      <span class="light">BLog list</span>
+    </a>
+    <a href="/2017/02/07/ruby-notes/">
+      <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+    </a>
+    <a href="/2017/02/15/rails-router/">
+      <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+    </a>
+  </div>
+</nav>
+ -->
+  <section id="blogPost" class="content-section">
+  <div class="postTitle">
+    <h1 class="blog_title">Rails Models</h1>
+    <h2 class="blog_date">13 February 2017</h2>
+  </div>
+  <div class="highlighter-rouge"><pre class="highlight"><code>DESCRIPTION: The model controls what is required when putting data into your database.
+</code></pre>
+</div>
+
+<h2 id="scope">Scope</h2>
+
+<p>Scope is used for commonly used queries in the model where you want to filter the data. For example:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Article</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">scope</span> <span class="ss">:published</span><span class="p">,</span> <span class="n">where</span><span class="p">(</span><span class="ss">published: </span><span class="kp">true</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>This example would only show data sets where published equals true, all false published articles will not be shown.</p>
+
+<p>It is good practice to put this filtering into the model rather than the controller to keep the controller cleaner.</p>
+
+<p>You can also filter the database by ordering the database, and filtering out above/below certain integers or letters. For example:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Arcticle</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="ss">scope: :fresh</span><span class="p">,</span> <span class="n">where</span><span class="p">(</span><span class="s2">"age &lt; 20"</span><span class="p">)</span>
+  <span class="ss">scope: :recent</span><span class="p">,</span> <span class="n">where</span><span class="p">(</span><span class="s2">"created_at desc"</span><span class="p">).</span><span class="nf">limit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>This will filter out any age which is above 20, and it will take the created_at column, filter the dates in descending order, and only display the top 3.</p>
+
+<p>Then in the controller if we want to call these methods from the model we can chain queries together:</p>
+
+<p><code class="highlighter-rouge">Article.published.fresh.recent</code></p>
+
+<p>This query would display articles which have been published, have an age of less than 20, and only the 3 most recent articles.</p>
+
+<h2 id="callbacks">Callbacks</h2>
+
+<p>Callbacks are used within the model to run some check before any of the other methods are run.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Article</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">before_save</span> <span class="ss">:recent_publish_check</span>
+
+  <span class="k">def</span> <span class="nf">recent_publish_check</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">fresh_article</span> <span class="o">=</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>This will check before any article is saved to the database whether the age is less than 20, and if so it will change the fresh_article attribute from false to true if necessary.</p>
+
+<p>It is also possible to stop data being saved to the database with a before_save check.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Article</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">before_save</span> <span class="ss">:already_published</span>
+
+  <span class="k">def</span> <span class="nf">already_published</span>
+    <span class="k">return</span> <span class="kp">false</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>This will simply return false for any call to Article. With false being returned, the method immediately stops running and nothing is saved to the database. Be careful not to do this unless you have a good reason to do so.</p>
+
+<p>Here are all the callbacks available:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Article</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">before_validation</span>
+  <span class="n">after_validation</span>
+
+  <span class="n">before_save</span>
+  <span class="n">after_save</span>
+
+  <span class="n">before_create</span>
+  <span class="n">after_create</span>
+
+  <span class="n">before_update</span>
+  <span class="n">after_update</span>
+
+  <span class="n">before_destroy</span>
+  <span class="n">after_destroy</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+</section>
+
+  <script type="text/javascript" src="/assets/vendor.js"></script>
+<script type="text/javascript" src="/assets/application.js"></script>
+<script type="text/javascript" src="/assets/main.js"></script>
+<script type="text/javascript" src="/assets/search.js"></script>
+<script type="text/javascript" src="/assets/nav.js"></script>
+
+
+
+</body>
+</html>
