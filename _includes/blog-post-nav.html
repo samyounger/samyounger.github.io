@@ -1,5 +1,29 @@
-<!-- Navigation -->
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<section class="navigation blog-nav">
+  <div class="brand">
+    <nav>
+      <ul class="nav-list">
+        <li>
+          <a href="/blog" class="navbar-brand">
+            BLog list
+          </a>
+        </li>
+        <li>
+          <a href="{{ page.previous.url }}">
+            <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="{{ page.next.url }}">
+            <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+
+<!-- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
   <div class="navbar-header">
     <a href="/blog" class="navbar-brand">
       <span class="light">BLog list</span>
@@ -12,3 +36,4 @@
     </a>
   </div>
 </nav>
+ -->

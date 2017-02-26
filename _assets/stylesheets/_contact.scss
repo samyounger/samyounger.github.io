@@ -26,7 +26,7 @@
   section#contact.content-section {
     height: calc(100vh - 48px);
     h2 {
-      padding-top: 20px;
+      padding-top: 40px;
     }
   }
 }
@@ -39,7 +39,8 @@
     color: black;
   }
   #contact {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 48px);
+    padding-top: 50px;
   }
   .banner-social-buttons {
     margin: 5px;

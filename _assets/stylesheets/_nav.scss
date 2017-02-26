@@ -1,60 +1,212 @@
-.navbar {
-  padding: 0 10px !important;
-  letter-spacing: 1px;
-  -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-  -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-  transition: background .5s ease-in-out,padding .5s ease-in-out;
-  .navbar-header {
+@import "colors";
+
+// Navigation Variables
+$content-width: 100%;
+$breakpoint: 800px;
+$nav-height: 70px;
+$nav-background: #262626;
+$nav-font-color: #ffffff;
+$link-hover-color: #2581DC;
+
+.navigation-drop {
+  background: rgba(black, 0.6) !important;
+}
+
+// Outer navigation wrapper
+.navigation {
+  height: $nav-height;
+  background: rgba($nav-background, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+// Logo and branding
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: $nav-height;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  a,
+  a:visited {
+    color: $nav-font-color;
+    text-decoration: none;
+    line-height: 70px;
+    padding: 0;
+  }
+}
+
+// Container with no padding for navbar
+.nav-container {
+  max-width: $content-width;
+  margin: 0;
+  /*margin: 0 auto;*/
+}
+
+// Navigation 
+nav {
+  float: right;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      a,
+      a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        background: rgba($primary-color, 0);
+        color: $nav-font-color;
+        text-decoration: none;
+        &:hover {
+          /*background: $link-hover-color;*/
+          color: $nav-font-color;
+        }
+        &:not(:only-child):after {
+          padding-left: 4px;
+          content: ' ▾';
+        }
+        } // Dropdown list
+        ul li {
+          min-width: 190px;
+          a {
+            padding: 15px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // Dropdown list binds to JS toggle event
+  .nav-dropdown {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Mobile navigation */
+
+  // Binds to JS Toggle
+  .nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba($nav-background, 0);
+    height: $nav-height;
+    width: $nav-height;
+  }
+  @media only screen and (max-width: $breakpoint) {
+    // Hamburger nav visible on mobile only
+    .navigation-drop {
+      background: rgba(white, 0.6) !important;
+    }
     a {
-      padding: 15px 0;
-      i {
-        padding: 10px;
+      color: black !important;
+    }
+    .nav-mobile {
+      display: block;
+    }
+    nav {
+     width: 100%;
+     padding: $nav-height 0 15px;
+     ul {
+      display: none;
+      background: rgba(lighten($primary-color, 100%), 0.6);
+      li {
+        float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        ul li a {
+          padding-left: 30px;
+        }
       }
     }
-    &:hover {
-      color: lighten($primary-color, 100%);
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: black;
+    /*background: $nav-font-color;*/
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
     }
   }
-  .collapse {
-    ul li a {
-      &:hover {
-        color: lighten($primary-color, 100%);
-        background: none;
+}
+
+// Page content 
+article {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+// Blog navigation
+.blog-nav {
+  .brand {
+    padding-left: 0;
+    nav {
+      ul {
+        li {
+          margin: 10px 20px 10px 5px;
+          a {
+            font-size: 20px;
+            i {
+              /*margin: 20px;*/
+            }
+          }
+        }
       }
     }
-  }
-}
-
-.top-nav-collapse {
-  padding: 0;
-  background-color: rgba($primary-color, 0.5);
-}
-
-@media (max-width: 870px) {
-  .navbar-nav {
-    padding-left: 20px;
-    li:hover {
-      background: lightgrey;
-    }
-  }
-}
-
-@media (max-width: 736px) {
-  .navbar-toggle {
-    color: $primary-color;
-    & > span {
-      background: black;
-    }
-  }
-  .nav li a, .navbar-header a i {
-    color: black;
-  }
-  .navbar {
-    background-image: none;
-    background: lighten($primary-color, 100%);
-    color: black;
-  }
-  .navbar-brand, .fa-bars {
-    color: black;
   }
 }
