@@ -41,7 +41,10 @@
 
 @media (max-width: 736px) {
   .navbar-toggle {
-    color: $secondary-color;
+    color: $primary-color;
+    & > span {
+      background: black;
+    }
   }
   .nav li a, .navbar-header a i {
     color: black;
@@ -51,7 +54,7 @@
     background: lighten($primary-color, 100%);
     color: black;
   }
-  .navbar-brand .light, .fa-bars {
+  .navbar-brand, .fa-bars {
     color: black;
   }
 }
