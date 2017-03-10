@@ -1,0 +1,26 @@
+@import "variables/colors";
+
+body {
+	margin: 0;
+	background: $primary-color;
+	color: $font-color;
+	font-family: $primary-font-stack;
+	font-weight: 100;
+	font-size: 1.1em;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+main {
+	padding: 50px 0 0;
+	max-width: $content-width;
+	margin: 0 auto;
+}
+time {
+	color: #898989;
+}
+
+footer {
+	text-align: center;
+	padding: 40px;
+}
