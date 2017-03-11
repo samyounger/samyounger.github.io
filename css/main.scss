@@ -10,9 +10,14 @@
 
 // Text styling
 @import "syntax-highlighting";
+@import "text";
 
 // Partials
 @import	"base";
 @import "layout";
 @import "partials/home";
 @import "partials/nav";
+@import "partials/about";
+@import "partials/projects";
+@import "partials/contact";
+@import "partials/footer";

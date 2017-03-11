@@ -19,9 +19,25 @@ description: >
   This is a website by Sam Younger describing his path to becoming a web developer, and a blog discussing web development learning.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://samyounger.com"
-repository: samyounger/samyounger.github.io
-twitter_username: ayoungersage
-github_username:  samyounger
+# repository: samyounger/samyounger.github.io
+# twitter_username: ayoungersage
+# github_username:  samyounger
+
+# Footer settings
+footer: Sam Younger
+
+# Social networks
+social:
+  - title: twitter
+    url: https://twitter.com/ayoungersage
+  - title: facebook
+    url: https://facebook.com/sam.younger1
+  - title: stack-overflow
+    url: http://stackoverflow.com/story/samyounger
+  - title: linkedin
+    url: http://linkedin.com/in/sam-younger
+  - title: github
+    url: https://github.com/samyounger
 
 # Build settings
 markdown: kramdown
