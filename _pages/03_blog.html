@@ -4,11 +4,18 @@ title: Blog
 permalink: /blog/
 ---
 
-<p>Blog index page goes</p>
+<h2>My blog</h2>
+<p>These articles contain a series of my thoughts and notes I have written while learning programming languages for later reference.</p>
 
-{% for post in site.posts %}
-		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-{% endfor %}
+<section id="blogIndex">
+	<ul>
+		{% for post in site.posts %}
+		<li>
+			<div><time>{{ post.date | date: "%b %-d, %Y" }}</time></div>
+			<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
 
 <p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

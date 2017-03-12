@@ -1,13 +1,27 @@
-h1,
-h2,
-h4,
-h5,
-h6 {
-  padding: 52px 0 35px;
+h1, h2, h3, h4 {
+  padding: 0 0 10px 0;
   text-transform: uppercase;
   font-family: $primary-font-stack;
   font-weight: 400;
   letter-spacing: 1px;
+  margin: 10px 0;
+  border-bottom: 3px solid $secondary-color;
+}
+h1 {
+  font-size: 30px;
+  padding: 10px 0;
+}
+h2 {
+  display: inline-block;
+  font-size: 25px;
+}
+h3 {
+  display: inline-block;
+  font-size: 20px;
+}
+h4 {
+  display: inline-block;
+  font-size: 15px;
 }
 
 a {
@@ -21,7 +35,7 @@ a {
 
 p {
   font-size: 20px;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .light {

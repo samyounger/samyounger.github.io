@@ -12,12 +12,16 @@
 @import "syntax-highlighting";
 @import "text";
 
+// Components
+@import "components/button";
+
 // Partials
-@import	"base";
 @import "layout";
-@import "partials/home";
+@import "partials/home/home";
 @import "partials/nav";
-@import "partials/about";
-@import "partials/projects";
+@import "partials/home/about";
+@import "partials/home/projects";
+@import "partials/about/about";
 @import "partials/contact";
 @import "partials/footer";
+@import "partials/blog/blog";
