@@ -10,11 +10,13 @@
 }
 
 .storyIntro {
+  padding-top: 50px;
   text-align: center;
+  height: 100vh;
   .aboutHead {
     display: inline-block;
     h1, h2 {
-      display: flex;
+      display: grid;
       align-items: center;
       justify-content: center;
     }
