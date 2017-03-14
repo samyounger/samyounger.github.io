@@ -70,7 +70,7 @@
     border-bottom: 1px solid lightgrey;
     margin-bottom: 10px;
   }
-  p {
+  p, li {
     font-size: 15px;
     margin: 0;
     padding: 0;
@@ -112,6 +112,18 @@
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+}
+
+.postNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  i, a {
+    margin: 0 10px;
+    z-index: 2;
+    color: lighten($primary-color, 100%);
   }
 }
 
