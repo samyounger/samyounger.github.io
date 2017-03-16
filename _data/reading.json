@@ -1,6 +1,13 @@
 {
   "blogPost": [
     {
+      "author": "Nikola Todorovic",
+      "date": null,
+      "type": "blog-post",
+      "title": "Ruby metaprogramming is even cooler than it sounds",
+      "url": "https://www.toptal.com/ruby/ruby-metaprogramming-cooler-than-it-sounds"
+    },
+    {
       "author": "Gavin Morrice",
       "date": 2010-11-23,
       "type": "blog-post",
