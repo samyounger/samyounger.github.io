@@ -1,11 +1,12 @@
 $(document).ready(function() {
   // Initialize lunr with the fields to be searched, plus the boost.
   window.idx = lunr(function () {
-    this.field('id');
-    this.field('title');
-    this.field('content', { boost: 10 });
+    this.ref('id');
+    this.field('title'), { boost: 10 };
+    this.field('content');
     this.field('author');
     this.field('categories');
+    this.field('date');
   });
 
   // Get the generated search_data.json file so lunr.js can search it locally.
@@ -14,9 +15,14 @@ $(document).ready(function() {
   // Wait for the data to load and add it to lunr
   window.data.then(function(loaded_data){
     $.each(loaded_data, function(index, value){
-      window.idx.add(
-        $.extend({ "id": index }, value)
-      );
+      window.idx.add({
+        id: index,
+        title: value.title,
+        categories: value.categories,
+        content: value.content,
+        author: value.author,
+        date: value.date
+      });
     });
   });
 
@@ -24,11 +30,12 @@ $(document).ready(function() {
   $(document).on('change keyup', '#search_box', function(event) {
     let boxValue = $("#search_box").val();
     if (boxValue !== "") {
-      var query = $("#search_box").val(); // Get the value for the text field
-      var results = window.idx.search(query); // Get lunr to perform a search
+      $("#defaultPostList").css({ display: "none" })
+      let results = window.idx.search(boxValue); // Get lunr to perform a search
       display_search_results(results); // Hand the results off to be displayed
     } else {
       $("#search_results li").remove();
+      $("#defaultPostList").css({ display: "unset" })
     }
   });
 
@@ -44,17 +51,22 @@ $(document).ready(function() {
 
         // Iterate over the results
         results.forEach(function(result) {
-          let item = loaded_data[result.ref];
+          let post = loaded_data[result.ref];
 
           // Build a snippet of HTML for this result
-          let appendString = '<li><a href="' + item.url + '">' + item.title + '</a></li>';
+          let appendString = `
+          <li>
+          <div><time>${post.date}</time></div>
+          <h3><a href=${post.url}>${post.title}</a></h3>
+          </li>
+          `;
 
           // Add the snippet to the collection of results.
           $search_results.append(appendString);
         });
       } else {
         // If there are no results, let the user know.
-        $search_results.html('<li>No results found.<br/>Please check spelling, spacing, yada...</li>');
+        $search_results.html('<li>No results found</li>');
       }
     });
   }
