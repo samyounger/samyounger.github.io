@@ -1,8 +1,7 @@
 ---
-layout: post
 title: Ruby Object Oriented Programming
 date: 2017-02-20 12:00
-published: true
+categories: ruby, object-oriented-programming, oop
 ---
 
     DESCRIPTION: Everything in Ruby is an object. Programming should be in an object-oriented way.

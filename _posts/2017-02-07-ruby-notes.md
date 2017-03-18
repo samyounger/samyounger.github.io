@@ -1,8 +1,7 @@
 ---
-layout: post
 title: Ruby notes
 date: 2017-02-07 12:00
-published: true
+categories: ruby
 ---
 
     DESCRIPTION: This is a collection of notes while learning Ruby

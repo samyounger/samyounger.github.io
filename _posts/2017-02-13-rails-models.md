@@ -1,8 +1,7 @@
 ---
-layout: post
 title: Rails Models
 date: 2017-02-13 12:00
-published: true
+categories: ruby-on-rails
 ---
 
     DESCRIPTION: The model controls what is required when putting data into your database.

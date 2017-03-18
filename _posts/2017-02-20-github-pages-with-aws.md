@@ -1,8 +1,7 @@
 ---
-layout: post
 title: Github Pages with AWS Route 53
 date: 2017-02-15 23:00:00
-published: true
+categories: github, aws
 ---
 
     DESCRIPTION: This post will describe how to set up your own personal jekyll website with github pages and route it to an amazon AWS Route53 DNS provider for a cost-effective solution to launching your website live.

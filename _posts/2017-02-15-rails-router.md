@@ -1,8 +1,7 @@
 ---
-layout: post
 title: Rails Router
 date: 2017-02-15 12:00:00
-published: true
+categories: ruby-on-rails
 ---
 
 

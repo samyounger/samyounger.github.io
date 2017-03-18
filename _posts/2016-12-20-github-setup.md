@@ -1,8 +1,7 @@
 ---
-layout: post
 title: GitHub Setup
 date: 2016-12-20 22:55:00
-published: true
+categories: github
 ---
 
     DESCRIPTION: GitHub is an online storage source for developers to save their code and collaborate on group projects. It is free to use and immensely useful for developers to share their projects. In addition Git has version control functionality, and so projects can be saved, rolled-back in case of errors, and you can see your progress i.e. no code is ever lost.

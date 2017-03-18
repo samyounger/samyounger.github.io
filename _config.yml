@@ -50,3 +50,14 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Default layouts for pages
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Sam Younger"
+      published: true
