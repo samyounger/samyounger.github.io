@@ -1,4 +1,4 @@
-jQuery(function() {
+$(document).ready(function() {
   // Initialize lunr with the fields to be searched, plus the boost.
   window.idx = lunr(function () {
     this.field('id');
@@ -20,16 +20,20 @@ jQuery(function() {
     });
   });
 
-  // Event when the form is submitted
-  $("#site_search").submit(function(event){
-      event.preventDefault();
+  // // Event when the the input box is changed
+  $(document).on('change keyup', '#search_box', function(event) {
+    let boxValue = $("#search_box").val();
+    if (boxValue !== "") {
       var query = $("#search_box").val(); // Get the value for the text field
       var results = window.idx.search(query); // Get lunr to perform a search
       display_search_results(results); // Hand the results off to be displayed
+    } else {
+      $("#search_results li").remove();
+    }
   });
 
   function display_search_results(results) {
-    var $search_results = $("#search_results");
+    const $search_results = $("#search_results");
 
     // Wait for data to load
     window.data.then(function(loaded_data) {
@@ -40,10 +44,10 @@ jQuery(function() {
 
         // Iterate over the results
         results.forEach(function(result) {
-          var item = loaded_data[result.ref];
+          let item = loaded_data[result.ref];
 
           // Build a snippet of HTML for this result
-          var appendString = '<li><a href="' + item.url + '">' + item.title + '</a></li>';
+          let appendString = '<li><a href="' + item.url + '">' + item.title + '</a></li>';
 
           // Add the snippet to the collection of results.
           $search_results.append(appendString);
