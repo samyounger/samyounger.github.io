@@ -56,8 +56,10 @@ $(document).ready(function() {
           // Build a snippet of HTML for this result
           let appendString = `
           <li>
-          <div><time>${post.date}</time></div>
-          <h3><a href=${post.url}>${post.title}</a></h3>
+            <div class="postDate"><time>${post.date}</time></div>
+            <div class="postHead">
+              <h3><a href=${post.url}>${post.title}</a></h3>
+            </div>
           </li>
           `;
 

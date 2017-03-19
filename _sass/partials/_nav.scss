@@ -24,6 +24,21 @@ nav {
 			}
 		}
 	}
+	.postNav {
+		text-align: center;
+		.postNav {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 5px;
+			height: 50px;
+			i, a {
+				margin: 0 10px;
+				z-index: 2;
+				color: lighten($primary-color, 100%);
+			}
+		}
+	}
 	.pageTop {
 		float: left;
 	}

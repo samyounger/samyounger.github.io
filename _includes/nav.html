@@ -2,6 +2,23 @@
   <ul class="pageTop">
     <li><a href="/">{{ site.title }}</a></li>
   </ul>
+
+  {% if page.layout == "post" %}
+  <div class="postNav">
+    <div class="postNav">
+      <a href="{{ page.previous.url }}">
+        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+      </a>
+      <a href="/blog" class="navbar-brand">
+        <span class="light">BLog list</span>
+      </a>
+      <a href="{{ page.next.url }}">
+        <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  {% endif %}
+
   <ul>
     <li><a href="/">Home</a></li>
     {% for page in site.pages %} {% if page.title %}
