@@ -1,20 +1,26 @@
 #blog {
   ul {
     li {
-      div {
+      .postDate {
         display: inline-block;
         width: 150px;
       }
-      h3 {
-        border-bottom: none;
-        padding: 0;
-        a {
-          padding: 0 0 10px 0;
-          border-bottom: 1px solid $secondary-color;
-          display: block;
-          &:hover {
-            border-bottom: 1px solid lighten($secondary-color, 100%);
+      .postHead {
+        display: inline-block;
+        h3 {
+          border-bottom: none;
+          padding: 0;
+          a {
+            padding: 0 0 10px 0;
+            border-bottom: 1px solid $secondary-color;
+            display: block;
+            &:hover {
+              border-bottom: 1px solid lighten($secondary-color, 100%);
+            }
           }
+        }
+        a {
+          display: block;
         }
       }
     }
@@ -86,6 +92,12 @@
     &:hover {
       background: lighten($primary-color, 100%);
     }
+  }
+  .commentCount {
+    display: block;
+    text-align: center;
+    background: lighten($primary-color, 100%);
+    cursor: default;
   }
   table {
     border: 1px solid black;

@@ -16,8 +16,10 @@ permalink: /blog/
 		<ul id="defaultPostList">
 			{% for post in site.posts %}
 			<li>
-				<div><time>{{ post.date | date: "%b %-d, %Y" }}</time></div>
-				<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+				<div class="postDate"><time>{{ post.date | date: "%b %-d, %Y" }}</time></div>
+				<div class="postHead">
+					<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+				</div>
 			</li>
 			{% endfor %}
 		</ul>
