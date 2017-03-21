@@ -1,6 +1,13 @@
 {
   "blogPost": [
     {
+      "author": "Leigh Halliday",
+      "date": 2015-11-19,
+      "type": "blog-post",
+      "title": "Architecting Rails Apps as Microservices",
+      "url": "https://blog.codeship.com/architecting-rails-apps-as-microservices/"
+    },
+    {
       "author": "Nikola Todorovic",
       "date": null,
       "type": "blog-post",
