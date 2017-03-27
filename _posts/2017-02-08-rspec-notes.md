@@ -1,7 +1,7 @@
 ---
 title: RSpec notes
 date: 2017-02-07 10:00
-categories: rspec, ruby, rails
+categories: [rspec, ruby, rails]
 ---
 
     DESCRIPTION: RSpec is a testing GEM for Ruby, supposedly easier to read for non-developers.

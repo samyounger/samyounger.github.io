@@ -1,7 +1,7 @@
 ---
 title: Atom Freezing On Project Open
 date: 2017-02-25 12:00
-categories: atom, ide
+categories: [atom, ide]
 ---
     DESCRIPTION: Atom was freezing when opening a Jekyll project. It started happening when opening a jquery.easing.min.js file. It also freezes when opening any other minimised file - like lunr.min.js, or bootstrap.min.js
 

@@ -1,7 +1,7 @@
 ---
 title: Jekyll kickster pre-build experiment
 date: 2017-02-21 12:00
-categories: jekyll, kickster
+categories: [jekyll, kickster]
 ---
 
     DESCRIPTION: In my pursuit to build a better personal blogging website and learning more about Jekyll, I am going to build a site using Kickster, recommended on Jekyll's Docs "for easy (automated) deploys to GitHub Pages when using unsupported plugins on GitHub Pages."
