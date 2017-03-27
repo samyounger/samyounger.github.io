@@ -127,6 +127,8 @@ Remember the 7 RESTful routes in the controller available to use are `index | sh
 - `new.html.erb`
 - `edit.html.erb`
 
+**FYI: if you're using HAML, make sure you include the `gem "haml"`**
+
 ## Set up routes
 
 In the engines `/config/routes.rb` file, add resources to give users access to the posts controller you've created. You may also want to add a root to the controllers index action.
@@ -144,6 +146,7 @@ You need to mount the engine in your main app's `routes.rb` file.
 
 ```rb
 mount MyEngine::Engine, at: '/myengine', as: 'my_engine'
+# Engine::Path, at: url route, as: engine name in app
 ```
 
 ## Complete set up
