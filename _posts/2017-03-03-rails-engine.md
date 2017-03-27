@@ -13,7 +13,7 @@ The engine is created like everything else in rails - from the terminal. The bel
 
 `$ rails plugin new my_engine --mountable`
 
-This creates a new file in your root application directory called `mountable`. If you intend to have more than one engine, you should move this file. Create a new file called `engines`, and move the file into there.
+This creates a new file in your root application directory called `my_engine` (or whatever you called your engine). If you intend to have more than one engine, you should move this file into an umbrella directory. It so, create a new file called `engines`, and move the newly created engine into there.
 
 ### Gemspec file
 
@@ -81,7 +81,7 @@ end
 
 ## Add the engine to the application
 
-To make the engine you've just created available to the application you need to open the applications gemfile, and add the line:
+To make the engine you've just created available to the application you need to open the applications `Gemfile`, and add the line:
 
 ```rb
 gem 'my_engine', path: 'engines/my_engine'
@@ -91,13 +91,19 @@ Run `bundle install` as usual to update your application. This requires the `eng
 
 In the engine app directory are the usual directories:
 
-- assets
-- controllers
-- helpers
-- jobs
-- mailers
-- models
-- views
+-- assets
+  |
+-- controllers
+  |
+-- helpers
+  |
+-- jobs
+  |
+-- mailers
+  |
+-- models
+  |
+-- views
 
 ## Set up controllers
 
@@ -137,7 +143,7 @@ end
 
 ## Mount the engine
 
-If you have authentication, you will want to mount the engine in your main app's `routes.rb` file.
+You need to mount the engine in your main app's `routes.rb` file.
 
 ```rb
 mount MyEngine::Engine, at: '/myengine', as: 'my_engine'
