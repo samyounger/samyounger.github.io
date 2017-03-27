@@ -1,7 +1,7 @@
 My personal profile site
 =========================
 
-    Run the site on your local host: in the console `$ jekyll serve` and it will start up on `localhost:4000`.
+Run the site on your local host: in the console `$ jekyll serve` and it will start up on `localhost:4000`.
 
 This page was produced using Jekyll.
 
