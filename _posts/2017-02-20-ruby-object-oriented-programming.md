@@ -1,5 +1,5 @@
 ---
-title: Ruby Object Oriented Programming
+title: Ruby object oriented programming
 date: 2017-02-20 12:00
 categories: ruby, object-oriented-programming, oop
 ---

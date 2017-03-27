@@ -1,7 +1,7 @@
 ---
-title: Rails Models
+title: Rails models
 date: 2017-02-13 12:00
-categories: ruby-on-rails
+categories: rails, ruby
 ---
 
     DESCRIPTION: The model controls what is required when putting data into your database.
