@@ -91,19 +91,16 @@ Run `bundle install` as usual to update your application. This requires the `eng
 
 In the engine app directory are the usual directories:
 
--- assets
-  |
--- controllers
-  |
--- helpers
-  |
--- jobs
-  |
--- mailers
-  |
--- models
-  |
--- views
+```
+.
+|-- assets
+|-- controllers
+|-- helpers
+|-- jobs
+|-- mailers
+|-- models
+|-- views
+```
 
 ## Set up controllers
 
