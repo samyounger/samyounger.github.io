@@ -3,6 +3,11 @@
 }
 
 #blog {
+  input {
+    width: 100%;
+    background: $secondary-color;
+    border: none;
+  }
   ul {
     li {
       .postDate {

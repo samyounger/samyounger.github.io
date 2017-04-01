@@ -1,50 +1,40 @@
 nav {
 	position: fixed;
 	width: 100vw;
-	margin: 0 auto;
+	height: 50px;
+	text-align: center;
 	transition: background 1s;
-	z-index: 1;
 	ul {
-		float: right;
-		margin: 0;
-		padding: 0;
-		list-style: none;
+		height: inherit;
 		li {
 			float: left;
-			position: relative;
 			a {
-				text-decoration: none;
 				display: block;
-				padding: 15px;
+				padding: 10px;
 				color: lighten($primary-color, 100%);
 				font-family: $primary-font-stack;
-				line-height: 20px;
-				margin-bottom: -1px;
 				box-shadow: 0;
 			}
 		}
 	}
-	.postNav {
-		text-align: center;
-		.postNav {
-			position: fixed;
-			left: 0;
-			right: 0;
-			top: 5px;
-			height: 50px;
-			i, a {
-				margin: 0 10px;
-				z-index: 2;
-				color: lighten($primary-color, 100%);
-			}
-		}
-	}
-	.pageTop {
+	.leftNav {
 		float: left;
 	}
-	&:after {
-		content: '';
-		display: table;
-		clear: both;
+	.rightNav {
+		float: right;
+	}
+	.middleNav {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		li {
+			a, i {
+				margin: 0 10px;
+				color: lighten($primary-color, 100%);
+			}
+			i {
+				font-size: 1.5em;
+			}
+		}
 	}
 }
