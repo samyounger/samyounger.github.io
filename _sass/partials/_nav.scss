@@ -4,6 +4,7 @@ nav {
 	height: 50px;
 	text-align: center;
 	transition: background 1s;
+	z-index: 1;
 	ul {
 		height: inherit;
 		li {
