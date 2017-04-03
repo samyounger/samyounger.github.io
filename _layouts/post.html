@@ -7,6 +7,11 @@ layout: default
   <div class="postTitle">
     <h1 class="blog_title">{{ page.title }}</h1>
     <h2 class="blog_date">{{ page.date | date_to_long_string }}</h2>
+    <p class="category">Tags:
+    {% for category in page.categories %}
+      <span>{{ category }}</span>
+    {% endfor %}
+    </p>
   </div>
   {{ content }}
 

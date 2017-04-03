@@ -134,6 +134,16 @@
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
   }
+  .category {
+  margin: 5px 0;
+  span {
+    background: $secondary-color;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: default;
+    text-transform: uppercase;
+  }
+}
 }
 
 @media (max-width: 736px) {
