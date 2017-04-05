@@ -1,6 +1,13 @@
 {
   "blogPost": [
     {
+      "author": "Ben Vinegar",
+      "date": 2016-2-3,
+      "type": "blog-post",
+      "title": "How to write bulletproof function wrappers in JavaScript",
+      "url": "https://blog.sentry.io/2016/02/03/wrap-javascript-functions.html"
+    },
+    {
       "author": "Leigh Halliday",
       "date": 2015-11-19,
       "type": "blog-post",
