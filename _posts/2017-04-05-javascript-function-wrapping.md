@@ -46,3 +46,17 @@ bindingTestingMessage(); // => 'Action Sam'
 ```
 
 Even if you try calling `bindingTestingMessage.call("Test")` it will not change the value of `this`, and would therefore return `"Action Sam"` rather than `"Test Sam"`.
+
+## Closure
+
+Closures can be used to permanently change the value of `this` without using `bind`.
+
+``` javascript
+let name = "Sam"
+let bindingMyName = function() {
+  myName.call(name)
+}
+
+bindingMyName() // => "Sam"
+bindingMyName.call("Bill") // => "Sam" - cannot override `this`
+```
