@@ -1,7 +1,12 @@
 <nav>
+
+  {% if page.layout != "post" %}
+
   <ul class="pageTop leftNav">
     <li><a href="/">{{ site.title }}</a></li>
   </ul>
+
+  {% endif %}
 
   {% if page.layout == "post" %}
 
@@ -23,10 +28,15 @@
 
   {% endif %}
 
+  {% if page.layout != "post" %}
+
   <ul class="rightNav">
     <li><a href="/">Home</a></li>
     {% for page in site.pages %} {% if page.title %}
     <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
     {% endif %} {% endfor %}
   </ul>
+
+  {% endif %}
+
 </nav>
