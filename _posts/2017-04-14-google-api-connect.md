@@ -2,7 +2,7 @@
 title: Connect Rails API to Google API
 date: 2017-04-14
 categories: [ google, api, rails, oauth, auth ]
-publish: false
+published: false
 ---
 
     DESCRIPTION: I want to connect a Ruby on Rails API to a google storage bucket, and pass data to the google prediction api to spot patterns. For completeness of instruction I will describe the set up of the rails API also so we are working with exactly the same data.
