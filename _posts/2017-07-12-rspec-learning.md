@@ -1,7 +1,7 @@
 ---
 title: Rspec learning
 date: 2017-07-12
-categories: [ rspec, spec, test, testing, rails, ruby ]
+categories: [ rspec, spec, test, testing, rails, ruby, simplecov, coverage ]
 published: true
 ---
 
@@ -201,11 +201,37 @@ This is where we verify whether the test assertion is met or not, returning true
 expect(name).to eq "Sam Younger"
 ```
 
-## Teardown
+### Teardown
 
 This is where we reset the database, so next time we test everything is clean.
 
 This is mostly handled by Rspec itself
+
+---
+
+## Code Coverage
+
+If you want to continuously deploy your code from each push to GitHub, I won't cover how to link this up, but what is important is that you have 100% code coverage of your tests. It is difficult to tell which code blocks you haven't tested simply by running the tests.
+
+I use [SimpleCov](https://github.com/colszowka/simplecov) to get code coverage information.
+
+In the .rspec file include `--require simplecov`
+
+In the spec_helper file in Rspec.config code block, include the line
+
+```rb
+SimpleCov.start
+```
+
+When you run your tests with `rspec` etc. you will see at the bottom a report with the percentage of your code covered.
+
+To see a more detailed report, in the console type:
+
+```sh
+$ open coverage/index.html
+```
+
+Here you will see a detailed report of all the different files in your application, and which lines of each file have been tested.
 
 ---
 
