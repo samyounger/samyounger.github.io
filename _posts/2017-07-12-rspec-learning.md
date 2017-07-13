@@ -215,6 +215,8 @@ If you want to continuously deploy your code from each push to GitHub, I won't c
 
 I use [SimpleCov](https://github.com/colszowka/simplecov) to get code coverage information.
 
+In the gemfile :test group, include `gem simplecov`, and run bundle
+
 In the .rspec file include `--require simplecov`
 
 In the spec_helper file in Rspec.config code block, include the line
