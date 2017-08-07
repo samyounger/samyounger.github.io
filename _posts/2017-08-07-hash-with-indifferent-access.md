@@ -70,3 +70,38 @@ It can be added to any non-rails ruby program with the following at the top of a
 ```rb
 require "active_support/core_ext/hash/indifferent_access"
 ```
+
+---
+
+If you want to test in a test.rb file, try the following:
+
+```rb
+require "active_support/core_ext/hash/indifferent_access"
+
+class TestIndifferentAccess
+
+  def self.name_hash
+    hash = ActiveSupport::HashWithIndifferentAccess.new
+
+    hash[:first_name] = "last_name"
+    hash["first_name"] = "last_name"
+
+    puts hash[:first_name]
+    puts hash["last_name"]
+    puts hash
+  end
+
+  def self.other_name_hash
+    hash = {
+      first_name: "last_name",
+      "first_name" => "last_name"
+    }.with_indifferent_access
+
+    puts hash
+  end
+
+end
+
+TestIndifferentAccess.name_hash
+TestIndifferentAccess.other_name_hash
+```
