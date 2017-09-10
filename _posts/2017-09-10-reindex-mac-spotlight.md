@@ -1,7 +1,7 @@
 ---
-title: Hash with Indifferent Access
+title: Reindex Mac Spotlight
 date: 2017-08-07
-categories: [ rails, ruby, hash, symbol, hash_rocket ]
+categories: [ mac, terminal, spotlight ]
 published: true
 ---
 
