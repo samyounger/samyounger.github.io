@@ -1,6 +1,13 @@
 {
   "blogPost": [
     {
+      "author": "Rob Lefebvre",
+      "date": 2017-3-23,
+      "type": "blog-post",
+      "title": "Re-Index Spotlight from the Terminal, Re-Gain Valuable Time for Life [OS X Tips]",
+      "url": "https://www.cultofmac.com/154458/re-index-spotlight-from-the-terminal-re-gain-valuable-time-for-life-os-x-tips/"
+    },
+    {
       "author": "Darien Moody",
       "date": 2016-2-25,
       "type": "blog-post",
