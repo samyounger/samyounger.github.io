@@ -5,7 +5,7 @@ categories: [ mac, terminal, spotlight ]
 published: true
 ---
 
-    DESCRIPTION: Sometimes the mac spotlight search doesn't discover applications when the update. The mac solution to fix this by adding the directory to the privacy tab in system preferences, and then removing it no longer works.
+    DESCRIPTION: Sometimes the mac spotlight search doesn't discover applications when updated. The Apple solution to fix this by adding the directory to the privacy tab in system preferences and then removing it no longer works.
 
 ## Fix
 
