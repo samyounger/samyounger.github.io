@@ -153,4 +153,5 @@ mount MyEngine::Engine, at: '/myengine', as: 'my_engine'
 
 Now that you have included the engine in your app gemfile, mounted it for authentication, created a home root in the engine, and created a controller in the engine, with required actions and related views, your engine should now be set up and ready to view in the browser.
 
-    IMPORTANT TO NOTE: If you have set up the engine within a Rails API, i.e. the api has none of the usual front-end assets, and you have an Admin engine to check things in a browser, then you will need to make a small change to get the assets to precompile. In your applications config/application.rb file, at the top require `require 'sprockets/railtie'`, and in the terminal run `$ rails assets:precompile`
+    IMPORTANT TO NOTE: If you have set up the engine within a Rails API, i.e. the api has none of the usual front-end assets, and you have an Admin engine to check things in a browser, then you will need to make a small change to get the assets to precompile. In your applications config/application.rb file, at the top require `require 'sprockets/railtie'`, and in the terminal run `$ rails assets:precompile`.
+    If this doesn't work, try `rails assets:clobber` which deletes all compiled assets.
