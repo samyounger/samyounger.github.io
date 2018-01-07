@@ -1,83 +1,45 @@
 #projects {
   background: lighten($primary-color, 100%);
-  width: 100%;
   color: black;
   text-align: center;
-  .projectContainer {
-    display: block;
-    width: 840px;
-    height: auto;
-    margin: 0 auto;
-    .project {
-      height: 300px;
-      width: 400px;
-      background: black;
-      float: left;
-      overflow: hidden;
-      position: relative;
-    }
-    &:nth-child(3) .project, &:nth-child(5) .project {
-      float: right;
-    }
-
-    .projectDescription {
-      display: inline-block;
-      width: 400px;
-      height: 310px;
-      overflow: hidden;
-      h3 {
-        margin: 10px;
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &:nth-child(odd) {
+      .photo {
+        order: 1;
       }
-      p {
-        font-size: 15px;
+      .project-description {
+        order: 2;
       }
-      .fa-cloud, .fa-code {
-        font-size: 3em;
+    }
+    .photo {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    a {
+      height: 3rem;
+      line-height: 3rem;
+      i {
+        font-size: 3rem;
         color: $primary-color;
-        margin: 0 50px;
+        margin: 0 1rem;
       }
     }
-    &:last-child {
-      .iconContainer {
-        display: inline-block;
-        width: 90px;
-        vertical-align: top;
-        .fa-cloud, .fa-code {
-          margin: 0 10px;
-        }
-        p {
-          color: grey;
-          font-weight: 100;
-        }
+    .icons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      p { text-align: right }
+      a:hover {
+        background: lighten($primary-color, 90%);
+        transition: 0.25s;
       }
-    }
-
-    .projectPhoto {
-      height: 300px;
-      width: auto;
-      display: block;
-      margin: 0 auto;
-      margin-left: -100px;
-      transition: all .2s ease-in-out;
-      &:hover {
-        transform: scale(1.1);
+      &.double a {
+        grid-column: 2;
       }
-    }
-  }
-}
-
-@media (max-width: 870px) {
-  #projects .projectContainer {
-    width: auto;
-    height: auto;
-    .project, .projectDescription {
-      width: 100%;
-      height: auto;
-    }
-    .projectPhoto, .projectDescription {
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
     }
   }
 }

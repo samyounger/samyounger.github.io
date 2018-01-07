@@ -4,15 +4,13 @@ layout: default
 
 <div class="navSpacer"></div>
 <section id="blogPost" class="content-section">
-  <div class="postTitle">
-    <h1 class="blog_title">{{ page.title }}</h1>
-    <h2 class="blog_date">{{ page.date | date_to_long_string }}</h2>
-    <p class="category">Tags:
-    {% for category in page.categories %}
-      <span>{{ category }}</span>
-    {% endfor %}
-    </p>
-  </div>
+  <h2 class="blog_title">{{ page.title }}</h1>
+  <h3 class="blog_date">{{ page.date | date_to_long_string }}</h2>
+  <p class="tags">
+  {% for category in page.categories %}
+    <span>{{ category }}</span>
+  {% endfor %}
+  </p>
   {{ content }}
 
   <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" class="commentCount" onclick="return false">Loading disqus</a>

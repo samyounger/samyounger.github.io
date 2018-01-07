@@ -1,0 +1,12 @@
+section#reading {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  justify-items: left;
+  & > * {
+    grid-column: 2;
+  }
+  .read {
+    display: grid;
+
+  }
+}

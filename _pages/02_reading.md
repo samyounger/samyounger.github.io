@@ -21,8 +21,6 @@ I have read the following series of books while learning to become a better prog
   {% endfor %}
 </div>
 
----
-
 ### Blog Posts
 
 <div class="sourceReading">

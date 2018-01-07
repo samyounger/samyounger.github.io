@@ -18,12 +18,10 @@ body {
 main {
 	margin: 0 auto;
 	section {
-		width: 100%;
-		padding: 30px 0;
-		.content {
-			max-width: 900px;
-			margin: 0 auto;
-		}
+		display: grid;
+		justify-items: center;
+		grid-gap: 1rem;
+		padding: 3rem;
 	}
 }
 

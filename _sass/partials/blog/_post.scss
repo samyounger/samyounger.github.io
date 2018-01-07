@@ -1,0 +1,22 @@
+#blogPost {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  justify-items: center;
+  & > * {
+    grid-column: 2;
+  }
+  h3 {
+    border: none;
+  }
+  .tags {
+    span {
+      background: $secondary-color;
+      color: $primary-color;
+      padding: 0.5rem;
+      border-radius: 0.1rem;
+    }
+  }
+  .highlight {
+    background: $secondary-color;
+  }
+}
