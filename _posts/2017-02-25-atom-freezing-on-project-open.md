@@ -19,6 +19,6 @@ The fix that worked for me was navigating to the project in the terminal. Here r
 
 This issue has been with atom since 2013 by the looks of this discussion board on Atom's github issues board:
 
-[Discussion](https://github.com/atom/atom/issues/979)
+<a class="main-link" href="https://github.com/atom/atom/issues/979">Discussion</a>
 
 I see that FINALLY they have found a fix for this, and should be released in the Atom version 1.16 (currently the production version is 1.14.3). I look forward to this fix.

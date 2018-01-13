@@ -8,7 +8,7 @@ categories: [github, git]
 
 Go to the site below and create a new account.
 
-<https://github.com/>
+<a class="main-link" href="https://github.com">http://github.com</a>
 
 ## Create a new repository for the project
 

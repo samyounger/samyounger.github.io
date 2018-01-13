@@ -11,7 +11,7 @@ published: false
 
 I had previously never used Google storage, having only used amazon's aws s3 bucket service to store website contents for static web pages. This week I have a project which requires the google prediction api service to identify patterns in a data packet. The previous post I wrote:
 
-[link](http://samyounger.com/big-data/google/prediction/api/2017/04/10/google-prediction-api.html)
+<a class="main-link" href="http://samyounger.com/big-data/google/prediction/api/2017/04/10/google-prediction-api.html">link</a>
 
 contains instructions of how to quickly set up the Google Prediction api service manually uploading data through the browser interface. I now want to send a data csv file to a google storage bucket, then call the google prediction api and pass the google storage file you've just uploaded to the prediction api.
 

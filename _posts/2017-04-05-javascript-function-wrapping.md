@@ -5,7 +5,7 @@ categories: javascript, functions
 ---
     DESCRIPTION: Making functions globally available becomes extremely confusing as your project builds in scale. Wrapping functions is a tidy solution to control accessibility to your functions. This blog will tackle this topic.
 
-[Prior Reading](https://blog.sentry.io/2016/02/03/wrap-javascript-functions.html)
+<a class="main-link" href="https://blog.sentry.io/2016/02/03/wrap-javascript-functions.html">Prior Reading</a>
 
 ## Introduction
 
@@ -31,7 +31,7 @@ function testingMessage(message) {
 testingMessage.call("hello", "Sam") // => "hello Sam"
 ```
 
-[call() documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+<a class="main-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call() documentation</a>
 
 We can also bind the value of `this` rather than individually setting the value of this in `call()`, by running this:
 

@@ -6,7 +6,7 @@ categories: [jekyll, kickster]
 
     DESCRIPTION: In my pursuit to build a better personal blogging website and learning more about Jekyll, I am going to build a site using Kickster, recommended on Jekyll's Docs "for easy (automated) deploys to GitHub Pages when using unsupported plugins on GitHub Pages."
 
-[Kickster](http://kickster.nielsenramon.com/)
+<a class="main-link" href="http://kickster.nielsenramon.com/">Kickster</a>
 
 ## About
 

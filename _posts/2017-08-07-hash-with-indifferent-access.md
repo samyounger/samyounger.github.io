@@ -7,7 +7,7 @@ published: true
 
     DESCRIPTION: Rails has a core active-support extension called 'HashWithIndifferentAccess'. This means that whatever you put in to the hash keys; string or symbol, it is put in as a string with hash rocket.
 
-[Documentation](http://api.rubyonrails.org/classes/ActiveSupport/HashWithIndifferentAccess.html)
+<a class="main-link" href="http://api.rubyonrails.org/classes/ActiveSupport/HashWithIndifferentAccess.html">Documentation</a>
 
 ## Why
 

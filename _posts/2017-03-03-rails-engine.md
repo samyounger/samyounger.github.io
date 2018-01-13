@@ -5,7 +5,7 @@ categories: [rails, ruby, engine]
 ---
     DESCRIPTION: A rails engine is a miniature application within a host application. This post will describe how to set up a rails engine within a rails app.
 
-[DOCUMENTATION](http://guides.rubyonrails.org/engines.html)
+<a class="main-link" href="http://guides.rubyonrails.org/engines.html">DOCUMENTATION</a>
 
 ## Generate the engine
 

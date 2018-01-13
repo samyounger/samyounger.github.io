@@ -6,7 +6,7 @@ categories: [ big-data, google, prediction, api ]
 
     DESCRIPTION: I am setting up an application which is using historic data of restaurant deliveries per hour to predict on any given hour and day what order volume should be expected. I am going to pass the data to the google prediction api to do the regression analysis.
 
-[Google Prediction API](https://cloud.google.com/prediction/docs/)
+<a class="main-link" href="https://cloud.google.com/prediction/docs/">Google Prediction API</a>
 
 ## Overview
 
@@ -17,7 +17,7 @@ The Google Prediction API very simply takes a CSV file as input which is calls t
 
 A Google cloud storage account needs to be set up:
 
-[Google Cloud Storage](https://console.cloud.google.com/)
+<a class="main-link" href="https://console.cloud.google.com/">Google Cloud Storage</a>
 
 ### Enable prediction API
 
