@@ -4,29 +4,21 @@ h1, h2, h3, h4 {
   font-family: $primary-font-stack;
   font-weight: 100;
   letter-spacing: 1px;
-  padding: 0 0 2rem 0;
+  padding: 0 0 0.1rem 0;
   border-bottom: 3px solid $secondary-color;
   user-select: none;
 }
 h1 {
   font-size: 30px;
-  height: 30px;
-  line-height: 30px;
 }
 h2 {
   font-size: 25px;
-  height: 25px;
-  line-height: 25px;
 }
 h3 {
   font-size: 20px;
-  height: 20px;
-  line-height: 20px;
 }
 h4 {
   font-size: 15px;
-  height: 15px;
-  line-height: 15px;
 }
 
 a {
@@ -43,6 +35,7 @@ a {
     padding: 1rem;
     margin: 0;
     background: blue;
+    display: inline-block;
   }
 }
 

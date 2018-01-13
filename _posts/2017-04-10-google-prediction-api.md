@@ -40,7 +40,7 @@ Once the bucket is created, click 'upload file' and upload your data file you wa
 Pass in the data csv file to the prediction API as follows:
 
 ``` javascript
-POST https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels
+// POST https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels
 {
   "id": "language-identifier",
   "storageDataLocation": "quickstart-1465256213/language_id.txt"
@@ -63,7 +63,7 @@ Successful reponses look like this
 To confirm completion of the training, call this method:
 
 ``` javascript
-GET https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels/language-identifier
+// GET https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels/language-identifier
 ```
 
 Replace the `[PROJECT_ID]` with your projects name.
@@ -92,7 +92,7 @@ In response take a look at the `trainingStatus` status:
 Once the model has been trained, you can submit data as frequently as you like for analysis as long as it remains in the same format as in the trained model.
 
 ``` javascript
-POST https://www.googleapis.com/prediction/v1.6/projects/prediction-docs/trainedmodels/language-identifier/predict
+// POST https://www.googleapis.com/prediction/v1.6/projects/prediction-docs/trainedmodels/language-identifier/predict
 
 {
   "input": {
