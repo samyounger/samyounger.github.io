@@ -39,94 +39,34 @@ Once the bucket is created, click 'upload file' and upload your data file you wa
 
 Pass in the data csv file to the prediction API as follows:
 
-``` javascript
-// POST https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels
-{
-  "id": "language-identifier",
-  "storageDataLocation": "quickstart-1465256213/language_id.txt"
-}
-```
+{% gist 3d77c4b6862647e2734c8d1e2ab4d1b1 train_the_model.json %}
 
 The `[PROJECT_ID]` is the name of your project, and the storageDataLocation is the location of your project with the csv file name.
 
 Successful reponses look like this
 
-``` json
-{
-  "kind": "prediction#training",
-  "id": "language-identifier",
-  "selfLink": "https://www.googleapis.com/prediction/v1.6/projects/prediction-docs/trainedmodels/language-identifier",
-  "storageDataLocation": "quickstart-1465256213/language_id.txt"
-}
-```
+{% gist 3d77c4b6862647e2734c8d1e2ab4d1b1 train_the_model_result.json %}
 
 To confirm completion of the training, call this method:
 
-``` javascript
-// GET https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels/language-identifier
-```
+{% gist 3d77c4b6862647e2734c8d1e2ab4d1b1 confirm_training_completion.js %}
+
 
 Replace the `[PROJECT_ID]` with your projects name.
 
 In response take a look at the `trainingStatus` status:
 
-``` json
-{
-  "kind": "prediction#training",
-  "id": "language-identifier",
-  "selfLink": "https://www.googleapis.com/prediction/v1.6/projects/prediction-docs/trainedmodels/language-identifier",
-  "created": "2016-06-07T22:51:13.702Z",
-  "trainingComplete": "2016-06-07T22:51:32.468Z",
-  "modelInfo": {
-    "numberInstances": "406",
-    "modelType": "classification",
-    "numberLabels": "3",
-    "classificationAccuracy": "0.99"
-  },
-  "trainingStatus": "DONE"
-}
-```
+{% gist 3d77c4b6862647e2734c8d1e2ab4d1b1 training_status.json %}
 
 ### Submit fresh data
 
 Once the model has been trained, you can submit data as frequently as you like for analysis as long as it remains in the same format as in the trained model.
 
-``` javascript
-// POST https://www.googleapis.com/prediction/v1.6/projects/prediction-docs/trainedmodels/language-identifier/predict
-
-{
-  "input": {
-    "csvInstance": [
-      "Sont des mots qui vont tres bien ensemble"
-    ]
-  }
-}
-```
+{% gist 3d77c4b6862647e2734c8d1e2ab4d1b1 get_prediction.json %}
 
 In reponse for the language prediction API we should get data which looks like this:
 
-``` json
-{
-  "kind": "prediction#output",
-  "id": "language-identifier",
-  "selfLink": "https://www.googleapis.com/prediction/v1.6/projects/prediction-docs/trainedmodels/language-identifier/predict",
-  "outputLabel": "French",
-  "outputMulti": [
-    {
-      "label": "English",
-      "score": "0.000000"
-    },
-    {
-      "label": "French",
-      "score": "1.000000"
-    },
-    {
-      "label": "Spanish",
-      "score": "0.000000"
-    }
-  ]
-}
-```
+{% gist 3d77c4b6862647e2734c8d1e2ab4d1b1 get_prediction_response.json %}
 
 And you're done. FYI - the above instructions were taken from the google docs on the prediction api link provided at the top of this post. For more in depth instruction I would recommend going to the actual Google page and following.
 

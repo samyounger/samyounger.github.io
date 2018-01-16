@@ -28,8 +28,8 @@ social:
 sass:
   sass_dir: _sass
 include: ['_pages']
-markdown: kramdown
-highlighter: rouge
+# markdown: kramdown
+# highlighter: rouge
 gems:
   - jekyll-feed
 exclude:
