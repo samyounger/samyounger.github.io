@@ -42,13 +42,12 @@
     padding: 0;
     font-size: 1rem;
     a {
-      background: lighten($primary-color, 98%);
       border: 1px solid darken($secondary-color, 20%);
       color: $primary-color;
       margin: 1rem 0;
+      transition: all 0.5s ease;
       &:hover {
-        background: lighten($primary-color, 100%);
-        color: $secondary-color;
+        color: $primary-color;
         text-decoration: none;
       }
     }
