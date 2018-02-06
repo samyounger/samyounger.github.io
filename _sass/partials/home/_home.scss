@@ -1,28 +1,37 @@
 header {
-	background: url("../assets/images/background.jpg") no-repeat center center fixed;
-	background-size: cover;
-	text-align: center;
-	height: 100vh;
 	display: grid;
 	justify-items: center;
-	align-items: center;
-	padding: 5rem 0;
-	margin-top: -60px;
-	h1 {
-		font-size: 100px;
-		height: 100px;
-		line-height: 100px;
-		letter-spacing: 5px;
-		text-transform: uppercase;
-		border: none;
-		a {
-			color: lighten($primary-color, 100%);
-		}
+	align-content: baseline;
+	grid-gap: 3rem 0;
+	text-align: center;
+	height: 90vh;
+	img {
+		width: 80%;
 	}
-	h2 {
-		color: white;
-		font-size: 30px;
-		border: none;
-		text-transform: none;
+}
+
+@media only screen and (min-device-width: 380px) {
+	header {
+		background: url("../assets/images/background.jpg") no-repeat center center fixed;
+		background-size: cover;
+		height: 100vh;
+		margin-top: -6rem;
+		h1 {
+			font-size: 100px;
+			height: 100px;
+			line-height: 100px;
+			letter-spacing: 5px;
+			text-transform: uppercase;
+			border: none;
+			a {
+				color: lighten($primary-color, 100%);
+			}
+		}
+		h2 {
+			color: white;
+			font-size: 30px;
+			border: none;
+			text-transform: none;
+		}
 	}
 }
