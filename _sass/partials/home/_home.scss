@@ -16,6 +16,7 @@ header {
 		background-size: cover;
 		height: 100vh;
 		margin-top: -6rem;
+		align-content: center;
 		h1 {
 			font-size: 100px;
 			height: 100px;
@@ -32,6 +33,9 @@ header {
 			font-size: 30px;
 			border: none;
 			text-transform: none;
+		}
+		img {
+			width: 10rem;
 		}
 	}
 }

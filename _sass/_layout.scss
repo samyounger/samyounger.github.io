@@ -21,10 +21,17 @@ main {
 		display: grid;
 		justify-items: center;
 		grid-gap: 1rem;
-		padding: 3rem;
 	}
 }
 
 time {
 	color: lighten($primary-color, 60%);
+}
+
+@media only screen and (min-device-width: 380px) {
+	main {
+		section {
+			padding: 3rem;
+		}
+	}
 }
