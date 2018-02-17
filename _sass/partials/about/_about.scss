@@ -1,17 +1,30 @@
 #about {
-  display: grid;
-  grid-template-columns: 20% auto 20%;
-  & > * {
-    grid-column: 2;
+  text-align: center;
+  #story {
+    padding: 0.5rem;
   }
   .code-languages {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     justify-items: center;
     .icon-container {
       display: grid;
       justify-items: center;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 380px) {
+  #about {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    justify-content: center;
+    & > * {
+      grid-column: 2;
+    }
+    .code-languages {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 }

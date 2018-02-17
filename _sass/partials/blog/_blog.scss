@@ -1,7 +1,7 @@
 #blog {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns: 5% 90% 5%;
   justify-items: left;
+  grid-gap: 0;
   & > * {
     grid-column: 2;
   }
@@ -12,65 +12,34 @@
   }
   #default-post-list, #search_results {
     li {
-      display: grid;
-      grid-template-columns: 10rem auto;
       margin: 1rem 0;
-      h3 { border: none; }
+      display: grid;
+      time {
+        grid-row: 2;
+        font-size: 1rem;
+      }
+      h3 {
+        grid-row: 1;
+        border: none;
+        a {
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
   }
 }
 
-#blog-post {
-  background: white;
-  display: grid;
-  justify-items: left;
-  grid-gap: 0;
-  padding: 0;
-  margin: 0 3rem;
-  color: black;
-  padding: 0.5rem;
-  .blog-post-head {
-    // background: blue;
-    display: grid;
-    justify-items: left;
-    grid-gap: 1rem;
-    width: 100%;
-    ul {
+@media only screen and (min-device-width: 380px) {
+  #blog {
+    grid-template-columns: 20% 60% 20%;
+    #default-post-list, #search_results {
       li {
-        display: inline-block;
-        background: $secondary-color;
-        padding: 0.5rem;
-        border-radius: 0.1rem;
+        grid-template-columns: 10rem auto;
+        time, h3 {
+          grid-row: 1;
+        }
       }
     }
-  }
-  pre {
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border-radius: 0.1rem;
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-    font-family: courier;
-  }
-  p {
-    padding: 0;
-    font-size: 1rem;
-    a {
-      background: lighten($primary-color, 98%);
-      border: 1px solid darken($secondary-color, 20%);
-      color: $primary-color;
-      margin: 1rem 0;
-      &:hover {
-        background: lighten($primary-color, 100%);
-        color: $secondary-color;
-        text-decoration: none;
-      }
-    }
-  }
-  .language-rb {
-    width: 100%;
   }
 }

@@ -2,11 +2,12 @@ nav {
 	text-align: right;
 	.hamburger {
 		display: inline-grid;
-		height: 4rem;
-		width: 5rem;
+		height: 3rem;
+		width: 4rem;
+		margin: 1rem;
 		div {
 			background: white;
-			height: 5px;
+			height: 1px;
 			margin: 0 0.8rem;
 			&:first-child {
 				grid-row: 2;
@@ -42,6 +43,27 @@ nav {
 				a {
 					background: rgba(white, 0.5);
 					color: white;
+				}
+			}
+		}
+	}
+	ul.post-nav {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-items: center;
+		align-items: center;
+		li {
+			text-align: center;
+			width: 100%;
+			a {
+				display: block;
+				padding: 1rem;
+				&:focus {
+					background: lighten($primary-color, 80%);
+					color: $primary-color;
+				}
+				i {
+					padding: 1rem;
 				}
 			}
 		}

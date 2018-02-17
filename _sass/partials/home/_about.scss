@@ -6,7 +6,7 @@
 
 
 @media only screen and (min-device-width: 380px) {
-  .home-about {
+  .home-about#about {
     text-align: center;
     grid-template-columns: 20% auto 20%;
     & > * {

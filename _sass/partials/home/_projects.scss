@@ -46,6 +46,8 @@
 @media only screen and (min-device-width: 380px) {
   #projects {
     .project-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       &:nth-child(odd) {
         .photo {
           order: 1;
