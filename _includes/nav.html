@@ -1,10 +1,4 @@
 <nav class="pageTop">
-  <div class="hamburger">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
   {% if page.layout == "post" %}
   <ul class="post-nav">
     <li>
@@ -21,10 +15,14 @@
       </a>
     </li>
   </ul>
-
   {% endif %}
 
   {% if page.layout != "post" %}
+  <div class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
   <ul class="main-nav right-nav">
     <li><a href="/">Home</a></li>
@@ -33,7 +31,6 @@
     {% endif %} {% endfor %}
     <li class="hamburger-close"><a href="#"><i class="fa fa-angle-double-up"></i></a></li>
   </ul>
-
   {% endif %}
 
 </nav>
