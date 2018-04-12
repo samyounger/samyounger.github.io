@@ -10,10 +10,8 @@ $(window).scroll(function() {
 // jQuery for page scrolling feature - requires jQuery ui
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 800, 'swing');
+        var $anchor = $(this).attr('href');
+        $('html,body').animate({scrollTop: $($anchor).offset().top},'fast');
         event.preventDefault();
     });
 });

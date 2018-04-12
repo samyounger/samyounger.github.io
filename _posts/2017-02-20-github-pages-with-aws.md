@@ -6,9 +6,9 @@ categories: [github, git, github-pages, aws, route53]
 
     DESCRIPTION: This post will describe how to set up your own personal jekyll website with github pages and route it to an amazon AWS Route53 DNS provider for a cost-effective solution to launching your website live.
 
-[GitHub](https://github.com/)
-[AWS](https://aws.amazon.com/console/)
-[Jekyll](https://jekyllrb.com/docs/github-pages/)
+<a class="main-link" href="https://github.com/">GitHub</a>
+<a class="main-link" href="https://aws.amazon.com/console/">AWS</a>
+<a class="main-link" href="https://jekyllrb.com/docs/github-pages/">Jekyll</a>
 
 Launching a website can potentially be a costly exercise if going through one of the Content Management Service providers, or even through SquareSpace or WordPress. One of the most cost-effective solutions I found was to host the code on GitHub (which you should be doing anyway for version control), and to host the domain with Amazon Web Services. The cost of the domain varies depending on what you go for, but mine costs c. $10 per annum. On top of that Amazon charges for traffic to the site. With me using my own site this ranges from $3 - $6 per month.
 
@@ -63,6 +63,6 @@ You have now connected the GitHub username repository to AWS Route 53, and your 
 
 Learn about Jekyll which GitHub Pages runs off.
 
-[Jekyll Guidance Notes](https://jekyllrb.com/docs/github-pages/)
+<a class="main-link" href="https://jekyllrb.com/docs/github-pages/">Jekyll Guidance Notes</a>
 
 Finally in the project folder, create a `CNAME` file. In the file simply type the name of your domain, for example `username.com`. No HTTP:// reference.

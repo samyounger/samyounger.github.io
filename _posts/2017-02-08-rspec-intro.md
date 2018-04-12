@@ -9,7 +9,7 @@ published: true
 
 Its documentation is located here:
 
-<http://rspec.info/>
+<a class="main-link" href="http://rspec.info/">http://rspec.info/</a>
 
 ## Install
 

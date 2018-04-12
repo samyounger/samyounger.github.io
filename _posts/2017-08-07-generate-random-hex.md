@@ -7,7 +7,7 @@ published: true
 
     DESCRIPTION: a brief note on how to generate a random hex.
 
-[Documentation](https://ruby-doc.org/stdlib-2.4.0/libdoc/securerandom/rdoc/SecureRandom.html)
+<a class="main-link" href="https://ruby-doc.org/stdlib-2.4.0/libdoc/securerandom/rdoc/SecureRandom.html">Documentation</a>
 
 ## Method
 

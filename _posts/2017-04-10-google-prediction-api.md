@@ -6,7 +6,7 @@ categories: [ big-data, google, prediction, api ]
 
     DESCRIPTION: I am setting up an application which is using historic data of restaurant deliveries per hour to predict on any given hour and day what order volume should be expected. I am going to pass the data to the google prediction api to do the regression analysis.
 
-[Google Prediction API](https://cloud.google.com/prediction/docs/)
+<a class="main-link" href="https://cloud.google.com/prediction/docs/">Google Prediction API</a>
 
 ## Overview
 
@@ -17,7 +17,7 @@ The Google Prediction API very simply takes a CSV file as input which is calls t
 
 A Google cloud storage account needs to be set up:
 
-[Google Cloud Storage](https://console.cloud.google.com/)
+<a class="main-link" href="https://console.cloud.google.com/">Google Cloud Storage</a>
 
 ### Enable prediction API
 
@@ -40,7 +40,7 @@ Once the bucket is created, click 'upload file' and upload your data file you wa
 Pass in the data csv file to the prediction API as follows:
 
 ``` javascript
-POST https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels
+// POST https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels
 {
   "id": "language-identifier",
   "storageDataLocation": "quickstart-1465256213/language_id.txt"
@@ -63,7 +63,7 @@ Successful reponses look like this
 To confirm completion of the training, call this method:
 
 ``` javascript
-GET https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels/language-identifier
+// GET https://www.googleapis.com/prediction/v1.6/projects/[PROJECT_ID]/trainedmodels/language-identifier
 ```
 
 Replace the `[PROJECT_ID]` with your projects name.
@@ -92,7 +92,7 @@ In response take a look at the `trainingStatus` status:
 Once the model has been trained, you can submit data as frequently as you like for analysis as long as it remains in the same format as in the trained model.
 
 ``` javascript
-POST https://www.googleapis.com/prediction/v1.6/projects/prediction-docs/trainedmodels/language-identifier/predict
+// POST https://www.googleapis.com/prediction/v1.6/projects/prediction-docs/trainedmodels/language-identifier/predict
 
 {
   "input": {

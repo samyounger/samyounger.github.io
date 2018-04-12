@@ -33,12 +33,12 @@ $(document).ready(function() {
   $(document).on('change keyup', '#search_box', function(event) {
     let boxValue = $("#search_box").val();
     if (boxValue !== "") {
-      $("#defaultPostList").css({ display: "none" })
+      $("#default-post-list").css({ display: "none" })
       let results = window.idx.search(boxValue); // Get lunr to perform a search
       display_search_results(results); // Hand the results off to be displayed
     } else {
       $("#search_results li").remove();
-      $("#defaultPostList").css({ display: "unset" })
+      $("#default-post-list").css({ display: "unset" })
     }
   });
 
@@ -59,10 +59,8 @@ $(document).ready(function() {
           // Build a snippet of HTML for this result
           let appendString = `
           <li>
-            <div class="postDate"><time>${post.date}</time></div>
-            <div class="postHead">
-              <h3><a href=${post.url}>${post.title}</a></h3>
-            </div>
+            <time>${post.date}</time>
+            <h3><a href=${post.url}>${post.title}</a></h3>
           </li>
           `;
 

@@ -1,0 +1,18 @@
+section#reading {
+  display: grid;
+  grid-template-columns: 5% auto 5%;
+  justify-items: left;
+  & > * {
+    grid-column: 2;
+  }
+  .read {
+    display: grid;
+
+  }
+}
+
+@media only screen and (min-device-width: 380px) {
+  section#reading {
+    grid-template-columns: 20% auto 20%;
+  }
+}

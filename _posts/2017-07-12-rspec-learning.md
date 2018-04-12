@@ -241,4 +241,6 @@ Here you will see a detailed report of all the different files in your applicati
 
 I used this blog-post series by [Ed Wassermann](https://vis-kid.github.io/) as a prime source for this blog-post.
 
-[first-post](https://code.tutsplus.com/articles/rspec-testing-for-beginners-part-1--cms-26716)[second-post](https://code.tutsplus.com/articles/rspec-testing-for-beginners-02--cms-26720)[third-post](https://code.tutsplus.com/articles/rspec-testing-for-beginners-03--cms-26728)
+<a class="main-link" href="https://code.tutsplus.com/articles/rspec-testing-for-beginners-part-1--cms-26716">first-post</a>
+<a class="main-link" href="https://code.tutsplus.com/articles/rspec-testing-for-beginners-02--cms-26720">second-post</a>
+<a class="main-link" href="https://code.tutsplus.com/articles/rspec-testing-for-beginners-03--cms-26728">third-post</a>

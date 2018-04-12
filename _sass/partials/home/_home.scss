@@ -1,37 +1,41 @@
-@import "variables/colors";
-
 header {
-	background: url("../assets/images/background.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	display: grid;
+	justify-items: center;
+	align-content: baseline;
+	grid-gap: 3rem 0;
 	text-align: center;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	.logoTitle {
-		display: block;
-		width: 100%;
+	height: 90vh;
+	img {
+		width: 80%;
 	}
+}
 
-	h1 {
-		display: block;
-		font-size: 100px;
-		letter-spacing: 5px;
-		text-transform: uppercase;
-		padding: 0;
-		border: none;
-		a {
-			color: lighten($primary-color, 100%);
+@media only screen and (min-device-width: 380px) {
+	header {
+		background: url("../assets/images/background.jpg") no-repeat center center fixed;
+		background-size: cover;
+		height: 100vh;
+		margin-top: -6rem;
+		align-content: center;
+		h1 {
+			font-size: 100px;
+			height: 100px;
+			line-height: 100px;
+			letter-spacing: 5px;
+			text-transform: uppercase;
+			border: none;
+			a {
+				color: lighten($primary-color, 100%);
+			}
 		}
-	}
-	h2 {
-		color: white;
-		font-size: 30px;
-		padding: 0;
-		border: none;
-		text-transform: none;
+		h2 {
+			color: white;
+			font-size: 30px;
+			border: none;
+			text-transform: none;
+		}
+		img {
+			width: 10rem;
+		}
 	}
 }

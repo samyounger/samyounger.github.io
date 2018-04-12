@@ -1,19 +1,9 @@
-<nav>
-
-  {% if page.layout != "post" %}
-
-  <ul class="pageTop leftNav">
-    <li><a href="/">{{ site.title }}</a></li>
-  </ul>
-
-  {% endif %}
-
+<nav class="pageTop">
   {% if page.layout == "post" %}
-
-  <ul class="middleNav">
+  <ul class="post-nav">
     <li>
       <a href="{{ page.previous.url }}">
-        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
       </a>
     </li>
     <li>
@@ -21,22 +11,26 @@
     </li>
     <li>
       <a href="{{ page.next.url }}">
-        <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </li>
   </ul>
-
   {% endif %}
 
   {% if page.layout != "post" %}
+  <div class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-  <ul class="rightNav">
+  <ul class="main-nav right-nav">
     <li><a href="/">Home</a></li>
     {% for page in site.pages %} {% if page.title %}
     <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
     {% endif %} {% endfor %}
+    <li class="hamburger-close"><a href="#"><i class="fa fa-angle-double-up"></i></a></li>
   </ul>
-
   {% endif %}
 
 </nav>

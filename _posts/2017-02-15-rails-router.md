@@ -10,7 +10,7 @@ categories: [rails, ruby]
 
 Documentation can be found here:
 
-[Rails Routes](http://guides.rubyonrails.org/routing.html)
+<a class="main-link" href="http://guides.rubyonrails.org/routing.html">Rails Routes</a>
 
 ## Basics
 

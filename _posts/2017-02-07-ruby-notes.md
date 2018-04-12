@@ -10,15 +10,15 @@ categories: [rails, ruby]
 
 Its documentation is found here:
 
-<https://www.ruby-lang.org/en/>
+<a class="main-link" href="https://www.ruby-lang.org/en/">https://www.ruby-lang.org/en/</a>
 
 Ruby is probably best known for the Ruby on Rails framework. The documentation for this can be found here:
 
-<http://rubyonrails.org/>
+<a class="main-link" href="http://rubyonrails.org/">http://rubyonrails.org/</a>
 
 ## Classes
 
-[Ruby Class documentation](https://ruby-doc.org/core-2.2.0/Class.html)
+<a class="main-link" href="https://ruby-doc.org/core-2.2.0/Class.html">Ruby Class documentation</a>
 
 **Naming**: all class names should begin with a capital letter.
 
@@ -26,7 +26,7 @@ Ruby is probably best known for the Ruby on Rails framework. The documentation f
 
 ## attr_accesssor
 
-[Ruby attr_accessor documentation](http://ruby-doc.org/core-2.0.0/Module.html#method-i-attr_accessor)
+<a class="main-link" href="http://ruby-doc.org/core-2.0.0/Module.html#method-i-attr_accessor">Ruby attr_accessor documentation</a>
 
 When you want to read/write to the database, in the Class you would need to write two read/write methods:
 
@@ -66,13 +66,13 @@ end
 
 ## Models
 
-[Rails Model documentation](http://guides.rubyonrails.org/active_model_basics.html)
+<a class="main-link" href="http://guides.rubyonrails.org/active_model_basics.html">Rails Model documentation</a>
 
 Models are where we determine database table relationships and filters/validations to any data being saved to the database.
 
 ## Database Relationships
 
-[Rails Active Record documentation](http://guides.rubyonrails.org/association_basics.html)
+<a class="main-link" href="http://guides.rubyonrails.org/association_basics.html">Rails Active Record documentation</a>
 
 SQL databases are relational and we must determine the relationship between the data sets.
 
@@ -110,7 +110,7 @@ You will see above I used a `belongs_to` relationship. This is called a **join**
 
 ## Validation
 
-[Rails Active Record Validations documentation](http://guides.rubyonrails.org/active_record_validations.html)
+<a class="main-link" href="http://guides.rubyonrails.org/active_record_validations.html">Rails Active Record Validations documentation</a>
 
 In the models directory, you can add in validations for data that is going to be added to your directory to ensure your database is clean data added that you approve of.
 
@@ -129,7 +129,7 @@ end
 
 ## Controllers
 
-[Rails Action Controller documentation](http://guides.rubyonrails.org/action_controller_overview.html)
+<a class="main-link" href="http://guides.rubyonrails.org/action_controller_overview.html">Rails Action Controller documentation</a>
 
 Controllers are the brains of the website. The controller accesses the model to input/output data. In addition it retrieves the data that is to be shown in the HTML.
 
@@ -155,7 +155,7 @@ end
 
 ## Routes
 
-[Rails Routes documentation](http://guides.rubyonrails.org/routing.html)
+<a class="main-link" href="http://guides.rubyonrails.org/routing.html">Rails Routes documentation</a>
 
 This is the section of the Rails app which controls how the URL is routed to the correct controller action. For our photo rails App a standard route page would look something like this:
 

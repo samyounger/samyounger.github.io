@@ -2,15 +2,16 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 // Reset
-@import "reset";
+@import "presets/reset";
 
 // Variables
 @import "variables/colors";
 @import "variables/fonts";
 
-// Text styling
-@import "syntax-highlighting";
-@import "text";
+// Presets
+@import "presets/syntax-highlighting";
+@import "presets/text";
+
 
 // Components
 @import "components/button";
@@ -23,7 +24,9 @@
 @import "partials/home/about";
 @import "partials/home/projects";
 @import "partials/about/about";
+@import "partials/reading/reading";
 @import "partials/contact/contact";
 @import "partials/contact";
 @import "partials/footer";
 @import "partials/blog/blog";
+@import "partials/blog/post";
