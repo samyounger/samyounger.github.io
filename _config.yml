@@ -45,7 +45,7 @@ sass:
 include: ['_pages']
 markdown: kramdown
 highlighter: rouge
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
@@ -62,5 +62,3 @@ defaults:
       comments: true
       author: "Sam Younger"
       published: true
-
-theme: jekyll-theme-midnight
