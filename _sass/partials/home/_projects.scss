@@ -9,19 +9,20 @@
       .icons {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 50%;
         padding: 1rem;
-        a {
-          i {
-            font-size: 4rem;
-            color: $primary-color;
-            &:focus {
-              color: lighten($primary-color, 100%);
+        width: 100%;
+        .icon {
+          a {
+            display: block;
+            background: rgba($secondary-color, 0.5);
+            border: 1px solid $secondary-color;
+            i {
+              font-size: 4rem;
+              color: $primary-color;
             }
-          }
-          &:focus {
-            background: lighten(black, 80%);
-            color: lighten($primary-color, 100%);
+            &:focus {
+              background: $secondary-color;
+            }
           }
         }
       }
@@ -35,7 +36,7 @@
   .project-container:last-child {
     .icons {
       width: 100%;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(3,1fr);
       a:last-child {
         grid-column: span 4;
       }
@@ -64,8 +65,6 @@
         }
       }
       a {
-        height: 3rem;
-        line-height: 3rem;
         i {
           font-size: 3rem;
           color: $primary-color;
@@ -75,13 +74,15 @@
       .icons {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        p { text-align: right }
-        a:hover {
-          background: lighten($primary-color, 90%);
-          transition: 0.25s;
-        }
-        &.double a {
-          grid-column: 2;
+        p { text-align: center; }
+        .icon {
+          a:hover {
+            background: $secondary-color;
+            transition: 0.25s;
+          }
+          &.double a {
+            grid-column: 2;
+          }
         }
       }
     }

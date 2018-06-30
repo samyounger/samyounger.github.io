@@ -32,8 +32,7 @@ nav {
 				background: white;
 				color: black;
 				&:focus {
-					background: black;
-					color: white;
+					background: $secondary-color;
 				}
 				i {
 					font-size: 3rem;
@@ -41,8 +40,8 @@ nav {
 			}
 			&:last-child {
 				a {
-					background: rgba(white, 0.5);
-					color: white;
+					background: rgba($secondary-color, 1);
+					color: $primary-color;
 				}
 			}
 		}
