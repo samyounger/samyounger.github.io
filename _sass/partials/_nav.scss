@@ -88,6 +88,10 @@ nav {
 					background: none;
 					border: none;
 					color: white;
+					&:focus {
+						background: none;
+						color: white;
+					}
 				}
 			}
 		}
@@ -103,8 +107,16 @@ nav {
 			a {
 				text-decoration: none;
 			}
-			li a i {
-				height: 100%;
+			li {
+				a {
+					&:focus {
+						background: $primary-color;
+						color: $secondary-color;
+					}
+					i {
+						height: 100%;
+					}
+				}
 			}
 		}
 	}
