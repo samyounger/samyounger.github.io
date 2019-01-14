@@ -39,8 +39,10 @@ In the menu bar in the left select `Hosted zones`.
 If AWS did create a hosted zone for the domain name, then click the link to open the hosted zone. Here select `Create Record Set`. Leave the name box empty, Type is `A`, and in the value box put:
 
 ```
-192.30.252.153
-192.30.252.154
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
 ```
 
 Then `Save Record Set`.
