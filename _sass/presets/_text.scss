@@ -57,6 +57,22 @@ i {
   line-height: 3rem;
 }
 
+.quote {
+  text-align: left;
+  border-left: 1px solid $secondary-color;
+  padding-left: 1rem;
+  &:before {
+    content: open-quote;
+  }
+  &:after {
+    content: close-quote;
+  }
+}
+
+hr {
+  width: 100%;
+}
+
 @media (max-width: 736px) {
   a {
     color: $secondary-color;

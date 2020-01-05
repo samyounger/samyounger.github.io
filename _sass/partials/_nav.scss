@@ -79,7 +79,7 @@ nav {
 		ul.right-nav {
 			grid-column: 2;
 			display: inline-grid;
-			grid-template-columns: repeat(4,1fr);
+			grid-template-columns: repeat(5,1fr);
 			justify-items: center;
 			li {
 				padding: 1rem;
