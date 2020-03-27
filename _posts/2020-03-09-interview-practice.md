@@ -1,7 +1,8 @@
 ---
 title: Software engineer interview preparation
-date: 2020-03-09 12:00:00
-categories: [job hunting, interviews, code tests, behavioural interview]
+date: 2020-03-09
+categories: [ job-hunting, interviews, code-tests, behavioural-interview ]
+published: true
 ---
 
     DESCRIPTION: After three years of software engineering experience in Ruby, I was planning to move from London to Edinburgh. I did plenty of research, practice, and investigation in preparing for the various interviews. The following is some of my notes, with the code solutions in Ruby. Not the most captivating of reads, but it might be useful to some.
