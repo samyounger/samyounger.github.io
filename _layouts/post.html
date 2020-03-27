@@ -6,12 +6,12 @@ layout: default
 <section id="blog-post">
   <div class="blog-post-head">
     <h2 class="blog_title">{{ page.title }}</h1>
-      <h3 class="blog_date">{{ page.date | date_to_long_string }}</h2>
-        <ul class="tags">
-          {% for category in page.categories %}
-          <li>{{ category }}</li>
-          {% endfor %}
-        </ul>
+      <ul class="tags">
+        {% for category in page.categories %}
+        <li>{{ category }}</li>
+        {% endfor %}
+      </ul>
+      <p class="blog_date">{{ page.date | date_to_long_string }}</p>
   </div>
   {{ content }}
 
