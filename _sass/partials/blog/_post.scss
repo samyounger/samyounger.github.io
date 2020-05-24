@@ -48,4 +48,19 @@
   .gist {
     max-width: 100%;
   }
+  .images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    img {
+      &.left {
+        grid-column: 1;
+      }
+      &.center {
+        grid-column: 2;
+      }
+      &.right {
+        grid-column: 3;
+      }
+    }
+  }
 }
