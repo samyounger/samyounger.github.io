@@ -27,11 +27,10 @@
     font-size: 1rem;
     a {
       border: 1px solid darken($secondary-color, 20%);
-      color: $primary-color;
+      color: $text-color;
       margin: 1rem 0;
       transition: all 0.5s ease;
       &:hover {
-        color: $primary-color;
         background: $secondary-color;
         text-decoration: none;
       }
