@@ -1,4 +1,4 @@
-<nav class="pageTop">
+<nav class="pageTop {{ include.section }}">
   {% if page.layout == "post" %}
   <ul class="post-nav">
     <li>
@@ -29,7 +29,6 @@
     {% for page in site.pages %} {% if page.title %}
     <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
     {% endif %} {% endfor %}
-    <li><a href="https://kytra.app">Kytra</a></li>
     <li class="hamburger-close"><a href="#"><i class="fa fa-angle-double-up"></i></a></li>
   </ul>
   {% endif %}

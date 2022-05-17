@@ -24,14 +24,13 @@ h4 {
 }
 
 a {
-  color: $secondary-color;
+  color: $text-color-secondary;
   text-transform: uppercase;
   text-decoration: none;
   margin: 0 0.2rem;
-  padding: 0 0.2rem;
   &:hover {
-    color: lighten($primary-color, 100%);
-    text-decoration: underline;
+    // color: $text-color-secondary-hover;
+    border-bottom: 1px solid $text-color-secondary;
   }
   &.main-link {
     padding: 1rem;
@@ -51,12 +50,6 @@ strong {
 
 .light {
   font-weight: 400;
-}
-
-i {
-  font-size: 3rem;
-  height: 3rem;
-  line-height: 3rem;
 }
 
 .quote {

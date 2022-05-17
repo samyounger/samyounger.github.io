@@ -1,2 +1,5 @@
-$primary-color: #304035;
-$secondary-color: #FFD85F;
+$primary-color: white;
+$secondary-color: #76d690;
+$text-color: black;
+$text-color-offset: lighten($text-color, 90%);
+$text-color-secondary: darken(#76d690, 20%);

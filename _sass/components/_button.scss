@@ -1,7 +1,6 @@
 .button {
   display: inline-block;
   margin: 10px;
-  height: 3.3rem;
   border: 1px solid $secondary-color;
   color: lighten($primary-color, 100%);
   background-color: rgba($secondary-color, 0.5);
@@ -17,7 +16,6 @@
   }
   a {
     display: block;
-    padding: 10px;
     border-radius: 5px;
     color: lighten($primary-color, 100%);
     -webkit-transition: all .3s ease-in-out;

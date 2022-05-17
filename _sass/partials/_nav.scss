@@ -1,3 +1,19 @@
+nav.default a {
+	color: $text-color;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	&:hover {
+		border-bottom: 1px solid $text-color
+	}
+}
+
+nav.home a {
+	color: $text-color-offset;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	&:hover {
+		border-bottom: 1px solid $text-color-offset
+	}
+}
+
 nav {
 	text-align: right;
 	.hamburger {
@@ -26,11 +42,9 @@ nav {
 		li {
 			a {
 				border-bottom: 1px solid black;
-				padding: 1rem;
-				margin: 0;
+				margin: 1rem;
 				display: block;
 				background: white;
-				color: black;
 				&:focus {
 					background: $secondary-color;
 				}
@@ -79,17 +93,15 @@ nav {
 		ul.right-nav {
 			grid-column: 2;
 			display: inline-grid;
-			grid-template-columns: repeat(5,1fr);
+			grid-template-columns: repeat(4,1fr);
 			justify-items: center;
 			li {
-				padding: 1rem;
+				margin: 1rem;
 				a {
 					background: none;
-					border: none;
-					color: white;
+					border-bottom: 3px solid RGBA(0,0,0,0);
 					&:focus {
 						background: none;
-						color: white;
 					}
 				}
 			}
