@@ -2,42 +2,22 @@
 layout: default
 ---
 
-<div class="navSpacer"></div>
-<section id="blog-post">
-  <div class="blog-post-head">
-    <h2 class="blog_title">{{ page.title }}</h1>
-      <ul class="tags">
-        {% for category in page.categories %}
-        <li>{{ category }}</li>
-        {% endfor %}
-      </ul>
-      <p class="blog_date">{{ page.date | date_to_long_string }}</p>
-  </div>
-  {{ content }}
+{% include nav.html section="default" %}
+<main>
+  <div class="navSpacer"></div>
+  <section id="blog-post">
+    <div class="blog-post-head">
+      <h2 class="blog_title">{{ page.title }}</h1>
+        <ul class="tags">
+          {% for category in page.categories %}
+          <li>{{ category }}</li>
+          {% endfor %}
+        </ul>
+        <p class="blog_date">{{ page.date | date_to_long_string }}</p>
+    </div>
+    {{ content }}
 
-  {% if page.comments %}
+    {% include disqus.html %}
 
-  <div id="disqus_thread"></div>
-  <script>
-
-  /*
-  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-  */
-  // var disqus_config = function () {
-  //   this.page.url = {{ site.url }};  // Replace PAGE_URL with your page's canonical URL variable
-  //   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  // };
-
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://samyounger.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-{% endif %}
-
-</section>
+  </section>
+</main>
