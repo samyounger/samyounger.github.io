@@ -1,45 +1,39 @@
 <head>
-	{% if jekyll.environment == 'production' %}
-		{% include analytics.html %}
-	{% endif %}
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/png" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
+  {% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="{{ " /assets/images/favicon.ico" | prepend: site.baseurl }}">
 
-	<title>
-		{% if page.layout == "post" %}
-			{{ page.title }}
-		{% elsif page.title %}
-			{{ site.title }} | {{ page.title }}
-		{% else %}
-			{{ site.title }}
-		{% endif %}
-	</title>
+  <title>
+    {% if page.layout == "post" %}
+    {{ page.title }}
+    {% elsif page.title %}
+    {{ site.title }} | {{ page.title }}
+    {% else %}
+    {{ site.title }}
+    {% endif %}
+  </title>
 
-		<!-- Styles -->
-		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
-		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="{{ " /css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-		<!-- Javascript -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-		<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+    integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
 
-		<script src="https://unpkg.com/lunr/lunr.js"></script>
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
 
-		<script type="text/javascript" src="/assets/javascripts/search.js"></script>
-		<script type="text/javascript" src="/assets/javascripts/menu.js"></script>
-		<script type="text/javascript" src="{{ "/assets/javascripts/main.js" | prepend: site.baseurl }}"></script>
-
-		<link href=/admin/config.yml type=text/yaml rel=cms-config-url>
-
-		<!-- Netflify authentication widget -->
-		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-		<!-- Include the script that builds the page and powers Netlify CMS -->
-		<script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-	</head>
+  <script type="text/javascript" src="/assets/javascripts/search.js"></script>
+  <script type="text/javascript" src="/assets/javascripts/menu.js"></script>
+  <script type="text/javascript" src="{{ " /assets/javascripts/main.js" | prepend: site.baseurl }}"></script>
+</head>
