@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-{% include head.html %}
+---
+layout: default
+---
 
-<body>
-	{% include nav.html section="home" %}
-	{% include home/header.html %}
-	<main>
-		{% include home/about.html %}
-		{% include get-in-touch.html %}
-		{% include contact.html %}
-	</main>
-	{% include footer.html %}
-
-	{% include admin-netflify.html  %}
-</body>
-
-</html>
+{% include nav.html section="home" %}
+{% include home/header.html %}
+<main>
+	{% include home/about.html %}
+	{% include get-in-touch.html %}
+	{% include contact.html %}
+</main>
+{% include footer.html %}

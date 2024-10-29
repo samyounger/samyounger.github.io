@@ -2,6 +2,10 @@
 layout: default
 ---
 
-<section id={{ page.title | downcase }}>
-  {{ content }}
-</section>
+{% include nav.html section="default" %}
+<main>
+  <section id={{ page.title | downcase }}>
+    {{ content }}
+  </section>
+</main>
+{% include footer.html %}
