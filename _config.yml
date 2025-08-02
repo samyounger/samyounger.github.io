@@ -1,9 +1,9 @@
 title: Sam Younger
-email: sam.younger@gmail.com
+email: samyounger@foobox.com
 description: >
   This is a website by Sam Younger describing his path to becoming a web developer, and a blog discussing web development learning.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://samyounger.com"
+url: "https://www.samyounger.com"
 # repository: samyounger/samyounger.github.io
 # twitter_username: ayoungersage
 # github_username:  samyounger
@@ -14,7 +14,7 @@ footer: Sam Younger
 # Social networks
 social:
   - title: twitter
-    url: https://twitter.com/ayoungersage
+    url: https://twitter.com/ayoungersam
   - title: facebook
     url: https://facebook.com/sam.younger1
   - title: stack-overflow
