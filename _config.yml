@@ -5,7 +5,6 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.samyounger.com"
 # repository: samyounger/samyounger.github.io
-# twitter_username: ayoungersage
 # github_username:  samyounger
 
 # Footer settings
@@ -20,12 +19,6 @@ google:
 
 # Social networks
 social:
-  - title: twitter
-    url: https://twitter.com/ayoungersam
-  - title: facebook
-    url: https://facebook.com/sam.younger1
-  - title: stack-overflow
-    url: https://stackoverflow.com/story/samyounger
   - title: linkedin
     url: https://linkedin.com/in/sam-younger
   - title: github
@@ -34,9 +27,9 @@ social:
 # Build settings
 sass:
   sass_dir: _sass
+  style: compressed
+  sourcemap: never
 include: ['_pages']
-keep_files:
-  - pagefind
 markdown: kramdown
 highlighter: rouge
 plugins:
@@ -44,9 +37,7 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - package.json
-  - package-lock.json
+  - README.md
 
 # How to structure post paths https://jekyllrb.com/docs/permalinks
 permalink: /:year-:month-:day-:title

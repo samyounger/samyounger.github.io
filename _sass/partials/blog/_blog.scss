@@ -1,51 +1,91 @@
 @use "../../variables/colors" as *;
+@use "../../variables/fonts" as *;
 
 #blog {
-  grid-template-columns: 5% 90% 5%;
-  justify-items: left;
-  gap: 0;
-  & > * {
-    grid-column: 2;
-  }
-  #search_box {
-    width: 100%;
-    background: $secondary-color;
-    border: none;
-  }
-  #default-post-list, #search_results {
-    li {
-      margin: 1rem 0;
-      display: grid;
-      align-items: center;
-      time {
-        grid-row: 2;
-        font-size: 1rem;
-      }
-      h2 {
-        grid-row: 1;
-        border: none;
-        margin: 0;
-        padding: 0;
-        font-size: 20px;
-        a {
-          margin: 0;
-          padding: 0;
-        }
-      }
-    }
-  }
+	width: min(100%, 72rem);
+	margin: 0 auto;
+	padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem);
+	justify-items: stretch;
+	gap: 1.5rem;
 }
 
-@media only screen and (min-width: 480px) {
-  #blog {
-    grid-template-columns: 20% 60% 20%;
-    #default-post-list, #search_results {
-      li {
-        grid-template-columns: 10rem auto;
-        time, h2 {
-          grid-row: 1;
-        }
-      }
-    }
-  }
+#blog h1 {
+	max-width: 12ch;
+}
+
+.blog-intro {
+	max-width: 42rem;
+	color: $muted-color;
+}
+
+#default-post-list,
+#search_results {
+	display: grid;
+	gap: 0;
+	margin: 1rem 0 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px solid $border-color;
+}
+
+#default-post-list li,
+#search_results li {
+	display: grid;
+	gap: 0.55rem 1.5rem;
+	padding: 1.35rem 0;
+	border-bottom: 1px solid $border-color;
+}
+
+#default-post-list time,
+#search_results time {
+	color: $secondary-color;
+	font-size: 0.82rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+#default-post-list h2,
+#search_results h2 {
+	font-family: $primary-font-stack;
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+#default-post-list h2 a,
+#search_results h2 a {
+	color: $text-color;
+}
+
+#default-post-list p,
+#search_results p {
+	max-width: 48rem;
+	color: $muted-color;
+	font-size: 0.98rem;
+}
+
+@media only screen and (min-width: 720px) {
+	#default-post-list li,
+	#search_results li {
+		grid-template-columns: 10rem minmax(0, 1fr);
+	}
+
+	#default-post-list h2,
+	#default-post-list p,
+	#search_results h2,
+	#search_results p {
+		grid-column: 2;
+	}
+
+	#default-post-list time,
+	#search_results time {
+		grid-row: 1 / span 2;
+	}
+
+	#default-post-list h2,
+	#search_results h2 {
+		font-size: 1.45rem;
+	}
 }

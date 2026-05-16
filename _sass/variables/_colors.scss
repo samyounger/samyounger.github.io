@@ -1,7 +1,13 @@
-@use "sass:color";
-
-$primary-color: white;
-$secondary-color: #76d690;
-$text-color: black;
-$text-color-offset: color.adjust($text-color, $lightness: 90%);
-$text-color-secondary: #0b6b2d;
+$primary-color: #fbfaf6;
+$secondary-color: #17666a;
+$text-color: #171615;
+$text-color-offset: #f4efe7;
+$text-color-secondary: #17666a;
+$muted-color: #67625b;
+$border-color: #ded6ca;
+$surface-color: #fffefa;
+$accent-dark: #0d4548;
+$accent-warm: #9a5a42;
+$selection-background: $accent-dark;
+$selection-text: #ffffff;
+$focus-color: $accent-warm;

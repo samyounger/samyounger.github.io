@@ -1,43 +1,75 @@
-@use "sass:color";
 @use "../../variables/colors" as *;
 
-header {
+.home-hero {
 	display: grid;
-	justify-items: center;
-	align-content: baseline;
-	gap: 3rem 0;
-	text-align: center;
-	min-height: 90vh;
-	img {
-		width: min(80%, 18rem);
-	}
+	gap: clamp(2rem, 5vw, 5rem);
+	min-height: auto;
+	padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 4rem) clamp(3rem, 7vw, 5rem);
+	background: $primary-color;
+	border-bottom: 1px solid $border-color;
 }
 
-@media only screen and (min-width: 480px) {
-	header {
-		background: url("../assets/images/background.jpg") no-repeat center center;
-		background-size: cover;
-		min-height: calc(100vh + 1px);
-		margin-top: -6rem;
-		align-content: center;
-		h1 {
-			font-size: clamp(3.5rem, 11vw, 6.25rem);
-			line-height: 1;
-			letter-spacing: 0;
-			border: none;
-			color: color.adjust($text-color, $lightness: 90%);
-			a {
-				color: color.adjust($primary-color, $lightness: 100%);
-			}
-		}
-		h2 {
-			color: color.adjust($text-color, $lightness: 90%);
-			font-size: clamp(1.5rem, 4vw, 2rem);
-			border: none;
-			text-transform: none;
-		}
-		img {
-			width: 10rem;
-		}
+.home-hero__copy {
+	display: grid;
+	align-content: center;
+	gap: 1.25rem;
+	max-width: 48rem;
+}
+
+.home-hero__copy h1 {
+	max-width: 10ch;
+}
+
+.home-hero__copy .lede {
+	max-width: 34rem;
+}
+
+.home-hero__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 0.5rem;
+}
+
+.home-hero__links a,
+.text-link {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	padding: 0.75rem 1rem;
+	border: 1px solid $text-color;
+	color: $text-color;
+	font-weight: 800;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.home-hero__links a:hover,
+.home-hero__links a:focus,
+.text-link:hover,
+.text-link:focus {
+	background: $text-color-secondary;
+	border-color: $text-color-secondary;
+	color: $surface-color;
+	text-decoration: none;
+}
+
+.home-hero__image {
+	margin: 0;
+	align-self: end;
+}
+
+.home-hero__image img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 11;
+	object-fit: cover;
+	border: 1px solid $border-color;
+}
+
+@media only screen and (min-width: 820px) {
+	.home-hero {
+		grid-template-columns: minmax(0, 0.95fr) minmax(22rem, 0.8fr);
+		align-items: center;
 	}
 }

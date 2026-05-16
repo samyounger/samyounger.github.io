@@ -3,8 +3,8 @@ layout: default
 ---
 
 {% include nav.html section="default" %}
-<main id="main-content" tabindex="-1" {% unless page.no_pagefind %}data-pagefind-body{% endunless %}>
-  <section id="{{ page.title | slugify }}">
+<main id="main-content" tabindex="-1">
+  <section id="{{ page.section_id | default: page.title | slugify }}">
     {{ content }}
   </section>
 </main>

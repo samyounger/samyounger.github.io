@@ -1,27 +1,21 @@
 ---
 layout: page
-title: Blog
+title: Writing
 permalink: /blog/
-pagefind: true
-published: false
+section_id: blog
 ---
 
 <h1>Writing</h1>
-<p>Selected writing and archived notes from my work across engineering, product, and technical problem solving.</p>
-
-{% if jekyll.environment == 'production' %}
-<pagefind-searchbox></pagefind-searchbox>
-{% endif %}
+<p class="blog-intro">Selected writing and archived technical notes from my work across engineering, product, and software problem solving.</p>
 
 <ul id="default-post-list">
 	{% for post in site.posts %}
 	<li>
 		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
 		<h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+		{% if post.excerpt %}
+		<p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+		{% endif %}
 	</li>
 	{% endfor %}
 </ul>
-
-{% if jekyll.environment == 'production' %}
-<script src="{{ "/pagefind/pagefind-component-ui.js" | prepend: site.baseurl }}" type="module"></script>
-{% endif %}
