@@ -1,7 +1,7 @@
 title: Sam Younger
 email: samyounger@foobox.com
 description: >
-  This is a website by Sam Younger describing his path to becoming a web developer, and a blog discussing web development learning.
+  This is a website by Sam Younger about engineering management, software delivery, and lessons from a career spanning finance, startups, and full-stack product engineering.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.samyounger.com"
 # repository: samyounger/samyounger.github.io
