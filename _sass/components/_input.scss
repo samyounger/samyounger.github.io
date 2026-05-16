@@ -1,6 +1,9 @@
+@use "../variables/fonts" as *;
+
 input {
-  font-weight: 300;
-  font-size: 20px;
+  font-family: $primary-font-stack;
+  font-weight: 400;
+  font-size: 1rem;
   width: 300px;
   text-align: center;
   display: block;

@@ -1,10 +1,15 @@
-<header>
-	<img src="assets/images/logo.png" alt="">
-	<h1>{{ site.title }}</h1>
-	<h2>Senior engineering manager, former founder, and full-stack developer.</h2>
-	<div class="btnCircleContainer">
-		<a href="#about" class="page-scroll" aria-label="Skip to about section">
-			<i class="fa fa-angle-double-down animated" aria-hidden="true"></i>
-		</a>
+<header class="home-hero">
+	<div class="home-hero__copy">
+		<p class="eyebrow">Engineering leadership, product context, and technical judgment</p>
+		<h1>{{ site.title }}</h1>
+		<p class="lede">I lead software teams through ambiguous product and platform work, with a bias for clear systems, better decisions, and teams that get stronger over time.</p>
+		<div class="home-hero__links" aria-label="Primary links">
+			<a href="/about/">About</a>
+			<a href="/blog/">Writing</a>
+			<a href="mailto:{{ site.email }}">Contact</a>
+		</div>
 	</div>
+	<figure class="home-hero__image">
+		<img src="/assets/images/editorial-hero.jpg" srcset="/assets/images/editorial-hero-600.jpg 600w, /assets/images/editorial-hero-900.jpg 900w, /assets/images/editorial-hero.jpg 1200w" sizes="(min-width: 820px) 40vw, 100vw" alt="Editorial desk composition with farming, hospitality, finance, software, founder, and engineering leadership references" width="1200" height="675" fetchpriority="high" />
+	</figure>
 </header>

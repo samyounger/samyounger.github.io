@@ -2,23 +2,22 @@
 @use "../variables/fonts" as *;
 
 h1, h2, h3, h4 {
-  display: inline-block;
-  font-family: $primary-font-stack;
-  font-weight: 300;
+  font-family: $editorial-font-stack;
+  font-weight: 600;
   letter-spacing: 0;
-  padding: 0 0 0.1rem 0;
-  margin: 0.5rem 0 1rem;
-  border-bottom: 3px solid $secondary-color;
+  line-height: 1.05;
+  margin: 0;
+  color: $text-color;
 }
 
 h1 {
-  font-size: clamp(2rem, 1.45rem + 2vw, 3.25rem);
+  font-size: 3rem;
 }
 h2 {
-  font-size: clamp(1.55rem, 1.25rem + 1vw, 2.25rem);
+  font-size: 2rem;
 }
 h3 {
-  font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.5rem);
+  font-size: 1.25rem;
 }
 h4 {
   font-size: 1rem;
@@ -27,10 +26,9 @@ h4 {
 a {
   color: $text-color-secondary;
   text-decoration: none;
-  margin: 0 0.2rem;
+  text-underline-offset: 0.18em;
   &:hover {
-    // color: $text-color-secondary-hover;
-    border-bottom: 1px solid $text-color-secondary;
+    text-decoration: underline;
   }
   &.main-link {
     padding: 1rem;
@@ -40,50 +38,51 @@ a {
 }
 
 p {
-  font-size: 20px;
-  padding: 10px 0;
+  font-size: 1.0625rem;
+  margin: 0;
+  padding: 0;
 }
 
 strong {
   font-weight: bold;
 }
 
-.light {
-  font-weight: 400;
-}
-
-.quote {
-  text-align: left;
-  border-left: 1px solid $secondary-color;
-  padding-left: 1rem;
-  &:before {
-    content: open-quote;
-  }
-  &:after {
-    content: close-quote;
-  }
-}
-
 hr {
   width: 100%;
+  border: 0;
+  border-top: 1px solid $border-color;
 }
 
-// Ordered list styling
-ol {
-  list-style: none;
-  counter-reset: my-awesome-counter;
-}
-ol li {
-  counter-increment: my-awesome-counter;
-}
-ol li::before {
-  content: counter(my-awesome-counter) ". ";
-  color: $primary-color;
-  font-weight: bold;
+.lede {
+  color: $muted-color;
+  font-size: 1.25rem;
+  line-height: 1.45;
 }
 
-@media (max-width: 736px) {
-  a {
-    color: $secondary-color;
+.section-kicker,
+.eyebrow {
+  color: $secondary-color;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 820px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  .lede {
+    font-size: 1.45rem;
   }
 }

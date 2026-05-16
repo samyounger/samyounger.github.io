@@ -1,5 +1,6 @@
 @use "sass:color";
 @use "../variables/colors" as *;
+@use "../variables/fonts" as *;
 
 /**
 * Syntax highlighting styles
@@ -29,10 +30,11 @@ pre {
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  font-family: courier;
+  font-family: $mono-font-stack;
 }
 code {
   width: 100%;
+  font-family: $mono-font-stack;
 }
 
 .highlight {

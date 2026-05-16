@@ -1,44 +1,56 @@
-@use "sass:color";
 @use "../variables/colors" as *;
+@use "../variables/fonts" as *;
 
+#getInTouch,
 #contact {
-  text-align: center;
-  clear: both;
+	width: min(100%, 76rem);
+	margin: 0 auto;
+	padding-inline: clamp(1rem, 5vw, 4rem);
+	text-align: left;
 }
 
 #getInTouch {
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  color: #fff;
-  background: url(../assets/images/background-narrow.jpg) no-repeat center center;
-  background-color: $primary-color;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  h2 {
-    border: none;
-  }
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
 }
 
-@media(min-width: 767px) {
-  section#contact {
-    height: calc(100vh - 50px);
-  }
+#getInTouch > div {
+	display: grid;
+	gap: 1rem;
+	max-width: 48rem;
 }
 
-@media(max-width:767px) {
-  .getInTouch-section {
-    padding: 100px 0;
-    background-image: none;
-    background: color.adjust($primary-color, $lightness: 100%);
-    color: black;
-  }
-  #contact {
-    height: calc(100vh - 100px);
-  }
-  #getInTouch {
-    display: none;
-  }
+#getInTouch p:not(.section-kicker),
+#contact p {
+	color: $muted-color;
+}
+
+#contact .content {
+	display: grid;
+	gap: 1rem;
+	width: 100%;
+}
+
+.contact-email {
+	color: $text-color;
+	font-family: $primary-font-stack;
+	font-size: 1.45rem;
+	font-weight: 600;
+	line-height: 1.15;
+	word-break: break-word;
+}
+
+@media only screen and (min-width: 820px) {
+	.contact-email {
+		font-size: 2.2rem;
+	}
+}
+
+#contact ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin: 1rem 0 0;
+	padding: 0;
+	list-style: none;
 }
