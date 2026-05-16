@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../variables/colors" as *;
+
 #contact {
   text-align: center;
   clear: both;
@@ -29,7 +32,7 @@
   .getInTouch-section {
     padding: 100px 0;
     background-image: none;
-    background: lighten($primary-color, 100%);
+    background: color.adjust($primary-color, $lightness: 100%);
     color: black;
   }
   #contact {

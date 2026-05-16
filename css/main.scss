@@ -2,30 +2,30 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 // Reset
-@import "presets/reset";
+@use "presets/reset" as reset;
 
 // Variables
-@import "variables/colors";
-@import "variables/fonts";
+@use "variables/colors" as colors;
+@use "variables/fonts" as fonts;
 
 // Presets
-@import "presets/syntax-highlighting";
-@import "presets/text";
+@use "presets/syntax-highlighting" as syntax-highlighting;
+@use "presets/text" as text;
 
 
 // Components
-@import "components/button";
-@import "components/input";
+@use "components/button" as button;
+@use "components/input" as input;
 
 // Partials
-@import "layout";
-@import "partials/home/home";
-@import "partials/nav";
-@import "partials/home/about";
-@import "partials/about/about";
-@import "partials/reading/reading";
-@import "partials/contact/contact";
-@import "partials/contact";
-@import "partials/footer";
-@import "partials/blog/blog";
-@import "partials/blog/post";
+@use "layout" as layout;
+@use "partials/home/home" as home;
+@use "partials/nav" as nav;
+@use "partials/home/about" as home-about;
+@use "partials/about/about" as about;
+@use "partials/reading/reading" as reading;
+@use "partials/contact/contact" as contact-reading;
+@use "partials/contact" as contact;
+@use "partials/footer" as footer;
+@use "partials/blog/blog" as blog;
+@use "partials/blog/post" as blog-post;
