@@ -3,8 +3,8 @@ layout: default
 ---
 
 {% include nav.html section="default" %}
-<main>
-  <section id={{ page.title | downcase }}>
+<main id="main-content" tabindex="-1">
+  <section id="{{ page.title | downcase }}">
     {{ content }}
   </section>
 </main>

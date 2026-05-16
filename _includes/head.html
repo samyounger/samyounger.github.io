@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/png" href="{{ " /assets/images/favicon.ico" | prepend: site.baseurl }}">
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace }}">
+  <link rel="shortcut icon" type="image/png" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
 
   <title>
     {% if page.layout == "post" %}
@@ -18,10 +19,10 @@
   </title>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="{{ " /css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <!-- Javascript -->
@@ -33,7 +34,7 @@
 
   <script src="https://unpkg.com/lunr/lunr.js"></script>
 
-  <script type="text/javascript" src="/assets/javascripts/search.js"></script>
-  <script type="text/javascript" src="/assets/javascripts/menu.js"></script>
-  <script type="text/javascript" src="{{ " /assets/javascripts/main.js" | prepend: site.baseurl }}"></script>
+  <script src="/assets/javascripts/search.js" defer></script>
+  <script src="/assets/javascripts/menu.js" defer></script>
+  <script src="{{ "/assets/javascripts/main.js" | prepend: site.baseurl }}" defer></script>
 </head>

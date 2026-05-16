@@ -21,11 +21,12 @@
         grid-row: 2;
         font-size: 1rem;
       }
-      h3 {
+      h2 {
         grid-row: 1;
         border: none;
         margin: 0;
         padding: 0;
+        font-size: 20px;
         a {
           margin: 0;
           padding: 0;
@@ -41,7 +42,7 @@
     #default-post-list, #search_results {
       li {
         grid-template-columns: 10rem auto;
-        time, h3 {
+        time, h2 {
           grid-row: 1;
         }
       }

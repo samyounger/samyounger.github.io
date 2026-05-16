@@ -1,35 +1,44 @@
-<nav class="pageTop {{ include.section }}">
+<nav class="pageTop {{ include.section }}" aria-label="Primary navigation">
   {% if page.layout == "post" %}
   <ul class="post-nav">
     <li>
-      <a href="{{ page.previous.url }}">
+      {% if page.previous %}
+      <a href="{{ page.previous.url }}" aria-label="Previous post: {{ page.previous.title }}">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
       </a>
+      {% else %}
+      <span class="post-nav-disabled" aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
+      {% endif %}
     </li>
     <li>
       <a href="/blog" class="navbar-brand">All Posts</a>
     </li>
     <li>
-      <a href="{{ page.next.url }}">
+      {% if page.next %}
+      <a href="{{ page.next.url }}" aria-label="Next post: {{ page.next.title }}">
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
+      {% else %}
+      <span class="post-nav-disabled" aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+      {% endif %}
     </li>
   </ul>
   {% endif %}
 
   {% if page.layout != "post" %}
-  <div class="hamburger">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <button class="hamburger" type="button" aria-controls="primary-menu" aria-expanded="false">
+    <span class="sr-only">Menu</span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </button>
 
-  <ul class="main-nav right-nav">
-    <li><a href="/">Home</a></li>
-    {% for page in site.pages %} {% if page.title %}
-    <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+  <ul class="main-nav right-nav" id="primary-menu">
+    <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
+    {% for nav_page in site.pages %} {% if nav_page.title %}
+    <li><a href="{{ nav_page.url | prepend: site.baseurl }}" {% if page.url == nav_page.url %}aria-current="page"{% endif %}>{{ nav_page.title }}</a></li>
     {% endif %} {% endfor %}
-    <li class="hamburger-close"><a href="#"><i class="fa fa-angle-double-up"></i></a></li>
+    <li class="hamburger-close"><button type="button" aria-label="Close menu"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button></li>
   </ul>
   {% endif %}
 

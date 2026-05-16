@@ -2,6 +2,8 @@
 $(window).scroll(function () {
   if ($("nav").offset().top > 50) {
     $("nav").css({ background: "rgba(0,0,0,0.5)" });
+  } else if ($("nav").hasClass("home")) {
+    $("nav").css({ background: "rgba(0,0,0,0.65)" });
   } else {
     $("nav").css({ background: "rgba(0,0,0,0)" });
   }
@@ -11,7 +13,11 @@ $(window).scroll(function () {
 $(function () {
   $("a.page-scroll").bind("click", function (event) {
     var $anchor = $(this).attr("href");
-    $("html,body").animate({ scrollTop: $($anchor).offset().top }, "fast");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.location.hash = $anchor;
+    } else {
+      $("html,body").animate({ scrollTop: $($anchor).offset().top }, "fast");
+    }
     event.preventDefault();
   });
 });
@@ -19,10 +25,4 @@ $(function () {
 // Closes the Responsive Menu on Menu Item Click
 $(".navbar-collapse ul li a").click(function () {
   $(".navbar-toggle:visible").click();
-});
-
-// remove the focused state after click,
-// otherwise bootstrap will still highlight the link
-$("a").mouseup(function () {
-  $(this).blur();
 });
