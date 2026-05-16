@@ -3,32 +3,29 @@
 
 h1, h2, h3, h4 {
   display: inline-block;
-  text-transform: uppercase;
   font-family: $primary-font-stack;
-  font-weight: 100;
-  letter-spacing: 1px;
+  font-weight: 300;
+  letter-spacing: 0;
   padding: 0 0 0.1rem 0;
   margin: 0.5rem 0 1rem;
   border-bottom: 3px solid $secondary-color;
-  user-select: none;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: clamp(2rem, 1.45rem + 2vw, 3.25rem);
 }
 h2 {
-  font-size: 25px;
+  font-size: clamp(1.55rem, 1.25rem + 1vw, 2.25rem);
 }
 h3 {
-  font-size: 20px;
+  font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.5rem);
 }
 h4 {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 a {
   color: $text-color-secondary;
-  text-transform: uppercase;
   text-decoration: none;
   margin: 0 0.2rem;
   &:hover {

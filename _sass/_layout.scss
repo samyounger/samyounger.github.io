@@ -45,9 +45,10 @@ body {
 	background: $primary-color;
 	color: $text-color;
 	font-family: $primary-font-stack;
-	font-weight: 100;
-	font-size: 1.1em;
-	line-height: 1.6;
+	font-weight: 300;
+	font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+	line-height: 1.65;
+	text-rendering: optimizeLegibility;
 }
 
 main {
@@ -55,7 +56,7 @@ main {
 	section {
 		display: grid;
 		justify-items: center;
-		grid-gap: 1rem;
+		gap: 1rem;
 	}
 }
 
@@ -72,10 +73,10 @@ time {
 	}
 }
 
-@media only screen and (min-device-width: 380px) {
+@media only screen and (min-width: 480px) {
 	main {
 		section {
-			padding: 3rem;
+			padding: clamp(2rem, 6vw, 4rem);
 		}
 	}
 }

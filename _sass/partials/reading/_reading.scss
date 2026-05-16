@@ -11,7 +11,7 @@ section#reading {
   }
 }
 
-@media only screen and (min-device-width: 380px) {
+@media only screen and (min-width: 480px) {
   section#reading {
     grid-template-columns: 20% auto 20%;
   }

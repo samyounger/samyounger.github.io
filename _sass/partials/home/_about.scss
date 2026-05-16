@@ -11,13 +11,13 @@
 }
 
 
-@media only screen and (min-device-width: 380px) {
+@media only screen and (min-width: 480px) {
   #about {
     text-align: center;
     grid-template-columns: 20% auto 20%;
     .container {
       display: grid;
-      grid-gap: 1rem;
+      gap: 1rem;
       align-items: center;
       &.left {
         grid-template-columns: 1fr 3fr;
