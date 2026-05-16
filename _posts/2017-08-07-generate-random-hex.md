@@ -2,7 +2,7 @@
 title: Generate a random hex
 date: 2017-08-07
 categories: [ ruby, hex, random ]
-published: true
+published: false
 ---
 
     DESCRIPTION: a brief note on how to generate a random hex.

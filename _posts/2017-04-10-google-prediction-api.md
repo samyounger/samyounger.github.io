@@ -2,6 +2,7 @@
 title: Google prediction API setup
 date: 2017-04-10
 categories: [ big-data, google, prediction, api ]
+published: false
 ---
 
     DESCRIPTION: I am setting up an application which is using historic data of restaurant deliveries per hour to predict on any given hour and day what order volume should be expected. I am going to pass the data to the google prediction api to do the regression analysis.

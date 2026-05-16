@@ -2,7 +2,7 @@
 title: RSpec intro
 date: 2017-02-07 10:00
 categories: [rspec, spec, testing, test, ruby, rails]
-published: true
+published: false
 ---
 
     DESCRIPTION: RSpec is a testing GEM for Ruby, supposedly easier to read for non-developers.

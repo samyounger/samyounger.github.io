@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "build:search": "rm -rf _site/pagefind && pagefind --site _site"
+  },
+  "devDependencies": {
+    "pagefind": "^1.4.0"
+  }
+}

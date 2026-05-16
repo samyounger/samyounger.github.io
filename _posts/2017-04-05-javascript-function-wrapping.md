@@ -2,6 +2,7 @@
 title: Javascript function wrapping
 date: 2017-04-05
 categories: javascript, functions
+published: false
 ---
     DESCRIPTION: Making functions globally available becomes extremely confusing as your project builds in scale. Wrapping functions is a tidy solution to control accessibility to your functions. This blog will tackle this topic.
 

@@ -2,6 +2,7 @@
 title: Rails models
 date: 2017-02-13 12:00
 categories: [rails, ruby]
+published: false
 ---
 
     DESCRIPTION: The model controls what is required when putting data into your database.

@@ -2,7 +2,7 @@
 title: Reindex Mac Spotlight
 date: 2017-08-07
 categories: [ mac, terminal, spotlight ]
-published: true
+published: false
 ---
 
     DESCRIPTION: Sometimes the mac spotlight search doesn't discover applications when updated. The Apple solution to fix this by adding the directory to the privacy tab in system preferences and then removing it no longer works.

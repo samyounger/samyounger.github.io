@@ -2,7 +2,7 @@
 title: Zsh Text Wrap Fix
 date: 2017-07-07
 categories: [ bash, terminal, zsh ]
-published: true
+published: false
 ---
 
     DESCRIPTION: When using the terminal occasionally the text when reaching the end of the line instead of moving to a new line, it would overwrite the same line, and go very strange when deleting the text. I use ZSH and Oh-My-Zsh.
