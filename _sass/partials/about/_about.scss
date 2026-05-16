@@ -6,7 +6,7 @@
   .code-languages {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    gap: 2rem;
     justify-items: center;
     .icon-container {
       display: grid;
@@ -15,7 +15,7 @@
   }
 }
 
-@media only screen and (min-device-width: 380px) {
+@media only screen and (min-width: 480px) {
   #about {
     display: grid;
     grid-template-columns: 20% auto 20%;

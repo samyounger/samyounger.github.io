@@ -2,7 +2,7 @@
 title: Rspec learning
 date: 2017-07-12
 categories: [ rspec, spec, test, testing, rails, ruby, simplecov, coverage ]
-published: true
+published: false
 ---
 
     DESCRIPTION: Rspec is one of the preferred testing packages for ruby on rails. This is a blog-post for how to set it up, and testing basics to note.

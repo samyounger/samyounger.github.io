@@ -3,7 +3,7 @@
 #blog {
   grid-template-columns: 5% 90% 5%;
   justify-items: left;
-  grid-gap: 0;
+  gap: 0;
   & > * {
     grid-column: 2;
   }
@@ -36,7 +36,7 @@
   }
 }
 
-@media only screen and (min-device-width: 380px) {
+@media only screen and (min-width: 480px) {
   #blog {
     grid-template-columns: 20% 60% 20%;
     #default-post-list, #search_results {

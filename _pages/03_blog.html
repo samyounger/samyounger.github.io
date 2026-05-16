@@ -2,15 +2,16 @@
 layout: page
 title: Blog
 permalink: /blog/
+pagefind: true
+published: false
 ---
 
-<h1>My blog</h1>
-<p>These articles contain a series of my thoughts and notes I have written while learning programming languages for later reference.</p>
+<h1>Writing</h1>
+<p>Selected writing and archived notes from my work across engineering, product, and technical problem solving.</p>
 
-<label for="search_box" class="sr-only">Search posts</label>
-<input type="search" id="search_box" placeholder="Search posts" autocomplete="off">
-
-<ul id="search_results" aria-live="polite"></ul>
+{% if jekyll.environment == 'production' %}
+<pagefind-searchbox></pagefind-searchbox>
+{% endif %}
 
 <ul id="default-post-list">
 	{% for post in site.posts %}
@@ -20,3 +21,7 @@ permalink: /blog/
 	</li>
 	{% endfor %}
 </ul>
+
+{% if jekyll.environment == 'production' %}
+<script src="{{ "/pagefind/pagefind-component-ui.js" | prepend: site.baseurl }}" type="module"></script>
+{% endif %}

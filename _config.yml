@@ -1,7 +1,7 @@
 title: Sam Younger
 email: samyounger@foobox.com
 description: >
-  This is a website by Sam Younger describing his path to becoming a web developer, and a blog discussing web development learning.
+  This is a website by Sam Younger about engineering management, software delivery, architecture modernisation, and lessons from a career spanning finance, startups, and full-stack product engineering.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.samyounger.com"
 # repository: samyounger/samyounger.github.io
@@ -25,9 +25,9 @@ social:
   - title: facebook
     url: https://facebook.com/sam.younger1
   - title: stack-overflow
-    url: http://stackoverflow.com/story/samyounger
+    url: https://stackoverflow.com/story/samyounger
   - title: linkedin
-    url: http://linkedin.com/in/sam-younger
+    url: https://linkedin.com/in/sam-younger
   - title: github
     url: https://github.com/samyounger
 
@@ -35,6 +35,8 @@ social:
 sass:
   sass_dir: _sass
 include: ['_pages']
+keep_files:
+  - pagefind
 markdown: kramdown
 highlighter: rouge
 plugins:
@@ -42,6 +44,9 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
 
 # How to structure post paths https://jekyllrb.com/docs/permalinks
 permalink: /:year-:month-:day-:title
@@ -54,6 +59,5 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: true
       author: "Sam Younger"
       published: true

@@ -2,7 +2,7 @@
 title: Hash with Indifferent Access
 date: 2017-08-07
 categories: [ rails, ruby, hash, symbol, hash_rocket ]
-published: true
+published: false
 ---
 
     DESCRIPTION: Rails has a core active-support extension called 'HashWithIndifferentAccess'. This means that whatever you put in to the hash keys; string or symbol, it is put in as a string with hash rocket.

@@ -2,6 +2,7 @@
 title: Rails Engine
 date: 2017-03-3 12:00
 categories: [rails, ruby, engine]
+published: false
 ---
     DESCRIPTION: A rails engine is a miniature application within a host application. This post will describe how to set up a rails engine within a rails app.
 

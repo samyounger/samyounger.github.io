@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% include nav.html section="default" %}
-<main id="main-content" tabindex="-1">
+<main id="main-content" tabindex="-1" {% unless page.no_pagefind %}data-pagefind-body{% endunless %}>
   <div class="navSpacer"></div>
   <article id="blog-post">
     <div class="blog-post-head">
@@ -16,8 +16,5 @@ layout: default
         <p class="blog_date">{{ page.date | date_to_long_string }}</p>
     </div>
     {{ content }}
-
-    {% include disqus.html %}
-
   </article>
 </main>

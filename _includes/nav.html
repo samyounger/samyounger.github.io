@@ -35,7 +35,7 @@
 
   <ul class="main-nav right-nav" id="primary-menu">
     <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
-    {% for nav_page in site.pages %} {% if nav_page.title %}
+    {% for nav_page in site.pages %} {% if nav_page.title and nav_page.exclude_nav != true %}
     <li><a href="{{ nav_page.url | prepend: site.baseurl }}" {% if page.url == nav_page.url %}aria-current="page"{% endif %}>{{ nav_page.title }}</a></li>
     {% endif %} {% endfor %}
     <li class="hamburger-close"><button type="button" aria-label="Close menu"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button></li>

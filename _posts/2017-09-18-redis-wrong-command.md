@@ -2,7 +2,7 @@
 title: Redis CommandError
 date: 2017-09-18
 categories: [ redis, rails ]
-published: true
+published: false
 ---
 
     DESCRIPTION: When running starting up a rails application that has redis, a redis error appears. This is the fix.
