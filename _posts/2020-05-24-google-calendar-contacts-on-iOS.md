@@ -2,7 +2,7 @@
 title: Google Calendar Contacts on iOS
 date: 2020-05-24
 categories: [ iOS, google-calendar ]
-published: true
+published: false
 ---
 
     DESCRIPTION: Google calendar contacts is showing on all iOS devices. This is a brief explanation of how to remove it.

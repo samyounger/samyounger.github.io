@@ -59,6 +59,5 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: true
       author: "Sam Younger"
       published: true
