@@ -1,8 +1,12 @@
+@use "sass:color";
+@use "../variables/colors" as *;
+@use "../variables/fonts" as *;
+
 .button {
   display: inline-block;
   margin: 10px;
   border: 1px solid $secondary-color;
-  color: lighten($primary-color, 100%);
+  color: color.adjust($primary-color, $lightness: 100%);
   background-color: rgba($secondary-color, 0.5);
   text-transform: uppercase;
   font-family: $primary-font-stack;
@@ -17,12 +21,12 @@
   a {
     display: block;
     border-radius: 5px;
-    color: lighten($primary-color, 100%);
+    color: color.adjust($primary-color, $lightness: 100%);
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     &:hover {
-      color: lighten($primary-color, 50%);
+      color: color.adjust($primary-color, $lightness: 50%);
     }
   }
 }
@@ -31,7 +35,7 @@
   width: 60px;
   height: 60px;
   line-height: 60px;
-  border: 1px solid lighten($primary-color, 100%);
+  border: 1px solid color.adjust($primary-color, $lightness: 100%);
   border-radius: 50%;
   margin: 0 auto;
   a {

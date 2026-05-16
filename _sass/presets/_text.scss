@@ -1,3 +1,6 @@
+@use "../variables/colors" as *;
+@use "../variables/fonts" as *;
+
 h1, h2, h3, h4 {
   display: inline-block;
   text-transform: uppercase;

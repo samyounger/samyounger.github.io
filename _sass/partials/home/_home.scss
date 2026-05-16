@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../../variables/colors" as *;
+
 header {
 	display: grid;
 	justify-items: center;
@@ -24,13 +27,13 @@ header {
 			letter-spacing: 5px;
 			text-transform: uppercase;
 			border: none;
-			color: lighten($text-color, 90%);
+			color: color.adjust($text-color, $lightness: 90%);
 			a {
-				color: lighten($primary-color, 100%);
+				color: color.adjust($primary-color, $lightness: 100%);
 			}
 		}
 		h2 {
-			color: lighten($text-color, 90%);
+			color: color.adjust($text-color, $lightness: 90%);
 			font-size: 30px;
 			border: none;
 			text-transform: none;

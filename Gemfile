@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby "3.3.5"
 
-gem "jekyll", "4.3.4"
+gem "jekyll", "4.4.1"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.0"
@@ -12,7 +12,7 @@ gem "jekyll", "4.3.4"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.16.0"
+   gem "jekyll-feed", "~> 0.17"
 end
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.9"
