@@ -1,22 +1,36 @@
 <head>
+  {% assign page_title = site.title %}
+  {% if page.layout == "post" %}
+    {% assign page_title = page.title %}
+  {% elsif page.title %}
+    {% capture page_title %}{{ site.title }} | {{ page.title }}{% endcapture %}
+  {% endif %}
+  {% assign page_description = page.description | default: site.description | strip_html | normalize_whitespace %}
+  {% assign canonical_url = page.url | replace:'index.html','' | absolute_url %}
+  {% assign social_image = page.image | default: "/assets/images/sam.jpg" | absolute_url %}
   {% if jekyll.environment == 'production' %}
   {% include analytics.html %}
   {% endif %}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace }}">
+  <meta name="description" content="{{ page_description }}">
+  {% if page.noindex %}
+  <meta name="robots" content="noindex">
+  {% endif %}
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:type" content="{% if page.layout == "post" %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ social_image }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ social_image }}">
   <link rel="shortcut icon" type="image/png" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
 
-  <title>
-    {% if page.layout == "post" %}
-    {{ page.title }}
-    {% elsif page.title %}
-    {{ site.title }} | {{ page.title }}
-    {% else %}
-    {{ site.title }}
-    {% endif %}
-  </title>
+  <title>{{ page_title }}</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -26,7 +40,7 @@
   {% if page.pagefind %}
   <link rel="stylesheet" href="{{ "/pagefind/pagefind-component-ui.css" | prepend: site.baseurl }}">
   {% endif %}
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
 
   <script src="{{ "/assets/javascripts/menu.js" | prepend: site.baseurl }}" defer></script>
   <script src="{{ "/assets/javascripts/main.js" | prepend: site.baseurl }}" defer></script>

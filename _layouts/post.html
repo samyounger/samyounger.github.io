@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% include nav.html section="default" %}
-<main id="main-content" tabindex="-1" data-pagefind-body>
+<main id="main-content" tabindex="-1" {% unless page.no_pagefind %}data-pagefind-body{% endunless %}>
   <div class="navSpacer"></div>
   <article id="blog-post">
     <div class="blog-post-head">
