@@ -11,6 +11,13 @@ url: "https://www.samyounger.com"
 # Footer settings
 footer: Sam Younger
 
+# Google Analytics setup
+# Universal Analytics UA-* properties no longer collect data. Create a GA4 web
+# data stream in Google Analytics, then add its measurement ID here:
+google:
+  analytics:
+    measurement_id: G-QNJF922CLC
+
 # Social networks
 social:
   - title: twitter
