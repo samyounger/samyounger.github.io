@@ -57,7 +57,7 @@ $(document).ready(function () {
           let appendString = `
           <li>
             <time>${post.date}</time>
-            <h3><a href=${post.url}>${post.title}</a></h3>
+            <h2><a href="${post.url}">${post.title}</a></h2>
           </li>
           `;
 

@@ -17,6 +17,10 @@ nav.home a {
 	}
 }
 
+nav.home {
+	background: rgba(0, 0, 0, 0.65);
+}
+
 nav {
 	text-align: right;
 	.hamburger {
@@ -24,7 +28,10 @@ nav {
 		height: 3rem;
 		width: 4rem;
 		margin: 1rem;
-		div {
+		border: 0;
+		background: transparent;
+		cursor: pointer;
+		span:not(.sr-only) {
 			background: white;
 			height: 1px;
 			margin: 0 0.8rem;
@@ -42,6 +49,9 @@ nav {
 	ul.main-nav {
 		display: none;
 		text-align: center;
+		&.is-open {
+			display: block;
+		}
 		li {
 			a {
 				border-bottom: 1px solid black;
@@ -54,6 +64,15 @@ nav {
 				i {
 					font-size: 3rem;
 				}
+			}
+			button {
+				min-width: 44px;
+				min-height: 44px;
+				border: 0;
+				background: transparent;
+				color: $text-color;
+				cursor: pointer;
+				font: inherit;
 			}
 			&:last-child {
 				a {
@@ -74,6 +93,8 @@ nav {
 			a {
 				display: block;
 				padding: 1rem;
+				min-width: 44px;
+				min-height: 44px;
 				&:focus {
 					background: color.adjust($primary-color, $lightness: 80%);
 					color: $primary-color;
@@ -83,6 +104,13 @@ nav {
 				}
 			}
 		}
+	}
+	.post-nav-disabled {
+		display: block;
+		padding: 1rem;
+		min-width: 44px;
+		min-height: 44px;
+		opacity: 0.45;
 	}
 }
 
@@ -103,6 +131,8 @@ nav {
 				a {
 					background: none;
 					border-bottom: 3px solid RGBA(0,0,0,0);
+					min-width: 44px;
+					min-height: 44px;
 					&:focus {
 						background: none;
 					}
