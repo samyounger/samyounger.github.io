@@ -8,7 +8,9 @@ pagefind: true
 <h1>Writing</h1>
 <p>Selected writing and archived notes from my work across engineering, product, and technical problem solving.</p>
 
+{% if jekyll.environment == 'production' %}
 <pagefind-searchbox></pagefind-searchbox>
+{% endif %}
 
 <ul id="default-post-list">
 	{% for post in site.posts %}
@@ -19,4 +21,6 @@ pagefind: true
 	{% endfor %}
 </ul>
 
+{% if jekyll.environment == 'production' %}
 <script src="{{ "/pagefind/pagefind-component-ui.js" | prepend: site.baseurl }}" type="module"></script>
+{% endif %}
