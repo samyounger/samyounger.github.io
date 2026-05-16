@@ -28,13 +28,6 @@
   {% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-  <!-- Javascript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
-    integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
-
-  <script src="/assets/javascripts/menu.js" defer></script>
+  <script src="{{ "/assets/javascripts/menu.js" | prepend: site.baseurl }}" defer></script>
   <script src="{{ "/assets/javascripts/main.js" | prepend: site.baseurl }}" defer></script>
 </head>

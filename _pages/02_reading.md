@@ -4,16 +4,16 @@ title: Reading
 permalink: /reading/
 ---
 
-## Reading
+# Reading
 
 I have read the following series of books while learning to become a better programmer.
 
-### Books
+## Books
 
 <div class="sourceReading">
   {% for source in site.data.reading.books %}
   <ul class="read">
-    <li>Title: <a href="{{ source.url }}" target="-blank">{{ source.title }}</a></li>
+    <li>Title: <a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.title }}</a></li>
     <li>Author: {{ source.author }}</li>
     <li>Published: {{ source.date }}</li>
     <li>Type: {{ source.type }}</li>
@@ -21,12 +21,12 @@ I have read the following series of books while learning to become a better prog
   {% endfor %}
 </div>
 
-### Blog Posts
+## Blog Posts
 
 <div class="sourceReading">
   {% for source in site.data.reading.blogPost %}
   <ul class="read">
-    <li>Title: <a href="{{ source.url }}" target="-blank">{{ source.title }}</a></li>
+    <li>Title: <a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.title }}</a></li>
     <li>Author: {{ source.author }}</li>
     <li>Published: {{ source.date }}</li>
     <li>Type: {{ source.type }}</li>

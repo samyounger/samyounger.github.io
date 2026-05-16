@@ -1,29 +1,38 @@
-$(document).ready(function () {
-  const $menuButton = $(".hamburger");
-  const $menu = $("#primary-menu");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".hamburger");
+  const menu = document.querySelector("#primary-menu");
+  const closeButton = document.querySelector(".hamburger-close button");
 
-  function setMenu(open) {
-    $menu.toggleClass("is-open", open);
-    $menuButton.attr("aria-expanded", String(open));
+  if (!menuButton || !menu) {
+    return;
   }
 
-  $menuButton.on("click", function () {
-    setMenu(!$menu.hasClass("is-open"));
+  function setMenu(open) {
+    menu.classList.toggle("is-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+  }
+
+  menuButton.addEventListener("click", () => {
+    setMenu(!menu.classList.contains("is-open"));
   });
 
-  $(".hamburger-close button").on("click", function () {
-    setMenu(false);
-    $menuButton.trigger("focus");
+  if (closeButton) {
+    closeButton.addEventListener("click", () => {
+      setMenu(false);
+      menuButton.focus();
+    });
+  }
+
+  menu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      setMenu(false);
+    }
   });
 
-  $menu.on("click", "a", function () {
-    setMenu(false);
-  });
-
-  $(document).on("keydown", function (event) {
+  document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       setMenu(false);
-      $menuButton.trigger("focus");
+      menuButton.focus();
     }
   });
 });
